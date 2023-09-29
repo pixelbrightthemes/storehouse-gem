@@ -1,0 +1,345 @@
+{
+    "sections": {
+      "bf22aaa9-9844-4467-9001-2078ad9af1f3": {
+        "type": "slideshow",
+        "blocks": {
+          "template--20992393904433__bf22aaa9-9844-4467-9001-2078ad9af1f3-slide-1": {
+            "type": "slide",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/custom_resized_72753304-1186-4d05-8bfc-a7db7496e73a.jpg",
+              "heading": "25% OFF ON POWER DRILLS",
+              "heading_size": "h1",
+              "subheading": "Tell your brand's story through images",
+              "button_label": "Button label",
+              "link": "",
+              "button_style_secondary": false,
+              "box_align": "middle-left",
+              "show_text_box": false,
+              "text_alignment": "left",
+              "image_overlay_opacity": 0,
+              "color_scheme": "scheme-49ba356b-3fba-414c-898c-a92bc364d1eb",
+              "text_alignment_mobile": "center"
+            }
+          },
+          "template--20992393904433__bf22aaa9-9844-4467-9001-2078ad9af1f3-slide-2": {
+            "type": "slide",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/custom_resized_34411e5b-aedb-4e57-a2bf-9629f0d34859.jpg",
+              "heading": "Image slide",
+              "heading_size": "h1",
+              "subheading": "Tell your brand's story through images",
+              "button_label": "Button label",
+              "link": "",
+              "button_style_secondary": false,
+              "box_align": "middle-center",
+              "show_text_box": true,
+              "text_alignment": "center",
+              "image_overlay_opacity": 0,
+              "color_scheme": "scheme-49ba356b-3fba-414c-898c-a92bc364d1eb",
+              "text_alignment_mobile": "center"
+            }
+          }
+        },
+        "block_order": [
+          "template--20992393904433__bf22aaa9-9844-4467-9001-2078ad9af1f3-slide-1",
+          "template--20992393904433__bf22aaa9-9844-4467-9001-2078ad9af1f3-slide-2"
+        ],
+        "settings": {
+          "layout": "full_bleed",
+          "slide_height": "medium",
+          "slider_visual": "dots",
+          "auto_rotate": false,
+          "change_slides_speed": 3,
+          "image_behavior": "none",
+          "show_text_below": true,
+          "accessibility_info": "Slideshow about our brand"
+        }
+      },
+      "fe9275c6-85b5-4d19-a687-e1993c46b9d9": {
+        "type": "scrolling-text",
+        "blocks": {
+          "template--20992393904433__fe9275c6-85b5-4d19-a687-e1993c46b9d9-scrolling_text-1": {
+            "type": "scrolling_text",
+            "settings": {
+              "text": "50% Offer on all products"
+            }
+          },
+          "template--20992393904433__fe9275c6-85b5-4d19-a687-e1993c46b9d9-scrolling_text-2": {
+            "type": "scrolling_text",
+            "settings": {
+              "text": "50% Offer on all products"
+            }
+          },
+          "template--20992393904433__fe9275c6-85b5-4d19-a687-e1993c46b9d9-scrolling_text-3": {
+            "type": "scrolling_text",
+            "settings": {
+              "text": "50% Offer on all products"
+            }
+          }
+        },
+        "block_order": [
+          "template--20992393904433__fe9275c6-85b5-4d19-a687-e1993c46b9d9-scrolling_text-1",
+          "template--20992393904433__fe9275c6-85b5-4d19-a687-e1993c46b9d9-scrolling_text-2",
+          "template--20992393904433__fe9275c6-85b5-4d19-a687-e1993c46b9d9-scrolling_text-3"
+        ],
+        "settings": {
+          "show_on_homepage_only": true,
+          "scroll_direction": "fromright",
+          "text_size": "l",
+          "text_padding": 10,
+          "link": "",
+          "color_scheme": "accent-1",
+          "padding_top": 0,
+          "padding_bottom": 0
+        }
+      },
+      "rich_text": {
+        "type": "rich-text",
+        "blocks": {
+          "heading": {
+            "type": "heading",
+            "settings": {
+              "heading": "Talk about your brand",
+              "heading_size": "h1"
+            }
+          },
+          "text": {
+            "type": "text",
+            "settings": {
+              "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+            }
+          },
+          "5e5f3bd0-2f66-43e8-91be-966010d57f01": {
+            "type": "button",
+            "settings": {
+              "button_label": "Button label",
+              "button_link": "",
+              "button_style_secondary": false,
+              "button_label_2": "",
+              "button_link_2": "",
+              "button_style_secondary_2": false
+            }
+          }
+        },
+        "block_order": [
+          "heading",
+          "text",
+          "5e5f3bd0-2f66-43e8-91be-966010d57f01"
+        ],
+        "settings": {
+          "desktop_content_position": "center",
+          "content_alignment": "center",
+          "color_scheme": "background-2",
+          "full_width": true,
+          "padding_top": 40,
+          "padding_bottom": 40
+        }
+      },
+      "featured_collection": {
+        "type": "featured-collection",
+        "settings": {
+          "title": "Featured products",
+          "heading_size": "h2",
+          "description": "",
+          "show_description": false,
+          "description_style": "body",
+          "collection": "all",
+          "products_to_show": 8,
+          "columns_desktop": 4,
+          "full_width": false,
+          "show_view_all": false,
+          "view_all_style": "solid",
+          "enable_desktop_slider": false,
+          "color_scheme": "background-1",
+          "image_ratio": "adapt",
+          "image_shape": "default",
+          "show_secondary_image": true,
+          "show_vendor": false,
+          "show_rating": false,
+          "enable_quick_add": false,
+          "columns_mobile": "2",
+          "swipe_on_mobile": false,
+          "padding_top": 28,
+          "padding_bottom": 36
+        }
+      },
+      "collage": {
+        "type": "collage",
+        "blocks": {
+          "collection-0": {
+            "type": "collection",
+            "settings": {
+              "collection": ""
+            }
+          },
+          "product": {
+            "type": "product",
+            "settings": {
+              "product": "",
+              "second_image": false
+            }
+          },
+          "collection-1": {
+            "type": "collection",
+            "settings": {
+              "collection": ""
+            }
+          }
+        },
+        "block_order": [
+          "collection-0",
+          "product",
+          "collection-1"
+        ],
+        "settings": {
+          "heading": "Multimedia collage",
+          "heading_size": "h2",
+          "desktop_layout": "left",
+          "mobile_layout": "collage",
+          "card_styles": "product-card-wrapper",
+          "color_scheme": "background-1",
+          "padding_top": 36,
+          "padding_bottom": 36
+        }
+      },
+      "video": {
+        "type": "video",
+        "settings": {
+          "heading": "",
+          "heading_size": "h1",
+          "enable_video_looping": false,
+          "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+          "description": "",
+          "full_width": false,
+          "color_scheme": "background-1",
+          "padding_top": 36,
+          "padding_bottom": 36
+        }
+      },
+      "68af79e5-4209-409f-83f5-09627f04ae70": {
+        "type": "collapsible-content",
+        "blocks": {
+          "template--20992393904433__68af79e5-4209-409f-83f5-09627f04ae70-collapsible_row-1": {
+            "type": "collapsible_row",
+            "settings": {
+              "heading": "Collapsible row",
+              "icon": "check_mark",
+              "row_content": "",
+              "page": ""
+            }
+          },
+          "template--20992393904433__68af79e5-4209-409f-83f5-09627f04ae70-collapsible_row-2": {
+            "type": "collapsible_row",
+            "settings": {
+              "heading": "Collapsible row",
+              "icon": "check_mark",
+              "row_content": "",
+              "page": ""
+            }
+          },
+          "template--20992393904433__68af79e5-4209-409f-83f5-09627f04ae70-collapsible_row-3": {
+            "type": "collapsible_row",
+            "settings": {
+              "heading": "Collapsible row",
+              "icon": "check_mark",
+              "row_content": "",
+              "page": ""
+            }
+          },
+          "template--20992393904433__68af79e5-4209-409f-83f5-09627f04ae70-collapsible_row-4": {
+            "type": "collapsible_row",
+            "settings": {
+              "heading": "Collapsible row",
+              "icon": "check_mark",
+              "row_content": "",
+              "page": ""
+            }
+          }
+        },
+        "block_order": [
+          "template--20992393904433__68af79e5-4209-409f-83f5-09627f04ae70-collapsible_row-1",
+          "template--20992393904433__68af79e5-4209-409f-83f5-09627f04ae70-collapsible_row-2",
+          "template--20992393904433__68af79e5-4209-409f-83f5-09627f04ae70-collapsible_row-3",
+          "template--20992393904433__68af79e5-4209-409f-83f5-09627f04ae70-collapsible_row-4"
+        ],
+        "settings": {
+          "caption": "",
+          "heading": "Collapsible content",
+          "heading_size": "h1",
+          "heading_alignment": "center",
+          "layout": "none",
+          "color_scheme": "",
+          "container_color_scheme": "",
+          "open_first_collapsible_row": false,
+          "image": "shopify:\/\/shop_images\/worker-using-drill-front-view.jpg",
+          "image_ratio": "small",
+          "desktop_layout": "image_first",
+          "padding_top": 36,
+          "padding_bottom": 36
+        }
+      },
+      "multicolumn": {
+        "type": "multicolumn",
+        "blocks": {
+          "column1": {
+            "type": "column",
+            "settings": {
+              "title": "Column",
+              "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+              "link_label": "",
+              "link": ""
+            }
+          },
+          "column2": {
+            "type": "column",
+            "settings": {
+              "title": "Column",
+              "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+              "link_label": "",
+              "link": ""
+            }
+          },
+          "column3": {
+            "type": "column",
+            "settings": {
+              "title": "Column",
+              "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+              "link_label": "",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "column1",
+          "column2",
+          "column3"
+        ],
+        "settings": {
+          "title": "",
+          "heading_size": "h1",
+          "image_width": "third",
+          "image_ratio": "adapt",
+          "columns_desktop": 3,
+          "column_alignment": "center",
+          "background_style": "none",
+          "button_label": "",
+          "button_link": "",
+          "color_scheme": "background-1",
+          "columns_mobile": "1",
+          "swipe_on_mobile": false,
+          "padding_top": 36,
+          "padding_bottom": 36
+        }
+      }
+    },
+    "order": [
+      "bf22aaa9-9844-4467-9001-2078ad9af1f3",
+      "fe9275c6-85b5-4d19-a687-e1993c46b9d9",
+      "rich_text",
+      "featured_collection",
+      "collage",
+      "video",
+      "68af79e5-4209-409f-83f5-09627f04ae70",
+      "multicolumn"
+    ]
+  }

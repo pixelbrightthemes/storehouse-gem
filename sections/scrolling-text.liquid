@@ -1,0 +1,194 @@
+{{ 'element-scrolling-text.css' | asset_url | stylesheet_tag }}
+{%- style -%}
+.section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+
+  .scr-content-{{ section.id }} {
+    padding: {{ section.settings.text_padding }}px;
+  }
+  .text-loop-right {
+    animation: 25s linear infinite reverse{% if section.settings.scroll_direction == 'fromright' %} text-loop-right-to-left{% else %} text-loop-left-to-right {% endif %};
+}
+.scrolling-text {
+  font-family: var(--font-body-family);
+}
+{%- endstyle -%}
+{%- liquid
+  assign showScrollingText = true
+  if section.settings.show_on_homepage_only
+    if template.name == 'index'
+      assign showScrollingText = true
+    else
+      assign showScrollingText = false
+    endif
+  endif
+-%}
+{%- if showScrollingText -%}
+<div class="section-{{ section.id }}-padding infinite-text-loop-wrapper">
+  <div class="infinite-text-content scr-content-{{ section.id }} color-{{ section.settings.color_scheme }}">
+    <div class="infinite-text infinite-text-subheading text-loop-right">
+      <a class="unstyled-link{% if section.settings.link %}" href="{{ section.settings.link }}" {% endif %}">
+      {%- for i in (1..10) -%}
+        {%- for block in section.blocks -%}
+          <span class="unstyled-link scrolling-text text-{{ section.settings.text_size }}" {{ block.shopify_attributes }}
+            >{%- if block.settings.text -%} &#9733; {{ block.settings.text }} &#9733; {%- else -%}{{ 'onboarding.promotion_text' | t }}{%- endif -%}</span>
+        {%- endfor -%}
+      {%- endfor -%}
+    </a>
+    </div>
+  </div>
+</div>
+{%- endif -%}
+{% schema %}
+{
+  "name": "t:sections.scrolling-text.name",
+  "tag": "section",
+  "max_blocks": 6,
+  "disabled_on": {
+    "groups": [
+      "aside"
+    ]
+  },
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_on_homepage_only",
+      "label": "t:sections.announce-bar.settings.show_on_homepage_only.label",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "t:sections.scrolling-text.settings.direction_header.content"
+    },
+    {
+      "type": "select",
+      "id": "scroll_direction",
+      "options": [
+        {
+          "value": "fromright",
+          "label": "t:sections.scrolling-text.settings.scroll_direction.options__1.label"
+        },
+        {
+          "value": "fromleft",
+          "label": "t:sections.scrolling-text.settings.scroll_direction.options__2.label"
+        }
+      ],
+      "default": "fromleft",
+      "label": "t:sections.scrolling-text.settings.scroll_direction.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.settings.text.content"
+    },
+    {
+      "type": "select",
+      "id": "text_size",
+      "options": [
+        {
+          "value": "xs",
+          "label": "t:sections.all.settings.text_size.options__1.label"
+        },
+        {
+          "value": "s",
+          "label": "t:sections.all.settings.text_size.options__2.label"
+        },
+        {
+          "value": "normal",
+          "label": "t:sections.all.settings.text_size.options__3.label"
+        },
+        {
+          "value": "l",
+          "label": "t:sections.all.settings.text_size.options__4.label"
+        },
+        {
+          "value": "xl",
+          "label": "t:sections.all.settings.text_size.options__5.label"
+        }
+      ],
+      "default": "l",
+      "label": "t:sections.all.settings.text_size.label"
+    },
+    {
+      "type": "range",
+      "id": "text_padding",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.scrolling-text.settings.text_padding.label",
+      "default": 1
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "t:sections.scrolling-text.settings.link.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.settings.color.content"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "default": "scheme_4",
+      "label": "t:sections.all.settings.color_scheme.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.settings.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "unit": "px",
+      "label": "t:sections.all.settings.padding.padding_top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "unit": "px",
+      "label": "t:sections.all.settings.padding.padding_bottom",
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "scrolling_text",
+      "name": "t:sections.scrolling-text.blocks.scrolling_text.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "default": "50% Offer on all products",
+          "label": "t:sections.scrolling-text.blocks.scrolling_text.settings.text.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.scrolling-text.presets.name",
+      "blocks": [
+        {
+          "type": "scrolling_text"
+        },
+        {
+          "type": "scrolling_text"
+        },
+        {
+          "type": "scrolling_text"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

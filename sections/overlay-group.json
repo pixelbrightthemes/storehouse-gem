@@ -1,0 +1,22 @@
+{
+  "type": "aside",
+  "name": "Overlay",
+  "sections": {
+    "back-to-top": {
+      "type": "back-to-top",
+      "settings": {
+        "color_scheme": "accent-2",
+        "bg_color": "#ffffff",
+        "text_color": "#121212",
+        "border_color": "#ffffff",
+        "button_shape": "square",
+        "button_size": 40,
+        "distancefromright": 30,
+        "distancefrombottom": 30
+      }
+    }
+  },
+  "order": [
+    "back-to-top"
+  ]
+}

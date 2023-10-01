@@ -225,9 +225,9 @@
       },
       "scheme-77da9f83-160c-41a4-9fb7-318079cffb9b": {
         "settings": {
-          "background": "rgba(0,0,0,0)",
+          "background": "#fff",
           "background_gradient": "",
-          "text": "#ffffff",
+          "text": "#000000",
           "button": "#121212",
           "button_label": "#ffffff",
           "secondary_button_label": "#121212",

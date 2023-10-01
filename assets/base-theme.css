@@ -1929,6 +1929,7 @@ details[open] > .share-button__fallback {
 .customer .field input:not(:placeholder-shown) ~ label,
 .customer .field input:-webkit-autofill ~ label {
   font-size: 1rem;
+  opacity: 0;
   top: calc(var(--inputs-border-width) + 0.5rem);
   left: calc(var(--inputs-border-width) + 2rem);
   letter-spacing: 0.04rem;
@@ -1940,7 +1941,7 @@ details[open] > .share-button__fallback {
 .customer .field input:focus,
 .customer .field input:not(:placeholder-shown),
 .customer .field input:-webkit-autofill {
-  padding: 2.2rem 1.5rem 0.8rem 2rem;
+  /*padding: 0.8rem 1.5rem 0.8rem 2rem;*/
   margin: var(--inputs-border-width);
 }
 
@@ -2242,8 +2243,10 @@ product-info .loading-overlay:not(.hidden) ~ *,
   align-items: center;
   padding: 0rem;
   height: 4.4rem;
+  border-radius: 50%;
   width: 4.4rem;
-  background-color: transparent;
+  background-color: rgba(var(--color-button), 1);
+  color: rgba(var(--color-button-text), 1);
 }
 
 .modal__close-button .icon {
@@ -2743,26 +2746,26 @@ product-info .loading-overlay:not(.hidden) ~ *,
   transform: scale(1.07);
 }
 .header__icon .icon-search {
-  height: 2.6rem!important;
-  width: 2.6rem!important;
+  height: 3.2rem!important;
+  width: 3.2rem!important;
 }
 .header__icon .icon-account {
-  height: 2.6rem!important;
-  width: 2.6rem!important;
+  height: 3.4rem!important;
+  width: 3.4rem!important;
 }
 .header__icon .icon {
-  height: 2.4rem;
-  width: 2.4rem;
+  height: 3rem;
+  width: 3rem;
   fill: none;
   vertical-align: middle;
 }
 .header__icon .icon-cart {
-  height: 2.4rem;
-  width: 2.4rem;
+  height: 3rem;
+  width: 3rem;
 }
 .icon-cart, .icon-cart-empty {
-  height: 2.4rem;
-  width: 2.4rem;
+  height: 3rem;
+  width: 3rem;
 }
 .header__icon,
 .header__icon--cart .icon {
@@ -3505,9 +3508,27 @@ details-disclosure > details {
   transition: scale var(--duration-short) linear;
   scale: var(--zoom-in-ratio);
 }
-
+::placeholder {
+  color: rgba(var(--color-text));
+}
 /* Animations */
+.mega-menu[open] .promotion-image-div,
+.mega-menu[open] .mega--menu {
+  opacity: 1;
+  animation: show-promotion-image var(--duration-long) ease 0s;
+  padding: 1rem;
+}
+@keyframes show-promotion-image {
+  0% {
+    opacity: 0.01;
+    transform: translate3d(0, 1.6rem, 0)
+  }
 
+  to {
+    opacity: 1;
+    transform: translateZ(0)
+  }
+}
 @media (prefers-reduced-motion: no-preference) {
   .animate--ambient > img,
   .animate--ambient > svg {

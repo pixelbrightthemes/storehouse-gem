@@ -285,13 +285,13 @@ slider-component.slider-component-full-width {
 .slider-counter__link--dots .dot {
   width: 5rem;
   height: 0.5rem;
-  border: 0.05rem solid rgba(var(--color-text), 0.2);
+  border: 0.05rem solid rgba(var(--color-bg), 1);
   padding: 0;
   display: block;
 }
 
 .slider-counter__link--active.slider-counter__link--dots .dot {
-  background-color: rgb(var(--color-text));
+  background-color: rgba(var(--color-bg), 1);
 }
 
 @media screen and (forced-colors: active) {

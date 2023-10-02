@@ -53,7 +53,7 @@
   data-desktop-layout="{{ section.settings.gallery_layout }}"
 >
   <div id="GalleryStatus-{{ section.id }}" class="visually-hidden" role="status"></div>
-  <slider-component id="GalleryViewer-{{ section.id }}{{ id_append }}" class="slider-mobile-gutter">
+  <storehouse-slider-component id="GalleryViewer-{{ section.id }}{{ id_append }}" class="slider-mobile-gutter">
     {%- unless is_duplicate -%}
       <a class="skip-to-content-link button visually-hidden quick-add-hidden" href="#ProductInfo-{{ section.id }}">
         {{ 'accessibility.skip_to_product_info' | t }}
@@ -146,7 +146,7 @@
         </button>
       </div>
     {%- endunless -%}
-  </slider-component>
+  </storehouse-slider-component>
   {%- if first_3d_model -%}
     <button
       class="button button--full-width product__xr-button"
@@ -165,7 +165,7 @@
     and section.settings.gallery_layout contains 'thumbnail'
     or section.settings.mobile_thumbnails == 'show'
   -%}
-    <slider-component
+    <storehouse-slider-component
       id="GalleryThumbnails-{{ section.id }}{{ id_append }}"
       class="thumbnail-slider slider-mobile-gutter quick-add-hidden{% unless section.settings.gallery_layout contains 'thumbnail' %} medium-hide large-up-hide{% endunless %}{% if section.settings.mobile_thumbnails != 'show' %} small-hide{% endif %}{% if media_count <= 3 %} thumbnail-slider--no-slide{% endif %}"
     >
@@ -303,6 +303,6 @@
       >
         {% render 'icon-caret' %}
       </button>
-    </slider-component>
+    </storehouse-slider-component>
   {%- endif -%}
 </media-gallery>

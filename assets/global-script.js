@@ -635,7 +635,7 @@ class DeferredMedia extends HTMLElement {
 
 customElements.define('deferred-media', DeferredMedia);
 
-class SliderComponent extends HTMLElement {
+class StorehouseSliderComponent extends HTMLElement {
   constructor() {
     super();
     this.slider = this.querySelector('[id^="Slider-"]');
@@ -734,9 +734,9 @@ class SliderComponent extends HTMLElement {
   }
 }
 
-customElements.define('slider-component', SliderComponent);
+customElements.define('storehouse-slider-component', StorehouseSliderComponent);
 
-class SlideshowComponent extends SliderComponent {
+class StorehouseSlideshowComponent extends StorehouseSliderComponent {
   constructor() {
     super();
     this.sliderControlWrapper = this.querySelector('.slider-buttons');
@@ -975,9 +975,9 @@ class SlideshowComponent extends SliderComponent {
   }
 }
 
-customElements.define('slideshow-component', SlideshowComponent);
+customElements.define('storehouse-slideshow-component', StorehouseSlideshowComponent);
 
-class VariantSelects extends HTMLElement {
+class StorehouseVariantSelects extends HTMLElement {
   constructor() {
     super();
     this.addEventListener('change', this.onVariantChange);
@@ -1216,9 +1216,9 @@ class VariantSelects extends HTMLElement {
   }
 }
 
-customElements.define('variant-selects', VariantSelects);
+customElements.define('variant-selects', StorehouseVariantSelects);
 
-class VariantRadios extends VariantSelects {
+class StorehouseVariantRadios extends StorehouseVariantSelects {
   constructor() {
     super();
   }
@@ -1241,7 +1241,7 @@ class VariantRadios extends VariantSelects {
   }
 }
 
-customElements.define('variant-radios', VariantRadios);
+customElements.define('storehouse-variant-radios', StorehouseVariantRadios);
 
 class ProductRecommendations extends HTMLElement {
   constructor() {
@@ -1264,7 +1264,7 @@ class ProductRecommendations extends HTMLElement {
             this.innerHTML = recommendations.innerHTML;
           }
 
-          if (!this.querySelector('slideshow-component') && this.classList.contains('complementary-products')) {
+          if (!this.querySelector('storehouse-slideshow-component') && this.classList.contains('complementary-products')) {
             this.remove();
           }
 

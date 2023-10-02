@@ -53,26 +53,6 @@
               >
                 {{ block.settings.text }}
               </div>
-              {%- when 'separator' -%}
-                <style>
-                  #cta-separator-{{ section.id }} {
-                    height: {{ block.settings.separator_thickness }}px;
-                    padding-top: {{ block.settings.separator_padding_top }}px;
-                    padding-bottom: {{ block.settings.separator_padding_bottom }}px;
-                  }
-                  #cta-separator-{{ section.id }} hr {
-                    width: {{ block.settings.separator_width }}%;
-                    border-top: {{ block.settings.separator_thickness }}px solid {{ settings.color_default_text }};
-                    margin: 0;
-                  }
-                </style>
-                <div
-                  id="cta-separator-{{ section.id }}"
-                  class="cta-separator flex flex-row justify-content-center"
-                  {{ block.shopify_attributes }}
-                >
-                  <hr class="text-center">
-                </div>
             {%- when 'button' -%}
               <div
                 class="rich-text__buttons{% if block.settings.button_label != blank and block.settings.button_label_2 != blank %} rich-text__buttons--multiple{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
@@ -116,7 +96,7 @@
 
 {% schema %}
 {
-  "name": "t:sections.rich-text.name",
+  "name": "t:sections.countdown-timer.name",
   "tag": "section",
   "class": "section",
   "disabled_on": {
@@ -132,20 +112,20 @@
       "options": [
         {
           "value": "left",
-          "label": "t:sections.rich-text.settings.desktop_content_position.options__1.label"
+          "label": "t:sections.countdown-timer.settings.desktop_content_position.options__1.label"
         },
         {
           "value": "center",
-          "label": "t:sections.rich-text.settings.desktop_content_position.options__2.label"
+          "label": "t:sections.countdown-timer.settings.desktop_content_position.options__2.label"
         },
         {
           "value": "right",
-          "label": "t:sections.rich-text.settings.desktop_content_position.options__3.label"
+          "label": "t:sections.countdown-timer.settings.desktop_content_position.options__3.label"
         }
       ],
       "default": "center",
-      "label": "t:sections.rich-text.settings.desktop_content_position.label",
-      "info": "t:sections.rich-text.settings.desktop_content_position.info"
+      "label": "t:sections.countdown-timer.settings.desktop_content_position.label",
+      "info": "t:sections.countdown-timer.settings.desktop_content_position.info"
     },
     {
       "type": "select",
@@ -153,19 +133,19 @@
       "options": [
         {
           "value": "left",
-          "label": "t:sections.rich-text.settings.content_alignment.options__1.label"
+          "label": "t:sections.countdown-timer.settings.content_alignment.options__1.label"
         },
         {
           "value": "center",
-          "label": "t:sections.rich-text.settings.content_alignment.options__2.label"
+          "label": "t:sections.countdown-timer.settings.content_alignment.options__2.label"
         },
         {
           "value": "right",
-          "label": "t:sections.rich-text.settings.content_alignment.options__3.label"
+          "label": "t:sections.countdown-timer.settings.content_alignment.options__3.label"
         }
       ],
       "default": "center",
-      "label": "t:sections.rich-text.settings.content_alignment.label"
+      "label": "t:sections.countdown-timer.settings.content_alignment.label"
     },
     {
       "type": "color_scheme",
@@ -177,7 +157,7 @@
       "type": "checkbox",
       "id": "full_width",
       "default": true,
-      "label": "t:sections.rich-text.settings.full_width.label"
+      "label": "t:sections.countdown-timer.settings.full_width.label"
     },
     {
       "type": "header",
@@ -207,14 +187,14 @@
   "blocks": [
     {
       "type": "heading",
-      "name": "t:sections.rich-text.blocks.heading.name",
+      "name": "t:sections.countdown-timer.blocks.heading.name",
       "limit": 3,
       "settings": [
         {
           "type": "inline_richtext",
           "id": "heading",
           "default": "Talk about your brand",
-          "label": "t:sections.rich-text.blocks.heading.settings.heading.label"
+          "label": "t:sections.countdown-timer.blocks.heading.settings.heading.label"
         },
         {
           "type": "select",
@@ -244,14 +224,14 @@
     },
     {
       "type": "caption",
-      "name": "t:sections.rich-text.blocks.caption.name",
+      "name": "t:sections.countdown-timer.blocks.caption.name",
       "limit": 3,
       "settings": [
         {
           "type": "text",
           "id": "caption",
           "default": "Add a tagline",
-          "label": "t:sections.rich-text.blocks.caption.settings.text.label"
+          "label": "t:sections.countdown-timer.blocks.caption.settings.text.label"
         },
         {
           "type": "select",
@@ -259,15 +239,15 @@
           "options": [
             {
               "value": "subtitle",
-              "label": "t:sections.rich-text.blocks.caption.settings.text_style.options__1.label"
+              "label": "t:sections.countdown-timer.blocks.caption.settings.text_style.options__1.label"
             },
             {
               "value": "caption-with-letter-spacing",
-              "label": "t:sections.rich-text.blocks.caption.settings.text_style.options__2.label"
+              "label": "t:sections.countdown-timer.blocks.caption.settings.text_style.options__2.label"
             }
           ],
           "default": "caption-with-letter-spacing",
-          "label": "t:sections.rich-text.blocks.caption.settings.text_style.label"
+          "label": "t:sections.countdown-timer.blocks.caption.settings.text_style.label"
         },
         {
           "type": "select",
@@ -275,128 +255,81 @@
           "options": [
             {
               "value": "small",
-              "label": "t:sections.rich-text.blocks.caption.settings.caption_size.options__1.label"
+              "label": "t:sections.countdown-timer.blocks.caption.settings.caption_size.options__1.label"
             },
             {
               "value": "medium",
-              "label": "t:sections.rich-text.blocks.caption.settings.caption_size.options__2.label"
+              "label": "t:sections.countdown-timer.blocks.caption.settings.caption_size.options__2.label"
             },
             {
               "value": "large",
-              "label": "t:sections.rich-text.blocks.caption.settings.caption_size.options__3.label"
+              "label": "t:sections.countdown-timer.blocks.caption.settings.caption_size.options__3.label"
             }
           ],
           "default": "medium",
-          "label": "t:sections.rich-text.blocks.caption.settings.caption_size.label"
+          "label": "t:sections.countdown-timer.blocks.caption.settings.caption_size.label"
         }
       ]
     },
     {
       "type": "text",
-      "name": "t:sections.rich-text.blocks.text.name",
+      "name": "t:sections.countdown-timer.blocks.text.name",
       "limit": 3,
       "settings": [
         {
           "type": "richtext",
           "id": "text",
           "default": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
-          "label": "t:sections.rich-text.blocks.text.settings.text.label"
+          "label": "t:sections.countdown-timer.blocks.text.settings.text.label"
         }
       ]
     },
     {
       "type": "button",
-      "name": "t:sections.rich-text.blocks.buttons.name",
+      "name": "t:sections.countdown-timer.blocks.buttons.name",
       "limit": 2,
       "settings": [
         {
           "type": "text",
           "id": "button_label",
           "default": "Button label",
-          "label": "t:sections.rich-text.blocks.buttons.settings.button_label_1.label",
-          "info": "t:sections.rich-text.blocks.buttons.settings.button_label_1.info"
+          "label": "t:sections.countdown-timer.blocks.buttons.settings.button_label_1.label",
+          "info": "t:sections.countdown-timer.blocks.buttons.settings.button_label_1.info"
         },
         {
           "type": "url",
           "id": "button_link",
-          "label": "t:sections.rich-text.blocks.buttons.settings.button_link_1.label"
+          "label": "t:sections.countdown-timer.blocks.buttons.settings.button_link_1.label"
         },
         {
           "type": "checkbox",
           "id": "button_style_secondary",
           "default": false,
-          "label": "t:sections.rich-text.blocks.buttons.settings.button_style_secondary_1.label"
+          "label": "t:sections.countdown-timer.blocks.buttons.settings.button_style_secondary_1.label"
         },
         {
           "type": "text",
           "id": "button_label_2",
-          "label": "t:sections.rich-text.blocks.buttons.settings.button_label_2.label",
-          "info": "t:sections.rich-text.blocks.buttons.settings.button_label_2.info"
+          "label": "t:sections.countdown-timer.blocks.buttons.settings.button_label_2.label",
+          "info": "t:sections.countdown-timer.blocks.buttons.settings.button_label_2.info"
         },
         {
           "type": "url",
           "id": "button_link_2",
-          "label": "t:sections.rich-text.blocks.buttons.settings.button_link_2.label"
+          "label": "t:sections.countdown-timer.blocks.buttons.settings.button_link_2.label"
         },
         {
           "type": "checkbox",
           "id": "button_style_secondary_2",
           "default": false,
-          "label": "t:sections.rich-text.blocks.buttons.settings.button_style_secondary_2.label"
-        }
-      ]
-    },
-    {
-      "type": "separator",
-      "name": "t:sections.rich-text.blocks.separator.name",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "range",
-          "id": "separator_padding_top",
-          "min": 5,
-          "max": 100,
-          "step": 5,
-          "unit": "px",
-          "label": "t:sections.rich-text.blocks.separator.settings.separator_padding_top.label",
-          "default": 10
-        },
-        {
-          "type": "range",
-          "id": "separator_padding_bottom",
-          "min": 5,
-          "max": 100,
-          "step": 5,
-          "unit": "px",
-          "label": "t:sections.rich-text.blocks.separator.settings.separator_padding_bottom.label",
-          "default": 20
-        },
-        {
-          "type": "range",
-          "id": "separator_width",
-          "min": 10,
-          "max": 100,
-          "step": 5,
-          "unit": "%",
-          "label": "t:sections.rich-text.blocks.separator.settings.separator_width.label",
-          "default": 20
-        },
-        {
-          "type": "range",
-          "id": "separator_thickness",
-          "min": 1,
-          "max": 10,
-          "step": 1,
-          "unit": "px",
-          "label": "t:sections.rich-text.blocks.separator.settings.separator_thickness.label",
-          "default": 4
+          "label": "t:sections.countdown-timer.blocks.buttons.settings.button_style_secondary_2.label"
         }
       ]
     }
   ],
   "presets": [
     {
-      "name": "t:sections.rich-text.presets.name",
+      "name": "t:sections.countdown-timer.presets.name",
       "blocks": [
         {
           "type": "heading"

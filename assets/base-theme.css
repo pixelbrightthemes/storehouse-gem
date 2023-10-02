@@ -396,7 +396,7 @@ h5,
   font-style: var(--font-heading-style);
   font-weight: var(--font-heading-weight);
   letter-spacing: calc(var(--font-heading-scale) * var(--font-heading-spacing));
-  color: rgb(var(--color-text));
+  /*color: rgb(var(--color-text));*/
   line-height: calc(1 + 0.3 / max(1, var(--font-heading-scale)));
   word-break: break-word;
 }
@@ -657,7 +657,110 @@ h6:empty {
 a:not([href]) {
   cursor: not-allowed;
 }
+hr {
+  border: none;
+  height: 0.1rem;
+  background-color: rgba(var(--color-text), 0.2);
+  display: block;
+  margin: 0rem;
+}
 
+.flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-row,
+.flex-h {
+  flex-direction: row;
+}
+
+.flex-column,
+.flex-v {
+  flex-direction: column;
+}
+
+
+
+.flex-shrink0 {
+  flex-shrink: 0;
+}
+
+.flex-grow0 {
+  flex-grow: 0;
+}
+
+.flex-grow1 {
+  flex-grow: 1;
+}
+
+.justify-items-center {
+  justify-items: center;
+  justify-content: center;
+}
+
+.justify-content-left {
+  justify-content: flex-start;
+}
+
+.justify-content-right {
+  justify-content: flex-end;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-spacebetween {
+  justify-content: space-between;
+}
+
+.align-items-end {
+  align-items: end;
+}
+.align-items-stretch {
+  align-items: stretch!important;
+}
+.align-items-center {
+  align-content: center;
+  align-items: center;
+}
+
+.align-items-right {
+  align-content: end;
+  align-items: flex-end;
+}
+.align-left {
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.flex-left {
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.flex-right {
+  display: flex;
+  justify-content: flex-end;
+  align-content: flex-end;
+  align-items: flex-end;
+}
 .circle-divider::after {
   content: '\2022';
   margin: 0 1.3rem 0 1.5rem;
@@ -665,14 +768,6 @@ a:not([href]) {
 
 .circle-divider:last-of-type::after {
   display: none;
-}
-
-hr {
-  border: none;
-  height: 0.1rem;
-  background-color: rgba(var(--color-text), 0.2);
-  display: block;
-  margin: 5rem 0;
 }
 
 @media screen and (min-width: 750px) {
@@ -1336,7 +1431,7 @@ deferred-media {
 /* component-button */
 /* Button - default */
 .overlay-text {
-  --color-button-text: var(--color-button-text);
+  color: rgba(var(--color-overlay-text), 1);
 }
 .button--secondary,
 .button--tertiary {
@@ -2543,12 +2638,16 @@ product-info .loading-overlay:not(.hidden) ~ *,
 }
 .text-left {
   text-align: left;
+  justify-content: flex-start;
 }
 .text-center {
   text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 .text-right {
   text-align: right;
+  justify-content: flex-end;
 }
 
 .header {

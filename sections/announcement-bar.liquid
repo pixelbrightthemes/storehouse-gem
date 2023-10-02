@@ -50,7 +50,7 @@
         {%- endif -%}
       </div>
     {%- elsif section.blocks.size > 1 -%}
-      <slideshow-component
+      <storehouse-slideshow-component
         class="announcement-bar"
         role="region"
         aria-roledescription="{{ 'sections.announcements.carousel' | t }}"
@@ -121,7 +121,7 @@
             {% render 'icon-caret' %}
           </button>
         </div>
-      </slideshow-component>
+      </storehouse-slideshow-component>
         {%- if request.design_mode -%}
           <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
         {%- endif -%}

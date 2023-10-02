@@ -33,7 +33,7 @@
         "menu": "main-menu",
         "menu_text_size": 13,
         "menu_type_desktop": "mega",
-        "enable_transparent_menu": true,
+        "enable_transparent_menu": false,
         "sticky_header_type": "on-scroll-up",
         "color_scheme": "background-1",
         "menu_color_scheme": "scheme-c673dc2e-d24e-4af1-a945-8dbcfee78c1c",

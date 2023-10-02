@@ -83,7 +83,7 @@
       {%- else -%}
         <div class="card__content absolute text-{{ text_alignment }}">
           <div class="card__information">
-            <h3 class="card__heading">
+            <div class="card__heading h3">
               <a
                 {% if card_collection == blank %}
                   role="link" aria-disabled="true"
@@ -101,7 +101,7 @@
                   <span class="icon-wrap">{% render 'icon-arrow' %}</span>
                 {%- endif %}
               </a>
-            </h3>
+            </div>
             {%- if card_collection.description != blank -%}
               <p class="card__caption">
                 {{- card_collection.description | strip_html | truncatewords: 12 -}}

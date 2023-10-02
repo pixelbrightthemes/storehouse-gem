@@ -496,7 +496,7 @@ a.product__text {
     width: calc(100% + 4rem);
   }
 
-  .product__media-wrapper slider-component:not(.thumbnail-slider--no-slide) {
+  .product__media-wrapper storehouse-slider-component:not(.thumbnail-slider--no-slide) {
     margin-left: -1.5rem;
     margin-right: -1.5rem;
   }

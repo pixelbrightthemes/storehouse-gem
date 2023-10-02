@@ -11,7 +11,7 @@
 {% endcomment %}
 {%- unless product.has_only_default_variant -%}
   {%- if block.settings.picker_type == 'button' -%}
-    <variant-radios
+    <storehouse-variant-radios
       id="variant-radios-{{ section.id }}"
       class="no-js-hidden"
       data-section="{{ section.id }}"
@@ -30,9 +30,9 @@
       <script type="application/json">
         {{ product.variants | json }}
       </script>
-    </variant-radios>
+    </storehouse-variant-radios>
   {%- else -%}
-    <variant-selects
+    <storehouse-variant-selects
       id="variant-selects-{{ section.id }}"
       class="no-js-hidden"
       data-section="{{ section.id }}"
@@ -64,7 +64,7 @@
       <script type="application/json">
         {{ product.variants | json }}
       </script>
-    </variant-selects>
+    </storehouse-variant-selects>
   {%- endif -%}
 {%- endunless -%}
 

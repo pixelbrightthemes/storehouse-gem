@@ -5,7 +5,7 @@
     "favicon": "shopify:\/\/shop_images\/Storehouse_Mobile.png",
     "type_header_font": "tenor_sans_n4",
     "heading_scale": 100,
-    "heading_letter_spacing": 2,
+    "heading_letter_spacing": 1,
     "type_body_font": "twentieth_century_n4",
     "body_scale": 100,
     "page_width": 1600,
@@ -142,7 +142,7 @@
           "secondary_button_label": "#121212",
           "shadow": "#121212",
           "icons": "#ffffff",
-          "links": "#121212"
+          "links": "#fff"
         }
       },
       "background-2": {
@@ -225,9 +225,22 @@
       },
       "scheme-77da9f83-160c-41a4-9fb7-318079cffb9b": {
         "settings": {
-          "background": "#fff",
+          "background": "#ffffff",
           "background_gradient": "",
           "text": "#000000",
+          "button": "#121212",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#121212",
+          "shadow": "#121212",
+          "icons": "#ffffff",
+          "links": "#121212"
+        }
+      },
+      "scheme-c673dc2e-d24e-4af1-a945-8dbcfee78c1c": {
+        "settings": {
+          "background": "rgba(0,0,0,0)",
+          "background_gradient": "",
+          "text": "#fff",
           "button": "#121212",
           "button_label": "#ffffff",
           "secondary_button_label": "#121212",

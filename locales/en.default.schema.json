@@ -114,6 +114,9 @@
     "colors": {
       "name": "Colors",
       "settings": {
+        "overlay_text": {
+          "label": "Overlay text"
+        },
         "background": {
           "label": "Background"
         },
@@ -1161,6 +1164,9 @@
     "header": {
       "name": "Header",
       "settings": {
+        "enable_transparent_menu": {
+          "label": "Enable transparent menu"
+        },
         "menu_text_size": {
           "label": "Menu text size"
         },

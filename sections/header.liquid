@@ -93,7 +93,42 @@
   .header {
     padding: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px 3rem {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px 3rem;
   }
-
+  {% if section.settings.enable_transparent_menu and template.name == 'index' %}
+    .header-wrapper {
+      margin-bottom: -100%;
+      background: transparent;
+    }
+    .header__menu-item {
+      color: rgba(var(--color-overlay-text), 1);
+    }
+    .header__active-menu-item {
+      color: rgba(var(--color-overlay-text), 1);
+    }
+    .header__icon .icon {
+      fill: rgba(var(--color-overlay-text));
+      stroke: rgba(var(--color-overlay-text));
+      color: rgba(var(--color-overlay-text));
+    }
+    .header__icon {
+      color: rgb(var(--color-overlay-text));
+      stroke: rgb(var(--color-overlay-text));
+      fill: rgb(var(--color-overlay-text));
+    }
+    {%- else -%}
+    .header__active-menu-item {
+      color: rgba(var(--color-text), 1);
+    }
+    .header__icon .icon {
+      fill: rgba(var(--color-text));
+      stroke: rgba(var(--color-text));
+      color: rgba(var(--color-text));
+    }
+    .header__icon {
+      color: rgb(var(--color-text));
+      stroke: rgb(var(--color-text));
+      fill: rgb(var(--color-text));
+    }
+    {% endif %}
   .section-header {
     position: sticky; /* This is for fixing a Safari z-index issue. PR #2147 */
     margin-bottom: {{ section.settings.margin_bottom | times: 0.75 | round: 0 }}px;
@@ -566,6 +601,12 @@
       "default": "dropdown",
       "label": "t:sections.header.settings.menu_type_desktop.label",
       "info": "t:sections.header.settings.menu_type_desktop.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_transparent_menu",
+      "default": true,
+      "label": "t:sections.header.settings.enable_transparent_menu.label"
     },
     {
       "type": "select",

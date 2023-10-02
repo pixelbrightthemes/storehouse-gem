@@ -20,7 +20,7 @@
 }
 
 .collection-card-wrapper .card,
-.contains-card--collection {
+.contains-card--collection {  
   --border-radius: var(--collection-card-corner-radius);
   --border-width: var(--collection-card-border-width);
   --border-opacity: var(--collection-card-border-opacity);
@@ -94,7 +94,6 @@
 .btn-box-shadow {
   box-shadow: 0 1px 1px rgba(var(--color-normal-button-bg), 0.25), 0 1px 1px rgba(var(--color-normal-button-bg), 0.2), 0 2px 2px rgba(var(--color-normal-button-bg), 0.15), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(var(--color-normal-button-bg), 0.05);
 }
-
 .menu-shadow {
   /*box-shadow: 8px 8px rgba(var(--color-text), 0.05);*/
   box-shadow: 0 0.5px 1px rgba(var(--color-text), 0.2);
@@ -164,7 +163,8 @@
 }
 
 .btn-shadow {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(var(--color-button-bg), 0.1), 0 6px 20px 0 rgba(var(--color-button-bg), 0.1);
+  /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
 }
 
 .popup-shadow {
@@ -417,7 +417,7 @@ h5,
 
 @media only screen and (min-width: 750px) {
   .h0 {
-    font-size: calc(var(--font-heading-scale) * 5.2rem);
+    font-size: calc(var(--font-heading-scale) * 4.778rem);
   }
 }
 
@@ -429,7 +429,7 @@ h1,
 @media only screen and (min-width: 750px) {
   h1,
   .h1 {
-    font-size: calc(var(--font-heading-scale) * 4rem);
+    font-size: calc(var(--font-heading-scale) * 3.79rem);
   }
 }
 
@@ -441,7 +441,7 @@ h2,
 @media only screen and (min-width: 750px) {
   h2,
   .h2 {
-    font-size: calc(var(--font-heading-scale) * 2.4rem);
+    font-size: calc(var(--font-heading-scale) * 2.843rem);
   }
 }
 
@@ -453,7 +453,7 @@ h3,
 @media only screen and (min-width: 750px) {
   h3,
   .h3 {
-    font-size: calc(var(--font-heading-scale) * 1.8rem);
+    font-size: calc(var(--font-heading-scale) * 2.765rem);
   }
 }
 
@@ -461,7 +461,7 @@ h4,
 .h4 {
   font-family: var(--font-heading-family);
   font-style: var(--font-heading-style);
-  font-size: calc(var(--font-heading-scale) * 1.5rem);
+  font-size: calc(var(--font-heading-scale) * 2.304rem);
 }
 
 h5,
@@ -472,12 +472,13 @@ h5,
 @media only screen and (min-width: 750px) {
   h5,
   .h5 {
-    font-size: calc(var(--font-heading-scale) * 1.3rem);
+    font-size: calc(var(--font-heading-scale) * 1.92rem);
   }
 }
 
 h6,
 .h6 {
+  font-size: calc(var(--font-heading-scale) * 1.6rem);
   color: rgba(var(--color-text), 1);
   margin-block-start: 1.67em;
   margin-block-end: 1.67em;
@@ -1339,7 +1340,7 @@ deferred-media {
 }
 .button--secondary,
 .button--tertiary {
-  --color-button: var(--color-secondary-button);
+  --color-button-bg: var(--color-secondary-button);
   --color-button-text: var(--color-secondary-button-text);
 }
 
@@ -1383,7 +1384,7 @@ button.shopify-payment-button__button--unbranded {
     rgba(var(--color-shadow), var(--shadow-opacity));
 }
 .pbutton {
-  background-color: rgba(var(--color-button), var(--alpha-button-background));
+  background-color: rgba(var(--color-button-bg), var(--alpha-button-background));
   color: rgba(var(--color-button-text));
 }
 .button,
@@ -1402,7 +1403,7 @@ button.shopify-payment-button__button--unbranded {
   transition: box-shadow var(--duration-short) ease;
   -webkit-appearance: none;
   appearance: none;
-  background-color: rgba(var(--color-button), var(--alpha-button-background));
+  background-color: rgba(var(--color-button-bg), var(--alpha-button-background));
 }
 
 .button:before,
@@ -1437,7 +1438,7 @@ button.shopify-payment-button__button--unbranded {
   border-radius: var(--buttons-radius);
   box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset))
       rgba(var(--color-button-text), var(--border-opacity)),
-    0 0 0 var(--buttons-border-width) rgba(var(--color-button), var(--alpha-button-background));
+    0 0 0 var(--buttons-border-width) rgba(var(--color-button-bg), var(--alpha-button-background));
   transition: box-shadow var(--duration-short) ease;
 }
 
@@ -1448,7 +1449,7 @@ button.shopify-payment-button__button--unbranded {
   --border-offset: 1.3px;
   box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset))
       rgba(var(--color-button-text), var(--border-opacity)),
-    0 0 0 calc(var(--buttons-border-width) + 1px) rgba(var(--color-button), var(--alpha-button-background));
+    0 0 0 calc(var(--buttons-border-width) + 1px) rgba(var(--color-button-bg), var(--alpha-button-background));
 }
 
 .button--secondary:after {
@@ -2245,7 +2246,7 @@ product-info .loading-overlay:not(.hidden) ~ *,
   height: 4.4rem;
   border-radius: 50%;
   width: 4.4rem;
-  background-color: rgba(var(--color-button), 1);
+  background-color: rgba(var(--color-button-bg), 1);
   color: rgba(var(--color-button-text), 1);
 }
 
@@ -2283,7 +2284,7 @@ product-info .loading-overlay:not(.hidden) ~ *,
 
 .cart-count-bubble {
   position: absolute;
-  background-color: rgb(var(--color-button));
+  background-color: rgb(var(--color-button-bg));
   color: rgb(var(--color-button-text));
   height: 1.7rem;
   width: 1.7rem;
@@ -2727,11 +2728,7 @@ product-info .loading-overlay:not(.hidden) ~ *,
   position: absolute;
   top: 1px;
 }
-.header__icon {
-  color: rgb(var(--color-text));
-  stroke: rgb(var(--color-text));
-  fill: rgb(var(--color-text));
-}
+
 
 .header__icon span {
   height: 100%;
@@ -2755,8 +2752,7 @@ product-info .loading-overlay:not(.hidden) ~ *,
 }
 .header__icon .icon {
   height: 3rem;
-  width: 3rem;
-  fill: none;
+  width: 3rem;  
   vertical-align: middle;
 }
 .header__icon .icon-cart {
@@ -3041,8 +3037,7 @@ details[open] > .header__menu-item .icon-caret {
 }
 
 .header__active-menu-item {
-  transition: text-decoration-thickness var(--duration-short) ease;
-  color: rgb(var(--color-text));
+  transition: text-decoration-thickness var(--duration-short) ease;  
  /* text-decoration: underline;
   text-underline-offset: 0.3rem;*/
 }
@@ -3759,7 +3754,7 @@ details-disclosure > details {
     --border-offset: 0.3px; /* Default is 1.3px as defined above in this file. This removes 1px to prevent the border from growing on buttons when this effect is on.  */
     box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset))
         rgba(var(--color-button-text), var(--border-opacity)),
-      0 0 0 var(--buttons-border-width) rgba(var(--color-button), var(--alpha-button-background));
+      0 0 0 var(--buttons-border-width) rgba(var(--color-button-bg), var(--alpha-button-background));
   }
 
   .animate--hover-vertical-lift .button:not([disabled]).button--secondary:hover:after {

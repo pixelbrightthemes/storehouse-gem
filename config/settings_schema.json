@@ -93,6 +93,12 @@
             "id": "links",
             "label": "t:settings_schema.colors.settings.links.label",
             "default": "#121212"
+          },
+          {
+            "type": "color",
+            "id": "overlay_text",
+            "label": "t:settings_schema.colors.settings.overlay_text.label",
+            "default": "#ffffff"
           }
         ],
         "role": {

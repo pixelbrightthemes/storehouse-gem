@@ -8,7 +8,7 @@ document.addEventListener('shopify:block:select', function (event) {
   const blockSelectedIsSlide = event.target.classList.contains('slideshow__slide');
   if (!blockSelectedIsSlide) return;
 
-  const parentSlideshowComponent = event.target.closest('slideshow-component');
+  const parentSlideshowComponent = event.target.closest('storehouse-slideshow-component');
   parentSlideshowComponent.pause();
 
   setTimeout(function () {
@@ -21,7 +21,7 @@ document.addEventListener('shopify:block:select', function (event) {
 document.addEventListener('shopify:block:deselect', function (event) {
   const blockDeselectedIsSlide = event.target.classList.contains('slideshow__slide');
   if (!blockDeselectedIsSlide) return;
-  const parentSlideshowComponent = event.target.closest('slideshow-component');
+  const parentSlideshowComponent = event.target.closest('storehouse-slideshow-component');
   if (parentSlideshowComponent.autoplayButtonIsSetToPlay) parentSlideshowComponent.play();
 });
 

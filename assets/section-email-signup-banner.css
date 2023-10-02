@@ -33,7 +33,7 @@
   .email-signup-banner:not(.banner--mobile-bottom) .banner__box:not(.email-signup-banner__box--no-image) {
     background-color: transparent;
     --color-text: 255, 255, 255;
-    --color-button: 255, 255, 255;
+    --color-button-bg: 255, 255, 255;
     --color-button-text: 0, 0, 0;
   }
 }

@@ -96,8 +96,8 @@ h2,
   border: none;
   padding: 1.5rem 3rem;
   text-decoration: none;
-  background-color: rgb(var(--color-button));
-  box-shadow: 0 0 0 0.1rem rgb(var(--color-button));
+  background-color: rgb(var(--color-button-bg));
+  box-shadow: 0 0 0 0.1rem rgb(var(--color-button-bg));
   color: rgb(var(--color-button-label));
   min-width: 12rem;
   height: auto;
@@ -111,7 +111,7 @@ h2,
 }
 
 .button:hover {
-  box-shadow: 0 0 0 0.2rem rgb(var(--color-button));
+  box-shadow: 0 0 0 0.2rem rgb(var(--color-button-bg));
 }
 
 .button--secondary {
@@ -276,7 +276,7 @@ h2,
 }
 
 .button:focus-visible {
-  box-shadow: 0 0 0 0.1rem rgb(var(--color-button)), 0 0 0 0.3rem rgb(var(--color-bg)),
+  box-shadow: 0 0 0 0.1rem rgb(var(--color-button-bg)), 0 0 0 0.3rem rgb(var(--color-bg)),
     0 0 0.5rem 0.4rem rgba(var(--color-text), 0.3);
 }
 
@@ -287,7 +287,7 @@ h2,
 }
 
 .button:focus {
-  box-shadow: 0 0 0 0.1rem rgb(var(--color-button)), 0 0 0 0.3rem rgb(var(--color-bg)),
+  box-shadow: 0 0 0 0.1rem rgb(var(--color-button-bg)), 0 0 0 0.3rem rgb(var(--color-bg)),
     0 0 0.5rem 0.4rem rgba(var(--color-text), 0.3);
 }
 

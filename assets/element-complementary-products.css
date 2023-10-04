@@ -76,7 +76,7 @@ product-recommendations.is-accordion + .accordion {
 }
 
 .complementary-products__container .card--card .card__content,
-.complementary-products__container .card--horizontal .card__information {
+.complementary-products__container .card--horizontal .card__info {
   padding: 0;
 }
 
@@ -94,7 +94,7 @@ product-recommendations.is-accordion + .accordion {
   grid-template-rows: minmax(0, 1fr) max-content auto;
 }
 
-.complementary-products__container .card--card.card--media > .card__content {
+.complementary-products__container .card--card.card--visual > .card__content {
   margin-top: 0;
 }
 
@@ -106,7 +106,7 @@ product-recommendations.is-accordion + .accordion {
   text-decoration: underline;
 }
 
-.complementary-products__container .card--card .card__inner .card__media {
+.complementary-products__container .card--card .card__inner .card__visual {
   border-radius: calc(var(--corner-radius) - var(--border-width) - var(--image-padding));
 }
 

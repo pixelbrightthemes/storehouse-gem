@@ -65,7 +65,7 @@
     padding: 0 5rem;
   }
 
-  .collection storehouse-slider-component:not(.page-width-desktop) {
+  .collection storehouse-slider-component:not(.page--width-desktop) {
     padding: 0;
   }
 

@@ -90,7 +90,7 @@ cart-drawer:not(.is-empty) .cart-drawer__collection {
   height: 4.4rem;
   position: absolute;
   top: 10px;
-  right: 6rem;
+  right: 2rem;
   border-radius: 50%;
   color: rgb(var(--color-button-text));
   background-color: rgba(var(--color-button-bg));

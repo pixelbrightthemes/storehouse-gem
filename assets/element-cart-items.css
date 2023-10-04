@@ -7,8 +7,8 @@
 .cart-items th {
   text-align: left;
   padding-bottom: 1.8rem;
-  opacity: 0.85;
-  font-weight: normal;
+  opacity: 0.9;
+  font-weight: bold;
 }
 
 .cart-item__quantity-wrapper {
@@ -206,7 +206,7 @@ cart-remove-button .icon-remove {
 }
 
 .cart-items thead th {
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 @media screen and (max-width: 749px) {

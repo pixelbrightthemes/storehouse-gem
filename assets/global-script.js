@@ -1217,7 +1217,69 @@ class StorehouseVariantSelects extends HTMLElement {
 }
 
 customElements.define('variant-selects', StorehouseVariantSelects);
+class CountdownTimer extends HTMLElement {
+  constructor() {
+    super();
+    this.countDownUl = this.querySelector('[id^="countdown-timer-"]');
+    this.countDownEndDate = this.querySelector(".countdownEndDate");
+    this.countDownEndDate.addEventListener(
+      "change",
+      this.updateTimer.bind(this)
+    );
+    this.days = this.querySelector('[id^="DaysSpan-"]');
+    const daysspan = this.days;
+    this.hours = this.querySelector('[id^="HoursSpan-"]');
+    this.minutes = this.querySelector('[id^="MinutesSpan-"]');
+    this.seconds = this.querySelector('[id^="SecondsSpan-"]');
+    this.sectionid = this.countDownUl.getAttribute("sectionid");
+    this.init();
+  }
+  init() {
+    const x = setInterval(this.timer.bind(this), 1000);
+    this.timer(x);
+  }
+  updateTimer() {
+    const x = setInterval(this.timer.bind(this), 1000);
+    this.timer(x);
+  }
+  timer(x) {
+    const second = 1000,
+      minute = second * 60,
+      hour = minute * 60,
+      day = hour * 24;
+    let today = new Date(),
+      dd = String(today.getDate()).padStart(2, "0"),
+      mm = String(today.getMonth() + 1).padStart(2, "0"),
+      yyyy = today.getFullYear(),
+      nextYear = yyyy + 1,
+      dayMonth = "09/30/",
+      birthday = dayMonth + yyyy;
 
+    today = mm + "/" + dd + "/" + yyyy;
+    const countdownenddate = this.countDownUl.value;
+
+    const daysspan = this.days;
+    const countDown = new Date(countdownenddate).getTime();
+    const now = new Date().getTime();
+    const distance = countDown - now;
+
+    if (!isNaN(distance)) {
+      if (this.days) this.days.innerText = Math.floor(distance / day) + 1;
+      if (this.hours)
+        this.hours.innerText = Math.floor((distance % day) / hour);
+      if (this.minutes)
+        this.minutes.innerText = Math.floor((distance % hour) / minute);
+      if (this.seconds)
+        this.seconds.innerText = Math.floor((distance % minute) / second);
+    }
+    //do something later when date is reached
+    if (distance < 0) {
+      if (x) clearInterval(x);
+    }
+  }
+}
+
+customElements.define("countdown-timer", CountdownTimer);
 class StorehouseVariantRadios extends StorehouseVariantSelects {
   constructor() {
     super();

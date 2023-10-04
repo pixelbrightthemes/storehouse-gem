@@ -27,6 +27,12 @@ document.addEventListener('shopify:block:deselect', function (event) {
 
 document.addEventListener('shopify:section:load', () => {
   hideProductModal();
+  setTimeout(() => {      
+    var slideshowImages = document.querySelectorAll('.slideshow__media img'); 
+    slideshowImages.forEach(sliderImage => {
+      sliderImage.style.opacity = 1;  
+    });   
+    }, 100); 
   const zoomOnHoverScript = document.querySelector('[id^=EnableZoomOnHover]');
   if (!zoomOnHoverScript) return;
   if (zoomOnHoverScript) {

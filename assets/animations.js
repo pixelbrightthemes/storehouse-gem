@@ -33,7 +33,7 @@ function initializeScrollAnimationTrigger(rootEl = document, isDesignModeEvent =
   }
 
   const observer = new IntersectionObserver(onIntersection, {
-    rootMargin: '0px 0px -50px 0px',
+    rootMargin: '0px 0px -100px 0px',
   });
   animationTriggerElements.forEach((element) => observer.observe(element));
 }
@@ -46,8 +46,7 @@ function initializeScrollZoomAnimationTrigger() {
 
   if (animationTriggerElements.length === 0) return;
 
-  const scaleAmount = 0.2 / 100;
-
+  const scaleAmount = 1 / 100;
   animationTriggerElements.forEach((element) => {
     let elementIsVisible = false;
     const observer = new IntersectionObserver((elements) => {

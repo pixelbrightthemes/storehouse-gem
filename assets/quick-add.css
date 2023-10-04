@@ -44,7 +44,7 @@
   width: 100%;
   background-color: rgb(var(--color-bg));
   overflow: hidden;
-  max-width: var(--page-width);
+  max-width: var(--page--width);
   width: calc(100% - 3rem);
 }
 
@@ -185,7 +185,7 @@ quick-add-modal .product__column-sticky {
   }
 }
 
-quick-add-modal .page-width {
+quick-add-modal .page--width {
   padding: 0;
 }
 

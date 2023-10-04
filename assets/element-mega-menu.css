@@ -25,15 +25,23 @@
 }
 
 .js .mega-menu__content {
-  opacity: 0;
-  transform: translateY(-1.5rem);
+  opacity: 0.01;
 }
 
 .mega-menu[open] .mega-menu__content {
   opacity: 1;
-  transform: translateY(0);
+  animation: fadeIn 0.3s cubic-bezier(0.65, 0, 0.35, 1) forwards;   
+  border-top: 0;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0.01;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .mega--menu {
   display: grid;
   gap: 1.8rem 4rem;  
@@ -47,15 +55,9 @@
   padding-bottom: 0.6rem;
   padding-top: 0.6rem;
   text-decoration: none;
-  transition: text-decoration var(--duration-short) ease;
+  /*transition: text-decoration var(--duration-short) ease;*/
   word-wrap: break-word;
-  font-weight: normal;
 }
-
-.mega-menu__link--level-2 {
-  font-weight: bold;
-}
-
 .header--top-center .mega--menu {
   display: flex;
   justify-content: center;

@@ -31,7 +31,7 @@
                 tabindex="-1"
               >
                 <ul
-                  class="mega--menu page-width{% if link.levels == 1 %} mega--menu--condensed{% endif %}"
+                  class="mega--menu page--width{% if link.levels == 1 %} mega--menu--condensed{% endif %}"
                   role="list"
                 >
                   {%- for childlink in link.links -%}
@@ -39,7 +39,7 @@
                       <a
                         id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
                         href="{{ childlink.url }}"
-                        class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"
+                        class="mega-menu__link mega-menu__link--level-2 bold link{% if childlink.current %} mega-menu__link--active{% endif %}"
                         {% if childlink.current %}
                           aria-current="page"
                         {% endif %}

@@ -124,12 +124,23 @@
     "settings": [
       {
         "type": "header",
+        "content": "t:settings_schema.typography.settings.header__0.content"
+      },
+      {
+        "type": "font_picker",
+        "id": "type_navigation_font",
+        "default": "work_sans_n6",
+        "label": "t:settings_schema.typography.settings.type_navigation_font.label",
+        "info": "t:settings_schema.typography.settings.type_navigation_font.info"
+      },
+      {
+        "type": "header",
         "content": "t:settings_schema.typography.settings.header__1.content"
       },
       {
         "type": "font_picker",
         "id": "type_header_font",
-        "default": "assistant_n4",
+        "default": "work_sans_n6",
         "label": "t:settings_schema.typography.settings.type_header_font.label",
         "info": "t:settings_schema.typography.settings.type_header_font.info"
       },
@@ -169,7 +180,7 @@
       {
         "type": "font_picker",
         "id": "type_body_font",
-        "default": "assistant_n4",
+        "default": "work_sans_n6",
         "label": "t:settings_schema.typography.settings.type_body_font.label",
         "info": "t:settings_schema.typography.settings.type_body_font.info"
       },
@@ -531,7 +542,7 @@
         "id": "card_style",
         "options": [
           {
-            "value": "standard",
+            "value": "std",
             "label": "t:settings_schema.cards.settings.style.options__1.label"
           },
           {
@@ -539,7 +550,7 @@
             "label": "t:settings_schema.cards.settings.style.options__2.label"
           }
         ],
-        "default": "standard",
+        "default": "std",
         "label": "t:settings_schema.cards.settings.style.label"
       },
       {
@@ -666,7 +677,7 @@
         "id": "collection_card_style",
         "options": [
           {
-            "value": "standard",
+            "value": "std",
             "label": "t:settings_schema.collection_cards.settings.style.options__1.label"
           },
           {
@@ -674,7 +685,7 @@
             "label": "t:settings_schema.collection_cards.settings.style.options__2.label"
           }
         ],
-        "default": "standard",
+        "default": "std",
         "label": "t:settings_schema.collection_cards.settings.style.label"
       },
       {
@@ -801,7 +812,7 @@
         "id": "blog_card_style",
         "options": [
           {
-            "value": "standard",
+            "value": "std",
             "label": "t:settings_schema.blog_cards.settings.style.options__1.label"
           },
           {
@@ -809,7 +820,7 @@
             "label": "t:settings_schema.blog_cards.settings.style.options__2.label"
           }
         ],
-        "default": "standard",
+        "default": "std",
         "label": "t:settings_schema.blog_cards.settings.style.label"
       },
       {

@@ -1,0 +1,162 @@
+{% comment %}
+  Renders a collection card
+
+  Accepts:
+  - card_collection: {Object} Collection Liquid object
+  - media_aspect_ratio: {String} Size of the product image card. Values are "square" and "portrait". Default is "square" (optional)
+  - columns: {Number}
+  - extend_height: {Boolean} Card height extends to available container space. Default: false (optional)
+  - wrapper_class: {String} Wrapper class for card (optional)
+  - placeholder_image: {String} Placeholder image when collection is empty (optional)
+
+  Usage:
+  {% render 'collection-card' %}
+{% endcomment %}
+
+{%- liquid
+    assign ratio = 1
+    if media_aspect_ratio == 'portrait'
+      assign ratio = 0.8
+    elsif media_aspect_ratio == 'landscape'
+      assign ratio = 1.5
+    elsif media_aspect_ratio == 'adapt'
+      if image
+        assign ratio = image.aspect_ratio
+      else
+        assign ratio = 1
+      endif      
+    endif
+    if ratio == 0 or ratio == null
+      assign ratio = 1
+    endif
+    assign card_color_scheme = settings.card_color_scheme
+    assign card_style = settings.card_style
+    if wrapper_class == null or wrapper_class == 'none'
+      assign card_color_scheme = settings.collection_card_color_scheme
+      assign card_style = settings.collection_card_style
+    endif
+  -%}
+  <div class="card-wrapper animate-arrow {% if wrapper_class and wrapper_class != 'none' %}{{ wrapper_class }}{% else %}collection-card-wrapper{% endif %}">
+    <div
+      class="relative
+        card
+        card--{{ card_style }}
+        {% if image %} card--visual{% else %} card--text{% endif %}
+        {% if card_style == 'card' %} color-{{ card_color_scheme }} gradient{% endif %}
+        {% if extend_height %} card--extend-height{% endif %}
+        {% if image == nil and card_style == 'card' %} ratio{% endif %}
+      "
+      style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
+    >
+      <div
+        class="card__inner{% if image or card_style == 'standard' %} ratio{% endif %}"
+        style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
+      >       
+          <div class="card__visual">
+            <div class="media media--transparent media--hover-effect">
+                {%- if image -%}
+              <img
+                srcset="
+                  {%- if image.width >= 165 -%}{{ image | image_url: width: 165 }} 165w,{%- endif -%}
+                  {%- if image.width >= 330 -%}{{ image | image_url: width: 330 }} 330w,{%- endif -%}
+                  {%- if image.width >= 535 -%}{{ image | image_url: width: 535 }} 535w,{%- endif -%}
+                  {%- if image.width >= 750 -%}{{ image | image_url: width: 750 }} 750w,{%- endif -%}
+                  {%- if image.width >= 1000 -%}{{ image | image_url: width: 1000 }} 1000w,{%- endif -%}
+                  {%- if image.width >= 1500 -%}{{ image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                  {%- if image.width >= 3000 -%}{{ image | image_url: width: 3000 }} 3000w,{%- endif -%}
+                  {{ image | image_url }} {{ image.width }}w
+                "
+                src="{{ image | image_url: width: 1500 }}"
+                sizes="
+                  (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: columns }}px,
+                  (min-width: 750px) {% if columns > 1 %}calc((100vw - 10rem) / 2){% else %}calc(100vw - 10rem){% endif %},
+                  calc(100vw - 3rem)
+                "
+                alt=""
+                height="{{ image.height }}"
+                width="{{ image.width }}"
+                loading="lazy"
+                class="motion-reduce"
+              >
+                {%- else -%}
+                {{ placeholder_image | placeholder_svg_tag: 'placeholder-svg' }}
+            {%- endif -%}
+            </div>
+          </div>
+          <div class="card__content absolute text-{{ text_alignment }}">
+            <div class="card__info">
+              <div class="card__heading h3">
+                <a
+                  {% if link_url == blank %}
+                    role="link" aria-disabled="true"
+                  {% else %}
+                    href="{{ link_url.url }}"
+                  {% endif %}
+                  class="full-unstyled-link{% if text_weight == 'bold' %} bold{% endif %}"
+                >
+                  {%- if heading != blank -%}
+                    {{- heading -}}
+                  {%- else -%}
+                    {{ 'onboarding.collection_title' | t }}
+                  {%- endif -%}
+                  {%- if link_label != blank -%}
+                    <button
+                        type="button"
+                        class="button button--secondary btn-shadow"
+                        name="previous"
+                        aria-label="{{ 'general.slider.previous_slide' | t }}"
+                      >
+                        {{ link_label }} {% render 'icon-arrow', icontype: '-btn' %}
+                      </button>
+                  {%- endif %}
+                </a>
+              </div>
+              {%- if description != blank -%}
+                <p class="card__caption">
+                  {{- description | strip_html | truncatewords: 12 -}}
+                  <span class="icon-wrap">&nbsp;{% render 'icon-arrow' %}</span>
+                </p>
+                
+              {%- endif -%}
+            </div>
+          </div>
+      </div>
+        <div class="card__content absolute text-{{ text_alignment }}">
+          <div class="card__info">
+            <h3 class="card__heading">
+              <a
+                {% if link_url == blank %}
+                  role="link" aria-disabled="true"
+                {% else %}
+                  href="{{ link_url.url }}"
+                {% endif %}
+                class="full-unstyled-link overlay-text{% if text_weight == 'bold' %} bold{% endif %}"
+              >
+                {%- if heading != blank -%}
+                  {{- heading -}}
+                {%- else -%}
+                  {{ 'onboarding.promotion_text' | t }}
+                {%- endif -%}                
+              </a>
+            </h3>
+            {%- if link_label != blank -%}
+              <button
+                type="button"
+                class="button button--secondary btn-shadow"
+                name="previous"
+                aria-label="{{ 'general.slider.previous_slide' | t }}"
+              >
+                {{ link_label }} {% render 'icon-arrow', icontype: '-btn' %}
+              </button>
+            {%- endif %}
+            {%- if image == null and description != blank -%}
+              <p class="card__caption">
+                {{- description | strip_html | truncatewords: 12 -}}
+                <span class="icon-wrap">&nbsp;{% render 'icon-arrow' %}</span>
+              </p>
+            {%- endif -%}
+          </div>
+        </div>
+    </div>
+  </div>
+  

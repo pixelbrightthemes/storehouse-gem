@@ -48,7 +48,7 @@
       "settings": {
         "style": {
           "options__1": {
-            "label": "Standard"
+            "label": "std"
           },
           "options__2": {
             "label": "Card"
@@ -62,7 +62,7 @@
       "settings": {
         "style": {
           "options__1": {
-            "label": "Standard"
+            "label": "std"
           },
           "options__2": {
             "label": "Card"
@@ -76,7 +76,7 @@
       "settings": {
         "style": {
           "options__1": {
-            "label": "Standard"
+            "label": "std"
           },
           "options__2": {
             "label": "Card"
@@ -186,6 +186,10 @@
     "typography": {
       "name": "Typography",
       "settings": {
+        "type_navigation_font": {
+          "label": "Font",
+          "info": "Selecting a different font can affect the speed of your store. [Learn more about system fonts.](https:\/\/help.shopify.com\/manual\/online-store\/os\/store-speed\/improving-speed#fonts)"
+        },
         "type_header_font": {
           "label": "Font",
           "info": "Selecting a different font can affect the speed of your store. [Learn more about system fonts.](https:\/\/help.shopify.com\/manual\/online-store\/os\/store-speed\/improving-speed#fonts)"
@@ -198,6 +202,9 @@
         },
         "heading_line_height": {
           "label": "Letter line height"
+        },
+        "header__0": {
+          "content": "Navigation"
         },
         "header__1": {
           "content": "Headings"
@@ -572,14 +579,6 @@
         "name": "Announcement bar"
       }
     },
-    "countdown-timer": {
-      "name": "Countdown timer",
-      "settings": {
-      },
-      "presets": {
-        "name": "Countdown timer"
-      }
-    },
     "scrolling-text": {
       "name": "Scrolling text",
       "settings": {
@@ -780,6 +779,73 @@
       },
       "presets": {
         "name": "Collection list"
+      }
+    },
+    "image-gallery": {
+      "name": "Promotion gallery",
+      "settings": {
+        "title": {
+          "label": "Heading"
+        },
+        "image_ratio": {
+          "label": "Image ratio",
+          "options__1": {
+            "label": "Adapt to image"
+          },
+          "options__2": {
+            "label": "Portrait"
+          },
+          "options__3": {
+            "label": "Square"
+          },
+          "options__4": {
+            "label": "Landscape"
+          },
+          "info": "Add images by editing your collections. [Learn more](https:\/\/help.shopify.com\/manual\/products\/collections)"
+        },
+        "columns_desktop": {
+          "label": "Number of columns on desktop"
+        },
+        "show_view_all": {
+          "label": "Enable \"View all\" button if list includes more collections than shown"
+        },
+        "header_mobile": {
+          "content": "Mobile Layout"
+        },
+        "columns_mobile": {
+          "label": "Number of columns on mobile",
+          "options__1": {
+            "label": "1 column"
+          },
+          "options__2": {
+            "label": "2 columns"
+          }
+        },
+        "swipe_on_mobile": {
+          "label": "Enable swipe on mobile"
+        }
+      },
+      "blocks": {
+        "image": {
+          "name": "Image",
+          "settings": {
+            "image": {
+              "label": "Image"
+            },
+            "caption": {
+              "label": "Caption"
+            },
+            "heading": {
+              "label": "Heading"
+            },
+            "description": {
+              "label": "Description"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Promotion gallery"
       }
     },
     "contact-form": {
@@ -1274,6 +1340,9 @@
     "image-banner": {
       "name": "Image banner",
       "settings": {
+        "show_border": {
+          "label": "Show border"
+        },
         "image": {
           "label": "First image"
         },
@@ -2682,6 +2751,9 @@
         "title": {
           "label": "Heading"
         },
+        "column_heading_size": {
+          "label": "Column heading size"
+        },
         "image_width": {
           "label": "Image width",
           "options__1": {
@@ -3153,6 +3225,134 @@
         "name": "Rich text"
       }
     },
+    "countdown-timer": {
+      "name": "Countdown timer",
+      "settings": {
+        "desktop_content_position": {
+          "options__1": {
+            "label": "Left"
+          },
+          "options__2": {
+            "label": "Center"
+          },
+          "options__3": {
+            "label": "Right"
+          },
+          "label": "Desktop content position",
+          "info": "Position is automatically optimized for mobile."
+        },
+        "content_alignment": {
+          "options__1": {
+            "label": "Left"
+          },
+          "options__2": {
+            "label": "Center"
+          },
+          "options__3": {
+            "label": "Right"
+          },
+          "label": "Content alignment"
+        },
+        "full_width": {
+          "label": "Make section full width"
+        }
+      },
+      "blocks": {
+        "heading": {
+          "name": "Heading",
+          "settings": {
+            "heading": {
+              "label": "Heading"
+            }
+          }
+        },
+        "separator": {
+          "name": "Separator",
+          "settings": {
+            "show_separator_line": {
+              "label": "Show separator line"
+            },
+            "separator_width": {
+              "label": "Width"
+            },
+            "separator_thickness": {
+              "label": "Thickness"
+            },
+            "separator_padding_top": {
+              "label": "Top padding"
+            },
+            "separator_padding_bottom": {
+              "label": "Bottom padding"
+            }
+          }
+        },
+        "caption": {
+          "name": "Caption",
+          "settings": {
+            "text": {
+              "label": "Text"
+            },
+            "text_style": {
+              "label": "Text style",
+              "options__1": {
+                "label": "Subtitle"
+              },
+              "options__2": {
+                "label": "Uppercase"
+              }
+            },
+            "caption_size": {
+              "label": "Text size",
+              "options__1": {
+                "label": "Small"
+              },
+              "options__2": {
+                "label": "Medium"
+              },
+              "options__3": {
+                "label": "Large"
+              }
+            }
+          }
+        },
+        "text": {
+          "name": "Text",
+          "settings": {
+            "text": {
+              "label": "Description"
+            }
+          }
+        },
+        "buttons": {
+          "name": "Buttons",
+          "settings": {
+            "button_label_1": {
+              "label": "First button label",
+              "info": "Leave the label blank to hide the button."
+            },
+            "button_link_1": {
+              "label": "First button link"
+            },
+            "button_style_secondary_1": {
+              "label": "Use outline button style"
+            },
+            "button_label_2": {
+              "label": "Second button label",
+              "info": "Leave the label blank to hide the button."
+            },
+            "button_link_2": {
+              "label": "Second button link"
+            },
+            "button_style_secondary_2": {
+              "label": "Use outline button style"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Countdown timer"
+      }
+    },
     "video": {
       "name": "Video",
       "settings": {
@@ -3261,6 +3461,12 @@
         "slide": {
           "name": "Slide",
           "settings": {
+            "show_border": {
+              "label": "Show border"
+            },
+            "buttons": {
+              "content": "Buttons"
+            },
             "description": {
               "label": "Description"
             },
@@ -3273,12 +3479,19 @@
             "subheading": {
               "label": "Subheading"
             },
-            "button_label": {
-              "label": "Button label",
+            "button_label1": {
+              "label": "First button label",
               "info": "Leave the label blank to hide the button."
             },
-            "link": {
-              "label": "Button link"
+            "link1": {
+              "label": "First button link"
+            },
+            "button_label2": {
+              "label": "Second button label",
+              "info": "Leave the label blank to hide the button."
+            },
+            "link2": {
+              "label": "Second button link"
             },
             "secondary_style": {
               "label": "Use outline button style"

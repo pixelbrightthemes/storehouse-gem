@@ -25,7 +25,7 @@
   endif
 -%}
 <div class="blog color-{{ section.settings.color_scheme }} gradient{% if section.settings.heading == blank %} no-heading{% endif %}">
-  <div class="page-width-desktop setapart{% if posts_displayed < 3 %} page-width-tablet{% endif %} section-{{ section.id }}-padding">
+  <div class="page--width-desktop setapart{% if posts_displayed < 3 %} page--width-tablet{% endif %} section-{{ section.id }}-padding">
     {%- unless section.settings.heading == blank -%}
       <div class="title-wrapper-with-link{% if posts_displayed > 2 %} title-wrapper--self-padded-tablet-down{% else %} title-wrapper--self-padded-mobile{% endif %} title-wrapper--no-top-margin">
         <h2
@@ -55,7 +55,7 @@
       <storehouse-slider-component class="slider-mobile-gutter{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
         <ul
           id="Slider-{{ section.id }}"
-          class="blog__posts articles-wrapper contains-card contains-card--article{% if settings.blog_card_style == 'standard' %} contains-card--standard{% endif %} grid grid--peek grid--2-col-tablet grid--{{ section.settings.columns_desktop }}-col-desktop slider {% if posts_displayed > 2 %}slider--tablet{% else %}slider--mobile{% endif %}"
+          class="blog__posts articles-wrapper contains-card contains-card--article{% if settings.blog_card_style == 'standard' %} contains-card--std{% endif %} grid grid--peek grid--2-col-tablet grid--{{ section.settings.columns_desktop }}-col-desktop slider {% if posts_displayed > 2 %}slider--tablet{% else %}slider--mobile{% endif %}"
           role="list"
         >
           {%- if section.settings.blog != blank and section.settings.blog.articles_count > 0 -%}
@@ -94,21 +94,21 @@
               <div class="article-card-wrapper card-wrapper{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
                 <div class="card article-card card--{{ settings.blog_card_style }}
                     {% if settings.blog_card_style == 'card' %} color-{{ settings.blog_card_color_scheme }} gradient{% endif %}
-                    {% if section.settings.show_image %} card--media{% else %} card--text{% endif %}"
+                    {% if section.settings.show_image %} card--visual{% else %} card--text{% endif %}"
                    style=" {% if settings.blog_card_style == 'standard' %} --ratio-percent: 100%;{% elsif settings.blog_card_style == 'card' %} --ratio-percent: 0%;{% endif %}"
                 >
                   <div class="card__inner{% if settings.blog_card_style == 'standard' %} color-{{ settings.blog_card_color_scheme }} gradient{% endif %} ratio"
                     style="--ratio-percent: 80%;"
                   >
                     {%- if section.settings.show_image == true -%}
-                      <div class="article-card__image-wrapper card__media">
+                      <div class="article-card__image-wrapper card__visual">
                         <div class="article-card__image media">
                           {{ placeholder_image | placeholder_svg_tag: 'blog-placeholder-svg' }}
                         </div>
                       </div>
                     {%- endif -%}
                     <div class="card__content">
-                      <div class="card__information">
+                      <div class="card__info">
                         <h3 class="card__heading h2">
                           {{ 'sections.featured_blog.onboarding_title' | t }}
                         </h3>
@@ -119,7 +119,7 @@
                     </div>
                   </div>
                   <div class="card__content">
-                    <div class="card__information">
+                    <div class="card__info">
                       <h3 class="card__heading h2">
                         {{ 'sections.featured_blog.onboarding_title' | t }}
                       </h3>
@@ -286,7 +286,7 @@
       "step": 1,
       "unit": "px",
       "label": "t:sections.all.padding.padding_top",
-      "default": 36
+      "default": 40
     },
     {
       "type": "range",
@@ -296,7 +296,7 @@
       "step": 1,
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
-      "default": 36
+      "default": 40
     }
   ],
   "presets": [

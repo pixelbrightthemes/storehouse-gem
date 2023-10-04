@@ -10,7 +10,7 @@
   - placeholder_image: {String} Placeholder image when collection is empty (optional)
 
   Usage:
-  {% render 'card-collection' %}
+  {% render 'collection-card' %}
 {% endcomment %}
 
 {%- liquid
@@ -36,7 +36,7 @@
     class="relative
       card
       card--{{ card_style }}
-      {% if card_collection.featured_image %} card--media{% else %} card--text{% endif %}
+      {% if card_collection.featured_image %} card--visual{% else %} card--text{% endif %}
       {% if card_style == 'card' %} color-{{ card_color_scheme }} gradient{% endif %}
       {% if extend_height %} card--extend-height{% endif %}
       {% if card_collection.featured_image == nil and card_style == 'card' %} ratio{% endif %}
@@ -48,7 +48,7 @@
       style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
     >
       {%- if card_collection.featured_image -%}
-        <div class="card__media">
+        <div class="card__visual">
           <div class="media media--transparent media--hover-effect">
             <img
               srcset="
@@ -77,12 +77,12 @@
         </div>
       {%- endif -%}
       {%- if card_collection == blank -%}
-        <div class="card__media">
+        <div class="card__visual">
           {{ placeholder_image | placeholder_svg_tag: 'placeholder-svg' }}
         </div>
       {%- else -%}
-        <div class="card__content absolute text-{{ text_alignment }}">
-          <div class="card__information">
+        <div class="card__content hoverable-overlay absolute text-{{ text_alignment }}">
+          <div class="card__info">
             <div class="card__heading h3">
               <a
                 {% if card_collection == blank %}
@@ -90,16 +90,24 @@
                 {% else %}
                   href="{{ card_collection.url }}"
                 {% endif %}
-                class="full-unstyled-link{% if text_weight == 'bold' %} bold{% endif %}"
+                class="full-unstyled-link overlay-text{% if text_weight == 'bold' %} bold{% endif %}"
               >
-                {%- if card_collection.title != blank -%}
-                  {{- card_collection.title | escape -}}
-                {%- else -%}
-                  {{ 'onboarding.collection_title' | t }}
-                {%- endif -%}
-                {%- if card_collection.description == blank -%}
-                  <span class="icon-wrap">{% render 'icon-arrow' %}</span>
-                {%- endif %}
+                <div class="flex flex-h flex-gap-s align-items-center">
+                  <span class="colln-title-span text-left second-text h2">
+                    {%- if card_collection.title != blank -%}
+                    {{- card_collection.title | escape -}}
+                  {%- else -%}
+                    {{ 'onboarding.collection_title' | t }}
+                  {%- endif -%}
+                </span>
+                
+                <span class="colln-title-span right-arrow-span flex-center">
+                  <svg width="25" height="25" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.77899 1L13 4.5L9.77899 8" stroke="black" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M1 4.5H11.5474" stroke="black" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </span>
+              </div>
               </a>
             </div>
             {%- if card_collection.description != blank -%}
@@ -113,8 +121,8 @@
       {%- endif -%}
     </div>
     {%- if card_collection != blank and card_style == 'card' or card_collection.featured_image -%}
-      <div class="card__content absolute text-{{ text_alignment }}">
-        <div class="card__information">
+      <div class="card__content hoverable-overlay absolute width-100 text-{{ text_alignment }}">
+        <div class="card__info">
           <h3 class="card__heading">
             <a
               {% if card_collection == blank %}
@@ -124,14 +132,22 @@
               {% endif %}
               class="full-unstyled-link overlay-text{% if text_weight == 'bold' %} bold{% endif %}"
             >
-              {%- if card_collection.title != blank -%}
-                {{- card_collection.title | escape -}}
-              {%- else -%}
-                {{ 'onboarding.collection_title' | t }}
-              {%- endif -%}
-              {%- if card_collection.featured_image or card_collection.description == blank -%}
-                <span class="icon-wrap">{% render 'icon-arrow' %}</span>
-              {%- endif %}
+              <div class="flex flex-h flex-gap-s align-items-center">
+                <span class="colln-title-span text-left second-text h2">
+                  {%- if card_collection.title != blank -%}
+                  {{- card_collection.title | escape -}}
+                {%- else -%}
+                  {{ 'onboarding.collection_title' | t }}
+                {%- endif -%}
+              </span>
+              
+              <span class="colln-title-span right-arrow-span flex-center">
+                <svg width="25" height="25" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.77899 1L13 4.5L9.77899 8" stroke="black" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M1 4.5H11.5474" stroke="black" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </span>
+            </div>
             </a>
           </h3>
           {%- if card_collection.featured_image == null and card_collection.description != blank -%}
@@ -145,7 +161,7 @@
     {%- endif -%}
     {%- if card_collection == blank -%}
       <div class="card__content">
-        <div class="card__information">
+        <div class="card__info">
           <h3 class="card__heading card__heading--placeholder">
             <a role="link" aria-disabled="true" class="full-unstyled-link">
               {{ 'onboarding.collection_title' | t }}

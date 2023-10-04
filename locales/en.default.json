@@ -103,7 +103,7 @@
   "onboarding": {
     "product_title": "Example product title",
     "collection_title": "Your collection's name",
-    "promotion_text": "Add promotion description here"
+    "promotion_text": "Add promotion text here"
   },
   "products": {
     "product": {

@@ -111,8 +111,8 @@
       }}
     </div>
   {%- endif -%}
-  <div class="banner__content banner__content--{{ section.settings.desktop_content_position }} page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-    <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} gradient">
+  <div class="banner__content banner__content--{{ section.settings.desktop_content_position }} page--width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+    <div class="banner__box {% if section.settings.show_border %}banner_box_border{% endif %} content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} gradient">
       {%- for block in section.blocks -%}
         {%- case block.type -%}
           {%- when 'heading' -%}
@@ -270,6 +270,12 @@
       "label": "t:sections.image-banner.settings.show_text_box.label"
     },
     {
+      "type": "checkbox",
+      "id": "show_border",
+      "default": false,
+      "label": "t:sections.image-banner.settings.show_border.label"
+    },
+    {
       "type": "select",
       "id": "desktop_content_alignment",
       "options": [
@@ -364,7 +370,7 @@
     {
       "type": "heading",
       "name": "t:sections.image-banner.blocks.heading.name",
-      "limit": 1,
+      "limit": 2,
       "settings": [
         {
           "type": "inline_richtext",
@@ -397,7 +403,7 @@
     {
       "type": "text",
       "name": "t:sections.image-banner.blocks.text.name",
-      "limit": 1,
+      "limit": 2,
       "settings": [
         {
           "type": "inline_richtext",

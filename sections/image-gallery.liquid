@@ -72,10 +72,14 @@
           >
             {%- assign placeholder_image_index = forloop.index0 | modulo: 4 | plus: 1 -%}
             {%- assign placeholder_image = 'collection-apparel-' | append: placeholder_image_index -%}
-            {% render 'collection-card',
-              card_collection: block.settings.collection,
+            {% render 'promotion-card',
+              image: block.settings.image,
               media_aspect_ratio: section.settings.image_ratio,
               columns: columns,
+              heading: block.settings.heading,
+              description: block.settings.description,
+              link_url: block.settings.link_url,
+              link_label: block.settings.link_label,
               placeholder_image: placeholder_image,
               text_alignment: section.settings.text_alignment,
               text_weight: section.settings.text_weight
@@ -133,7 +137,7 @@
 
 {% schema %}
 {
-  "name": "t:sections.collection-list.name",
+  "name": "t:sections.image-gallery.name",
   "tag": "section",
   "class": "section section-collection-list",
   "max_blocks": 15,
@@ -147,8 +151,7 @@
     {
       "type": "inline_richtext",
       "id": "title",
-      "default": "Collections",
-      "label": "t:sections.collection-list.settings.title.label"
+      "label": "t:sections.image-gallery.settings.title.label"
     },
     {
       "type": "select",
@@ -198,20 +201,24 @@
       "options": [
         {
           "value": "adapt",
-          "label": "t:sections.collection-list.settings.image_ratio.options__1.label"
+          "label": "t:sections.image-gallery.settings.image_ratio.options__1.label"
         },
         {
           "value": "portrait",
-          "label": "t:sections.collection-list.settings.image_ratio.options__2.label"
+          "label": "t:sections.image-gallery.settings.image_ratio.options__2.label"
         },
         {
           "value": "square",
-          "label": "t:sections.collection-list.settings.image_ratio.options__3.label"
+          "label": "t:sections.image-gallery.settings.image_ratio.options__3.label"
+        },
+        {
+          "value": "landscape",
+          "label": "t:sections.image-gallery.settings.image_ratio.options__4.label"
         }
       ],
-      "default": "square",
-      "label": "t:sections.collection-list.settings.image_ratio.label",
-      "info": "t:sections.collection-list.settings.image_ratio.info"
+      "default": "landscape",
+      "label": "t:sections.image-gallery.settings.image_ratio.label",
+      "info": "t:sections.image-gallery.settings.image_ratio.info"
     },
     {
       "type": "range",
@@ -220,7 +227,7 @@
       "max": 5,
       "step": 1,
       "default": 3,
-      "label": "t:sections.collection-list.settings.columns_desktop.label"
+      "label": "t:sections.image-gallery.settings.columns_desktop.label"
     },
     {
       "type": "color_scheme",
@@ -233,11 +240,11 @@
       "type": "checkbox",
       "id": "show_view_all",
       "default": false,
-      "label": "t:sections.collection-list.settings.show_view_all.label"
+      "label": "t:sections.image-gallery.settings.show_view_all.label"
     },
     {
       "type": "header",
-      "content": "t:sections.collection-list.settings.header_mobile.content"
+      "content": "t:sections.image-gallery.settings.header_mobile.content"
     },
     {
       "type": "select",
@@ -245,21 +252,21 @@
       "options": [
         {
           "value": "1",
-          "label": "t:sections.collection-list.settings.columns_mobile.options__1.label"
+          "label": "t:sections.image-gallery.settings.columns_mobile.options__1.label"
         },
         {
           "value": "2",
-          "label": "t:sections.collection-list.settings.columns_mobile.options__2.label"
+          "label": "t:sections.image-gallery.settings.columns_mobile.options__2.label"
         }
       ],
       "default": "1",
-      "label": "t:sections.collection-list.settings.columns_mobile.label"
+      "label": "t:sections.image-gallery.settings.columns_mobile.label"
     },
     {
       "type": "checkbox",
       "id": "swipe_on_mobile",
       "default": false,
-      "label": "t:sections.collection-list.settings.swipe_on_mobile.label"
+      "label": "t:sections.image-gallery.settings.swipe_on_mobile.label"
     },
     {
       "type": "header",
@@ -288,29 +295,57 @@
   ],
   "blocks": [
     {
-      "type": "featured_collection",
-      "name": "t:sections.collection-list.blocks.featured_collection.name",
+      "type": "image",
+      "name": "t:sections.image-gallery.blocks.image.name",
       "settings": [
         {
-          "type": "collection",
-          "id": "collection",
-          "label": "t:sections.collection-list.blocks.featured_collection.settings.collection.label"
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.image-gallery.blocks.image.settings.image.label"
+        },
+        {
+          "type": "text",
+          "id": "caption",
+          "default": "Caption here",
+          "label": "t:sections.image-gallery.blocks.image.settings.caption.label"
+        },
+        {
+          "type": "richtext",
+          "id": "heading",
+          "default": "<h3>Add promotion text here</h3>",
+          "label": "t:sections.image-gallery.blocks.image.settings.heading.label"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "t:sections.image-gallery.blocks.image.settings.description.label"
+        },
+        {
+          "type": "text",
+          "id": "link_label",
+          "default": "SHOP NOW",
+          "label": "t:sections.image-gallery.blocks.image.settings.link_label.label"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "t:sections.image-gallery.blocks.image.settings.link_url.label"
         }
       ]
     }
   ],
   "presets": [
     {
-      "name": "t:sections.collection-list.presets.name",
+      "name": "t:sections.image-gallery.presets.name",
       "blocks": [
         {
-          "type": "featured_collection"
+          "type": "image"
         },
         {
-          "type": "featured_collection"
+          "type": "image"
         },
         {
-          "type": "featured_collection"
+          "type": "image"
         }
       ]
     }

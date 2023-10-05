@@ -76,6 +76,11 @@
           </div>
         </div>
       {%- endif -%}
+      {%- if overlay_badge_text != blank -%}
+      <div class="absolute card_colln_overlay flex flex-center overlay-{{ overlay_position }}">
+        <span>{{ overlay_badge_text }}</span>
+      </div>
+    {%- endif -%}
       {%- if card_collection == blank -%}
         <div class="card__visual">
           {{ placeholder_image | placeholder_svg_tag: 'placeholder-svg' }}

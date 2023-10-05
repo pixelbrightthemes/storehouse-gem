@@ -17,7 +17,7 @@
 {%- endstyle -%}
 
 {%- liquid
-  assign columns_mobile_int = section.settings.columns_mobile | plus: 0
+  assign columns_mobile_int = 2 | plus: 0
   assign show_mobile_slider = false
   if section.settings.swipe_on_mobile and section.blocks.size > columns_mobile_int
     assign show_mobile_slider = true
@@ -50,7 +50,7 @@
 
     <storehouse-slider-component class="slider-mobile-gutter{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
       <ul
-        class="collection-list contains-card contains-card--collection{% if settings.card_style == 'standard' %} contains-card--std{% endif %} grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down{% if section.settings.swipe_on_mobile %} slider slider--tablet grid--peek{% endif %} collection-list--{{ section.blocks.size }}-items"
+        class="collection-list contains-card contains-card--collection{% if settings.card_style == 'standard' %} contains-card--std{% endif %} grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--2-col-tablet-down{% if section.settings.swipe_on_mobile %} slider slider--tablet grid--peek{% endif %} collection-list--{{ section.blocks.size }}-items"
         id="Slider-{{ section.id }}"
         role="list"
       >
@@ -78,7 +78,9 @@
               columns: columns,
               placeholder_image: placeholder_image,
               text_alignment: section.settings.text_alignment,
-              text_weight: section.settings.text_weight
+              text_weight: section.settings.text_weight,
+              overlay_badge_text: block.settings.overlay_badge_text,
+              overlay_position: block.settings.overlay_position
             %}
           </li>
         {%- endfor -%}
@@ -295,6 +297,27 @@
           "type": "collection",
           "id": "collection",
           "label": "t:sections.collection-list.blocks.featured_collection.settings.collection.label"
+        },
+        {
+          "type": "text",
+          "id": "overlay_badge_text",
+          "label": "t:sections.collection-list.blocks.featured_collection.settings.overlay_badge_text.label"
+        },
+        {
+          "type": "select",
+          "id": "overlay_position",
+          "options": [
+            {
+              "value": "left",
+              "label": "t:sections.collection-list.settings.overlay_position.options__1.label"
+            },
+            {
+              "value": "right",
+              "label": "t:sections.collection-list.settings.overlay_position.options__2.label"
+            }
+          ],
+          "default": "left",
+          "label": "t:sections.collection-list.settings.overlay_position.label"
         }
       ]
     }

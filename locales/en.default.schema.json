@@ -190,6 +190,15 @@
           "label": "Font",
           "info": "Selecting a different font can affect the speed of your store. [Learn more about system fonts.](https:\/\/help.shopify.com\/manual\/online-store\/os\/store-speed\/improving-speed#fonts)"
         },
+        "navigation_scale": {
+          "label": "Font size scale"
+        },
+        "navigation_letter_spacing": {
+          "label": "Letter spacing"
+        },
+        "navigation_line_height": {
+          "label": "Letter line height"
+        },
         "type_header_font": {
           "label": "Font",
           "info": "Selecting a different font can affect the speed of your store. [Learn more about system fonts.](https:\/\/help.shopify.com\/manual\/online-store\/os\/store-speed\/improving-speed#fonts)"
@@ -731,6 +740,15 @@
       "settings": {
         "title": {
           "label": "Heading"
+        },
+        "overlay_position": {
+          "label": "Overlay position",
+          "options__1": {
+            "label": "Left"
+          },
+          "options__2": {
+            "label": "Right"
+          }
         },
         "image_ratio": {
           "label": "Image ratio",

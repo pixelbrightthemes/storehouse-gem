@@ -418,7 +418,9 @@
       "password": "Password",
       "title": "Login",
       "sign_in": "Sign in",
-      "submit": "Submit"
+      "submit": "Submit",
+      "login_here": "Already have account? Login here",
+      "register_here": "Don't have account? Register from here"
     },
     "order": {
       "title": "Order {{ name }}",

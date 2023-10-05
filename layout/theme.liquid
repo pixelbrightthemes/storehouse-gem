@@ -101,6 +101,9 @@
         --font-heading-scale: {{ settings.heading_scale | times: 1.0 | divided_by: settings.body_scale }};
         --font-heading-spacing: {{ settings.heading_letter_spacing | times: 1.0 }}px;
         --font-heading-height: {{ settings.heading_line_height | times: 1.0 }};
+        --font-navigation-scale: {{ settings.navigation_scale | times: 1.0 | divided_by: settings.body_scale }};
+        --font-navigation-spacing: {{ settings.navigation_letter_spacing | times: 1.0 }}px;
+        --font-navigation-height: {{ settings.navigation_line_height | times: 1.0 }};
 
         --media-padding: {{ settings.media_padding }}px;
         --media-border-opacity: {{ settings.media_border_opacity | divided_by: 100.0 }};

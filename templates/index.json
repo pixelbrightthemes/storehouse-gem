@@ -101,6 +101,75 @@
         "padding_bottom": 0
       }
     },
+    "8af310f0-ce71-44dc-bddd-d2a8a01540f8": {
+      "type": "rich-text",
+      "blocks": {
+        "b13a5a54-3f40-4997-9fa4-be8546531025": {
+          "type": "text",
+          "settings": {
+            "text": "<h4>\"We are community led, with a continued commitment to be the most responsible version of ourselves – and we never rest on our laurels.\"<\/h4>"
+          }
+        }
+      },
+      "block_order": [
+        "b13a5a54-3f40-4997-9fa4-be8546531025"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "db2aec08-1985-4fe4-9194-1a8c0d103207": {
+      "type": "countdown-timer",
+      "blocks": {
+        "template--21269232582972__db2aec08-1985-4fe4-9194-1a8c0d103207-text-1": {
+          "type": "text",
+          "settings": {
+            "heading": "<h1>50% Off on rings<\/h1>",
+            "description": "Hurry up! Grab the deal"
+          }
+        },
+        "template--21269232582972__db2aec08-1985-4fe4-9194-1a8c0d103207-timer-1": {
+          "type": "timer",
+          "settings": {
+            "heading": "<h2>Offer title<\/h2>",
+            "enddate": "",
+            "after_message": ""
+          }
+        },
+        "template--21269232582972__db2aec08-1985-4fe4-9194-1a8c0d103207-button-1": {
+          "type": "button",
+          "settings": {
+            "link_label": "Button label",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--21269232582972__db2aec08-1985-4fe4-9194-1a8c0d103207-text-1",
+        "template--21269232582972__db2aec08-1985-4fe4-9194-1a8c0d103207-timer-1",
+        "template--21269232582972__db2aec08-1985-4fe4-9194-1a8c0d103207-button-1"
+      ],
+      "settings": {
+        "title": "Multicolumn",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "Button label",
+        "button_link": "",
+        "color_scheme": "accent-2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "4a2cf0c8-5cee-4732-a8bd-9474dd47325f": {
       "type": "guarantees",
       "blocks": {
@@ -169,72 +238,31 @@
         "padding_bottom": 36
       }
     },
-    "db2aec08-1985-4fe4-9194-1a8c0d103207": {
-      "type": "countdown-timer",
-      "blocks": {
-        "template--21269232582972__db2aec08-1985-4fe4-9194-1a8c0d103207-text-1": {
-          "type": "text",
-          "settings": {
-            "heading": "<h1>50% Off on rings<\/h1>",
-            "description": "Hurry up! Grab the deal"
-          }
-        },
-        "template--21269232582972__db2aec08-1985-4fe4-9194-1a8c0d103207-timer-1": {
-          "type": "timer",
-          "settings": {
-            "heading": "<h2>Offer title<\/h2>",
-            "enddate": "",
-            "after_message": ""
-          }
-        },
-        "template--21269232582972__db2aec08-1985-4fe4-9194-1a8c0d103207-button-1": {
-          "type": "button",
-          "settings": {
-            "link_label": "Button label",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--21269232582972__db2aec08-1985-4fe4-9194-1a8c0d103207-text-1",
-        "template--21269232582972__db2aec08-1985-4fe4-9194-1a8c0d103207-timer-1",
-        "template--21269232582972__db2aec08-1985-4fe4-9194-1a8c0d103207-button-1"
-      ],
-      "settings": {
-        "title": "Multicolumn",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "left",
-        "background_style": "primary",
-        "button_label": "Button label",
-        "button_link": "",
-        "color_scheme": "accent-2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "02cd4276-a273-4712-8f07-88f01f1d9c7d": {
       "type": "collection-list",
       "blocks": {
         "template--21269232582972__02cd4276-a273-4712-8f07-88f01f1d9c7d-featured_collection-1": {
           "type": "featured_collection",
           "settings": {
-            "collection": "rings"
+            "collection": "rings",
+            "overlay_badge_text": "NEW",
+            "overlay_position": "left"
           }
         },
         "template--21269232582972__02cd4276-a273-4712-8f07-88f01f1d9c7d-featured_collection-2": {
           "type": "featured_collection",
           "settings": {
-            "collection": "earrings"
+            "collection": "earrings",
+            "overlay_badge_text": "",
+            "overlay_position": "left"
           }
         },
         "template--21269232582972__02cd4276-a273-4712-8f07-88f01f1d9c7d-featured_collection-3": {
           "type": "featured_collection",
           "settings": {
-            "collection": "bracelets"
+            "collection": "bracelets",
+            "overlay_badge_text": "",
+            "overlay_position": "left"
           }
         }
       },
@@ -252,7 +280,7 @@
         "columns_desktop": 3,
         "color_scheme": "",
         "show_view_all": false,
-        "columns_mobile": "1",
+        "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 80,
         "padding_bottom": 80
@@ -422,8 +450,8 @@
         "show_view_all": false,
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     },
     "featured_collection": {
@@ -522,7 +550,7 @@
         "template--21269232582972__f17ad61c-09f3-4226-ac04-824d31c3e634-email_form-1"
       ],
       "settings": {
-        "color_scheme": "background-2",
+        "color_scheme": "accent-2",
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 52
@@ -842,8 +870,9 @@
   "order": [
     "bf22aaa9-9844-4467-9001-2078ad9af1f3",
     "fe9275c6-85b5-4d19-a687-e1993c46b9d9",
-    "4a2cf0c8-5cee-4732-a8bd-9474dd47325f",
+    "8af310f0-ce71-44dc-bddd-d2a8a01540f8",
     "db2aec08-1985-4fe4-9194-1a8c0d103207",
+    "4a2cf0c8-5cee-4732-a8bd-9474dd47325f",
     "02cd4276-a273-4712-8f07-88f01f1d9c7d",
     "b53c509b-a931-4f33-add2-c5d96b578ed5",
     "177ce50b-cd4f-45c4-832a-98e779463333",

@@ -256,7 +256,7 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page--width {
 }
 
 @media screen and (min-width: 990px) {
-  .header:not(.drawer-menu).page--width {
+  .header:not(.drawer-menu).page--width, .mega--menu {
     padding-left: 5rem;
     padding-right: 5rem;
   }
@@ -621,7 +621,7 @@ h6:empty {
   display: none;
 }
 
-.link,
+.link
 .customer a {
   cursor: pointer;
   display: inline-block;
@@ -631,7 +631,7 @@ h6:empty {
   text-underline-offset: 0.3rem;
   color: rgb(var(--color-link));
   background-color: transparent;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-family: inherit;
 }
 
@@ -1569,9 +1569,10 @@ button.shopify-payment-button__button--unbranded {
 .customer button:hover::after,
 .shopify-payment-button__button--unbranded:hover::after {
   --border-offset: 1.3px;
-  box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset))
+  box-shadow: none;
+  /*box-shadow: 0 0 0 calc(var(--buttons-border-width) + var(--border-offset))
       rgba(var(--color-button-text), var(--border-opacity)),
-    0 0 0 calc(var(--buttons-border-width) + 1px) rgba(var(--color-button-bg), var(--alpha-button-background));
+    0 0 0 calc(var(--buttons-border-width) + 1px) rgba(var(--color-button-bg), var(--alpha-button-background));*/
 }
 
 .button--secondary:after {
@@ -2370,6 +2371,7 @@ product-info .loading-overlay:not(.hidden) ~ *,
   width: 4.4rem;
   background-color: rgba(var(--color-button-bg), 1);
   color: rgba(var(--color-button-text), 1);
+  border: none;
 }
 
 .modal__close-button .icon {
@@ -2663,7 +2665,7 @@ product-info .loading-overlay:not(.hidden) ~ *,
   width: 100vw;
   max-width: 100%;
   /*box-shadow: 0 0.05px 1px rgba(var(--color-text), 0.1);*/
-  box-shadow: 0 9px 20px rgba(var(--color-text), 0.1);
+  box-shadow: 0 1px 20px rgba(var(--color-text), 0.1);
 }
 .text-left {
   text-align: left;
@@ -2855,6 +2857,7 @@ product-info .loading-overlay:not(.hidden) ~ *,
 .cart-count-bubble span {
   position: absolute;
   top: 1px;
+  left: 7px;
 }
 
 
@@ -2866,10 +2869,10 @@ product-info .loading-overlay:not(.hidden) ~ *,
   content: none;
 }
 
-.header__icon:hover .icon,
+/*.header__icon:hover .icon,
 .modal__close-button:hover .icon {
   transform: scale(1.07);
-}
+}*/
 .header__icon .icon-search {
   height: 3.2rem!important;
   width: 3.2rem!important;
@@ -3136,6 +3139,7 @@ main#MainContent {
 .header__menu-item {
   padding: 1.2rem;
   text-decoration: none;
+  font-size: calc(var(--font-navigation-scale) * 1.2rem);
   color: rgba(var(--color-text), 1);  
 }
 .mega-menu__link, .header__menu-item {
@@ -3157,13 +3161,13 @@ main#MainContent {
 
 details[open] > .header__menu-item {
   text-decoration: underline;
-  text-underline-offset: 0.5rem;
+  text-underline-offset: 0.8rem;
   text-decoration-thickness: 0.3rem;
 }
 
 details[open]:hover > .header__menu-item {
   text-decoration: underline;
-  text-underline-offset: 0.5rem;
+  text-underline-offset: 0.8rem;
   text-decoration-thickness: 0.3rem;
 }
 
@@ -3646,7 +3650,8 @@ details-revealer > details {
 .mega-menu[open] .mega--menu {
   opacity: 1;
   animation: show-promotion-image var(--duration-long) ease 0s;
-  padding: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 @keyframes show-promotion-image {
   0% {

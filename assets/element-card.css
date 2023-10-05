@@ -323,7 +323,25 @@
     text-underline-offset: 0.3rem;
   }*/
 }
-
+.overlay-left {
+  top: 2rem;
+  left: 2rem;
+}
+.overlay-right {
+  top: 2rem;
+  right: 2rem;
+}
+.card_colln_overlay { 
+  font-size: 1.6rem;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  background-color: rgba(var(--color-button-bg), 1);
+  color: rgba(var(--color-button-text), 1);
+}
+.card_colln_overlay span {
+  text-align: center;
+}
 .card--std.card--visual .card__inner .card__info,
 .card--std.card--text:not(.card--horizontal)>.card__content .card__heading:not(.card__heading--placeholder),
 .card--std:not(.card--horizontal)>.card__content .card__badge,

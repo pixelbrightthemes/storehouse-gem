@@ -21,6 +21,8 @@
 
 .newsletter-form__field-wrapper .field__input {
   padding-right: 5rem;
+  background-color: white;
+  color: black;
 }
 
 .newsletter-form__field-wrapper .field {
@@ -67,5 +69,5 @@
 }
 
 .newsletter-form__button .icon {
-  width: 1.5rem;
+  width: 3.5rem;
 }

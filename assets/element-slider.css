@@ -292,6 +292,8 @@ storehouse-slider-component.slider-component-full-width {
 
 .slider-counter__link {
   padding: 1rem 0.5rem;
+  background: transparent;
+  border: none;
 }
 
 @media screen and (max-width: 749px) {

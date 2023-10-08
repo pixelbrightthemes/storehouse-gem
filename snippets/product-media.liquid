@@ -37,13 +37,13 @@
 {%- else -%}
   {%- if media.media_type == 'model' -%}
     <div class="product-media-modal__model" data-media-id="{{ media.id }}">
-      <product-model class="deferred-media media media--transparent global-media-settings global-media-settings--no-shadow" style="padding-top: min(calc(100vh - 12rem), 100%)">
+      <product-model class="delayed-media media media--transparent global-media-settings global-media-settings--no-shadow" style="padding-top: min(calc(100vh - 12rem), 100%)">
   {%- else -%}
-    <deferred-media class="deferred-media media global-media-settings global-media-settings--no-shadow" style="padding-top: min(calc(100vh - 12rem), {{ 1 | divided_by: media.aspect_ratio | times: 100 }}%)" data-media-id="{{ media.id }}">
+    <delayed-media class="delayed-media media global-media-settings global-media-settings--no-shadow" style="padding-top: min(calc(100vh - 12rem), {{ 1 | divided_by: media.aspect_ratio | times: 100 }}%)" data-media-id="{{ media.id }}">
   {%- endif -%}
 
-    <button id="Deferred-Poster-Modal-{{ media.id }}" class="deferred-media__poster" type="button">
-      <span class="deferred-media__poster-button motion-reduce">
+    <button id="Deferred-Poster-Modal-{{ media.id }}" class="delayed-media__poster" type="button">
+      <span class="delayed-media__poster-button motion-reduce">
         {%- if media.media_type == 'model' -%}
           {%- render 'icon-3d-model' -%}
         {%- else -%}
@@ -96,6 +96,6 @@
       </button>
     </div>
   {%- else -%}
-    </deferred-media>
+    </delayed-media>
   {%- endif -%}
 {%- endif -%}

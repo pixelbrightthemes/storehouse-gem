@@ -49,7 +49,7 @@
     >
       {%- if card_collection.featured_image -%}
         <div class="card__visual">
-          <div class="media media--transparent media--hover-effect">
+          <div class="media media--transparent media--hover-effect colln-media-{{ section_id }}">
             <img
               srcset="
                 {%- if card_collection.featured_image.width >= 165 -%}{{ card_collection.featured_image | image_url: width: 165 }} 165w,{%- endif -%}
@@ -86,9 +86,9 @@
           {{ placeholder_image | placeholder_svg_tag: 'placeholder-svg' }}
         </div>
       {%- else -%}
-        <div class="card__content hoverable-overlay absolute text-{{ text_alignment }}">
+        <div class="card__content align-items-{{ overlay_heading_position }} hoverable-overlay absolute justify-content-{{ text_alignment }}">
           <div class="card__info">
-            <div class="card__heading h3">
+            <div class="card__heading">
               <a
                 {% if card_collection == blank %}
                   role="link" aria-disabled="true"
@@ -98,7 +98,7 @@
                 class="full-unstyled-link overlay-text{% if text_weight == 'bold' %} bold{% endif %}"
               >
                 <div class="flex flex-h flex-gap-s align-items-center">
-                  <span class="colln-title-span text-left second-text h2">
+                  <span class="colln-title-span text-left second-text {{ overlay_heading_size }}">
                     {%- if card_collection.title != blank -%}
                     {{- card_collection.title | escape -}}
                   {%- else -%}
@@ -126,9 +126,9 @@
       {%- endif -%}
     </div>
     {%- if card_collection != blank and card_style == 'card' or card_collection.featured_image -%}
-      <div class="card__content hoverable-overlay absolute width-100 text-{{ text_alignment }}">
+      <div class="card__content align-items-{{ overlay_heading_position }} hoverable-overlay absolute width-100 justify-content-{{ text_alignment }}">
         <div class="card__info">
-          <h3 class="card__heading">
+          <div class="card__heading">
             <a
               {% if card_collection == blank %}
                 role="link" aria-disabled="true"
@@ -138,7 +138,7 @@
               class="full-unstyled-link overlay-text{% if text_weight == 'bold' %} bold{% endif %}"
             >
               <div class="flex flex-h flex-gap-s align-items-center">
-                <span class="colln-title-span text-left second-text h2">
+                <span class="colln-title-span text-left second-text {{ overlay_heading_size }}">
                   {%- if card_collection.title != blank -%}
                   {{- card_collection.title | escape -}}
                 {%- else -%}
@@ -154,7 +154,7 @@
               </span>
             </div>
             </a>
-          </h3>
+          </div>
           {%- if card_collection.featured_image == null and card_collection.description != blank -%}
             <p class="card__caption">
               {{- card_collection.description | strip_html | truncatewords: 12 -}}

@@ -41,6 +41,10 @@
         "id": "color_schemes",
         "definition": [
           {
+            "type": "header",
+            "content": "t:settings_schema.colors.settings.primary_bg_header.content"
+          },
+          {
             "type": "color",
             "id": "background",
             "label": "t:settings_schema.colors.settings.background.label",
@@ -55,6 +59,28 @@
           {
             "type": "color",
             "id": "text",
+            "label": "t:settings_schema.colors.settings.text.label",
+            "default": "#121212"
+          },
+          {
+            "type": "header",
+            "content": "t:settings_schema.colors.settings.secondary_bg_header.content"
+          },
+          {
+            "type": "color",
+            "id": "background_secondary",
+            "label": "t:settings_schema.colors.settings.background.label",
+            "default": "#FFFFFF"
+          },
+          {
+            "type": "color_background",
+            "id": "background_gradient_secondary",
+            "label": "t:settings_schema.colors.settings.background_gradient.label",
+            "info": "t:settings_schema.colors.settings.background_gradient.info"
+          },
+          {
+            "type": "color",
+            "id": "text_secondary",
             "label": "t:settings_schema.colors.settings.text.label",
             "default": "#121212"
           },

@@ -11,11 +11,12 @@
       right: {{ section.settings.distancefromright }}px;
       z-index: 20;
       font-size: 32px;
+      background-color: rgba(var(--color-bg), var(--alpha-button-background));
+      color: rgba(var(--color-text));
       border: none;
       outline: none;
       cursor: pointer;
       padding: 1px;
-      box-shadow: 0 0 2px rgba(var(--color-button-text), 0.5);
       border-radius: {% if section.settings.button_shape == 'circular' %}50%{% else %}4px{% endif %};
       width: {{ section.settings.button_size }}px;
       height: {{ section.settings.button_size }}px;
@@ -34,7 +35,7 @@
       }
     }
 {%- endstyle -%}
-<button id="backtotop_btn" onclick="topFunction()" class="color-{{ section.settings.color_scheme }} flex flex-column flex-center pbutton backtotop_btn" title="Go to top">  
+<button id="backtotop_btn" onclick="topFunction()" class="color-{{ section.settings.color_scheme }} flex flex-column flex-center btn-shadow backtotop_btn" title="Go to top">  
 <span>&uarr;</span> 
 </button>
 

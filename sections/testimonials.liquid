@@ -2,28 +2,6 @@
 {{ 'element-slider.css' | asset_url | stylesheet_tag }}
 {{ 'element-slideshow.css' | asset_url | stylesheet_tag }}
 
-{%- if section.settings.slide_height == 'adapt_image' and section.blocks.first.settings.image != blank -%}
-  {%- style -%}
-    @media screen and (max-width: 749px) {
-      #Slider-{{ section.id }}::before,
-      #Slider-{{ section.id }} .media::before,
-      #Slider-{{ section.id }}:not(.banner--mobile-bottom) .banner__content::before {
-        padding-bottom: {{ 1 | divided_by: section.blocks.first.settings.image.aspect_ratio | times: 100 }}%;
-        content: '';
-        display: block;
-      }
-    }
-    @media screen and (min-width: 750px) {
-      #Slider-{{ section.id }}::before,
-      #Slider-{{ section.id }} .media::before {
-        padding-bottom: {{ 1 | divided_by: section.blocks.first.settings.image.aspect_ratio | times: 100 }}%;
-        content: '';
-        display: block;
-      }
-    }
-  {%- endstyle -%}
-{%- endif -%}
-
 <storehouse-slideshow-component
   class="color-{{ section.settings.color_scheme }} slider-mobile-gutter{% if section.settings.layout == 'grid' %} page--width{% endif %}{% if section.settings.show_text_below %} mobile-text-below{% endif %}"
   role="region"
@@ -49,7 +27,7 @@
               aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
               aria-controls="Slider-{{ section.id }}"
             >
-              <span class="dot"></span>
+              <span class="custom-dot"></span>
             </button>
           {%- endfor -%}
         </div>
@@ -93,7 +71,7 @@
   {%- endif -%}
 
   <div
-    class="slideshow banner banner--{{ section.settings.slide_height }} grid grid--1-col slider slider--everywhere{% if section.settings.show_text_below %} banner--mobile-bottom{% endif %}{% if section.blocks.first.settings.image == blank %} slideshow--placeholder{% endif %}"
+    class="slideshow banner grid grid--1-col slider slider--everywhere{% if section.settings.show_text_below %} banner--mobile-bottom{% endif %}{% if section.blocks.first.settings.image == blank %} slideshow--placeholder{% endif %}"
     id="Slider-{{ section.id }}"
     aria-live="polite"
     aria-atomic="true"
@@ -110,7 +88,7 @@
         aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
         tabindex="-1"
       >
-        <div class="slideshow__media banner__media media{% if block.settings.image == blank %} placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}">
+        <div class="slideshow__media banner__media media{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}">
           
         </div>
         <div class="slideshow__text-wrapper banner__content banner__content--middle-center page--width{% if settings.animations_reveal_on_scroll and forloop.index == 1 %} scroll-trigger animate--slide-in{% endif %}">
@@ -151,7 +129,7 @@
   </div>
   <button
     type="button"
-    class="slider-button slider-button--prev btn-shadow"
+    class="slider-button overlay-arrow slider-button--prev btn-shadow"
     name="previous"
     aria-label="{{ 'sections.slideshow.previous_slideshow' | t }}"
     aria-controls="Slider-{{ section.id }}"
@@ -160,7 +138,7 @@
   </button>
   <button
     type="button"
-    class="slider-button slider-button--next btn-shadow"
+    class="slider-button overlay-arrow slider-button--next btn-shadow"
     name="next"
     aria-label="{{ 'sections.slideshow.next_slideshow' | t }}"
     aria-controls="Slider-{{ section.id }}"
@@ -177,7 +155,7 @@
               aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
               aria-controls="Slider-{{ section.id }}"
             >
-              <span class="dot"></span>
+              <span class="custom-dot"></span>
             </button>
           {%- endfor -%}
         </div>
@@ -242,30 +220,6 @@
       ],
       "default": "full_bleed",
       "label": "t:sections.testimonials.settings.layout.label"
-    },
-    {
-      "type": "select",
-      "id": "slide_height",
-      "options": [
-        {
-          "value": "adapt_image",
-          "label": "t:sections.testimonials.settings.slide_height.options__1.label"
-        },
-        {
-          "value": "small",
-          "label": "t:sections.testimonials.settings.slide_height.options__2.label"
-        },
-        {
-          "value": "medium",
-          "label": "t:sections.testimonials.settings.slide_height.options__3.label"
-        },
-        {
-          "value": "large",
-          "label": "t:sections.testimonials.settings.slide_height.options__4.label"
-        }
-      ],
-      "default": "medium",
-      "label": "t:sections.testimonials.settings.slide_height.label"
     },
     {
       "type": "checkbox",

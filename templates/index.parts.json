@@ -158,45 +158,6 @@
         "padding_bottom": 36
       }
     },
-    "collage": {
-      "type": "collage",
-      "blocks": {
-        "collection-0": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "product": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "second_image": false
-          }
-        },
-        "collection-1": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection-0",
-        "product",
-        "collection-1"
-      ],
-      "settings": {
-        "heading": "Multimedia collage",
-        "heading_size": "h2",
-        "desktop_layout": "left",
-        "mobile_layout": "collage",
-        "card_styles": "product-card-wrapper",
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "video": {
       "type": "video",
       "settings": {
@@ -218,7 +179,6 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Collapsible row",
-            "icon": "check_mark",
             "row_content": "",
             "page": ""
           }
@@ -227,7 +187,6 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Collapsible row",
-            "icon": "check_mark",
             "row_content": "",
             "page": ""
           }
@@ -236,7 +195,6 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Collapsible row",
-            "icon": "check_mark",
             "row_content": "",
             "page": ""
           }
@@ -245,7 +203,6 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Collapsible row",
-            "icon": "check_mark",
             "row_content": "",
             "page": ""
           }
@@ -273,8 +230,8 @@
         "padding_bottom": 36
       }
     },
-    "multicolumn": {
-      "type": "multicolumn",
+    "multicolumn-grid": {
+      "type": "multicolumn-grid",
       "blocks": {
         "column1": {
           "type": "column",
@@ -332,9 +289,8 @@
     "fe9275c6-85b5-4d19-a687-e1993c46b9d9",
     "rich_text",
     "featured_collection",
-    "collage",
     "video",
     "68af79e5-4209-409f-83f5-09627f04ae70",
-    "multicolumn"
+    "multicolumn-grid"
   ]
 }

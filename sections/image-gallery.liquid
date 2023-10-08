@@ -5,7 +5,7 @@
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
   }
 
   @media screen and (min-width: 750px) {
@@ -82,7 +82,8 @@
               link_label: block.settings.link_label,
               placeholder_image: placeholder_image,
               text_alignment: section.settings.text_alignment,
-              text_weight: section.settings.text_weight
+              text_weight: section.settings.text_weight,
+              image_corner_radius: section.settings.image_corner_radius
             %}
           </li>
         {%- endfor -%}
@@ -219,6 +220,16 @@
       "default": "landscape",
       "label": "t:sections.image-gallery.settings.image_ratio.label",
       "info": "t:sections.image-gallery.settings.image_ratio.info"
+    },
+    {
+      "type": "range",
+      "id": "image_corner_radius",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 0,
+      "unit": "px",
+      "label": "t:sections.image-gallery.settings.image_corner_radius.label"
     },
     {
       "type": "range",

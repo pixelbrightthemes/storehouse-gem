@@ -9,7 +9,7 @@
   {{ 'element-slider.css' | asset_url | stylesheet_tag }}
   {{ 'element-rating.css' | asset_url | stylesheet_tag }}
   {{ 'element-loading-overlay.css' | asset_url | stylesheet_tag }}
-  {{ 'element-deferred-media.css' | asset_url | stylesheet_tag }}
+  {{ 'element-delayed-media.css' | asset_url | stylesheet_tag }}
   {%- if product.quantity_price_breaks_configured? -%}
     {{ 'element-volume-pricing.css' | asset_url | stylesheet_tag }}
   {%- endif -%}
@@ -17,7 +17,7 @@
   {%- style -%}
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
     }
 
     @media screen and (min-width: 750px) {
@@ -517,7 +517,7 @@
                                 <div class="slideshow__control-wrapper">
                                   {%- for i in (1..number_of_slides) -%}
                                     <button class="slider-counter__link slider-counter__link--{{ block.settings.pagination_style }} link" aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}" aria-controls="Slider-{{ block.id }}">
-                                      {%- if block.settings.pagination_style == 'numbers' -%}{{ forloop.index }}{% else %}<span class="dot"></span>{%- endif -%}
+                                      {%- if block.settings.pagination_style == 'numbers' -%}{{ forloop.index }}{% else %}<span class="normal-dot"></span>{%- endif -%}
                                     </button>
                                   {%- endfor -%}
                                 </div>

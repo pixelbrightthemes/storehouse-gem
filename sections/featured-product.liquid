@@ -3,14 +3,14 @@
 {{ 'element-accordion.css' | asset_url | stylesheet_tag }}
 {{ 'element-price.css' | asset_url | stylesheet_tag }}
 {{ 'element-loading-overlay.css' | asset_url | stylesheet_tag }}
-{{ 'element-deferred-media.css' | asset_url | stylesheet_tag }}
+{{ 'element-delayed-media.css' | asset_url | stylesheet_tag }}
 {{ 'element-rating.css' | asset_url | stylesheet_tag }}
 {{ 'element-volume-pricing.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
   }
 
   @media screen and (min-width: 750px) {

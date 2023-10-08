@@ -88,7 +88,7 @@ if (!customElements.get('media-gallery')) {
 
       playActiveMedia(activeItem) {
         window.pauseAllMedia();
-        const deferredMedia = activeItem.querySelector('.deferred-media');
+        const deferredMedia = activeItem.querySelector('.delayed-media');
         if (deferredMedia) deferredMedia.loadContent(false);
       }
 

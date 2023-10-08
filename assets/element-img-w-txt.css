@@ -1,0 +1,417 @@
+.img-w-txt .grid {
+  margin-bottom: 0;
+}
+
+.img-w-txt .grid__item {
+  position: relative;
+}
+
+@media screen and (min-width: 750px) {
+  .img-w-txt__grid--reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+.img-w-txt__media {
+  min-height: 100%;
+  overflow: visible;
+}
+
+.img-w-txt__media--small {
+  height: 19.4rem;
+}
+
+.img-w-txt__media--medium {
+  height: 29.6rem;
+}
+
+.img-w-txt__media--large {
+  height: 43.5rem;
+}
+
+@media screen and (min-width: 750px) {
+  .img-w-txt__media--small {
+    height: 31.4rem;
+  }
+
+  .img-w-txt__media--medium {
+    height: 46rem;
+  }
+
+  .img-w-txt__media--large {
+    height: 69.5rem;
+  }
+}
+
+.img-w-txt__media--placeholder {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-w-txt__media--placeholder:after {
+  content: '';
+  position: absolute;
+  background: rgba(var(--color-text), 0.04);
+}
+
+.img-w-txt__media--placeholder.img-w-txt__media--adapt {
+  height: 20rem;
+}
+
+@media screen and (min-width: 750px) {
+  .img-w-txt__media--placeholder.img-w-txt__media--adapt {
+    height: 30rem;
+  }
+}
+
+.img-w-txt__media--placeholder > svg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
+.img-w-txt__media--placeholder:is(.animate--ambient, .animate--zoom-in) > svg {
+  top: 0;
+  left: 0;
+  transform: translate(0);
+}
+
+.img-w-txt__content {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  align-self: center;
+  padding: 4rem calc(4rem / var(--font-body-scale)) 5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.img-w-txt .grid__item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.img-w-txt:not(.img-w-txt--overlap) .img-w-txt__media-item:after {
+  border-radius: var(--media-radius);
+  box-shadow: var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius)
+    rgba(var(--color-shadow), var(--media-shadow-opacity));
+}
+
+.img-w-txt:not(.img-w-txt--overlap) .img-w-txt__text-item:after {
+  border-radius: var(--text-boxes-radius);
+  box-shadow: var(--text-boxes-shadow-horizontal-offset) var(--text-boxes-shadow-vertical-offset)
+    var(--text-boxes-shadow-blur-radius) rgba(var(--color-shadow), var(--text-boxes-shadow-opacity));
+}
+
+.img-w-txt .img-w-txt__media-item > * {
+  border-radius: var(--media-radius);
+  overflow: hidden;
+  box-shadow: var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius)
+    rgba(var(--color-shadow), var(--media-shadow-opacity));
+}
+
+.img-w-txt .global-media-settings {
+  overflow: hidden !important;
+}
+
+.img-w-txt .img-w-txt__text-item > * {
+  border-radius: var(--text-boxes-radius);
+  overflow: hidden;
+  box-shadow: var(--text-boxes-shadow-horizontal-offset) var(--text-boxes-shadow-vertical-offset)
+    var(--text-boxes-shadow-blur-radius) rgba(var(--color-shadow), var(--text-boxes-shadow-opacity));
+}
+
+.img-w-txt:not(.img-w-txt--overlap) .img-w-txt__media-item > *,
+.img-w-txt:not(.img-w-txt--overlap) .img-w-txt__text-item > * {
+  box-shadow: none;
+}
+
+@media screen and (max-width: 749px) {
+  .img-w-txt.collapse-corners:not(.img-w-txt--overlap) .img-w-txt__media-item:after,
+  .img-w-txt.collapse-corners:not(.img-w-txt--overlap) .grid__item .img-w-txt__media,
+  .img-w-txt.collapse-corners:not(.img-w-txt--overlap) .img-w-txt__media img,
+  .img-w-txt.collapse-corners:not(.img-w-txt--overlap) .img-w-txt__media .placeholder-svg {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .img-w-txt.collapse-corners:not(.img-w-txt--overlap) .img-w-txt__text-item:after,
+  .img-w-txt.collapse-corners:not(.img-w-txt--overlap) .grid__item .img-w-txt__content {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .img-w-txt.collapse-borders:not(.img-w-txt--overlap) .img-w-txt__content {
+    border-top: 0;
+  }
+}
+
+.img-w-txt__content--mobile-right > * {
+  align-self: flex-end;
+  text-align: right;
+}
+
+.img-w-txt__content--mobile-center > * {
+  align-self: center;
+  text-align: center;
+}
+
+.img-w-txt--overlap .img-w-txt__content {
+  width: 90%;
+  margin: -3rem auto 0;
+}
+
+@media screen and (min-width: 750px) {
+  .img-w-txt__grid--reverse .img-w-txt__content {
+    margin-left: auto;
+  }
+
+  .img-w-txt__content--bottom {
+    justify-content: flex-end;
+    align-self: flex-end;
+  }
+
+  .img-w-txt__content--top {
+    justify-content: flex-start;
+    align-self: flex-start;
+  }
+
+  .img-w-txt__content--desktop-right > * {
+    align-self: flex-end;
+    text-align: right;
+  }
+
+  .img-w-txt__content--desktop-left > * {
+    align-self: flex-start;
+    text-align: left;
+  }
+
+  .img-w-txt__content--desktop-center > * {
+    align-self: center;
+    text-align: center;
+  }
+
+  .img-w-txt--overlap .img-w-txt__text-item {
+    display: flex;
+    padding: 3rem 0;
+  }
+
+  .img-w-txt--overlap .img-w-txt__content {
+    height: auto;
+    width: calc(100% + 4rem);
+    min-width: calc(100% + 4rem);
+    margin-top: 0;
+    margin-left: -4rem;
+  }
+
+  .img-w-txt--overlap .img-w-txt__grid--reverse .img-w-txt__content {
+    margin-left: 0;
+    margin-right: -4rem;
+  }
+
+  .img-w-txt--overlap .img-w-txt__grid--reverse .img-w-txt__text-item {
+    justify-content: flex-end;
+  }
+
+  .img-w-txt--overlap .img-w-txt__media-item--top {
+    align-self: flex-start;
+  }
+
+  .img-w-txt--overlap .img-w-txt__media-item--middle {
+    align-self: center;
+  }
+
+  .img-w-txt--overlap .img-w-txt__media-item--bottom {
+    align-self: flex-end;
+  }
+
+  .img-w-txt__media-item--small,
+  .img-w-txt__media-item--large + .img-w-txt__text-item {
+    flex-grow: 0;
+  }
+
+  .img-w-txt.collapse-corners:not(.img-w-txt--overlap)
+    .grid:not(.img-w-txt__grid--reverse)
+    .img-w-txt__media-item:after,
+  .img-w-txt.collapse-corners:not(.img-w-txt--overlap)
+    .grid:not(.img-w-txt__grid--reverse)
+    .img-w-txt__media,
+  .img-w-txt.collapse-corners:not(.img-w-txt--overlap)
+    .grid:not(.img-w-txt__grid--reverse)
+    .img-w-txt__media
+    img,
+  .img-w-txt.collapse-corners:not(.img-w-txt--overlap)
+    .grid:not(.img-w-txt__grid--reverse)
+    .img-w-txt__media
+    .placeholder-svg,
+  .img-w-txt.collapse-corners:not(.img-w-txt--overlap)
+    .img-w-txt__grid--reverse
+    .img-w-txt__text-item:after,
+  .img-w-txt.collapse-corners:not(.img-w-txt--overlap)
+    .img-w-txt__grid--reverse
+    .img-w-txt__content,
+  .img-w-txt.collapse-corners:not(.img-w-txt--overlap)
+    .img-w-txt__grid--reverse
+    .img-w-txt__content:after {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .img-w-txt.collapse-corners:not(.img-w-txt--overlap)
+    .grid:not(.img-w-txt__grid--reverse)
+    .img-w-txt__text-item:after,
+  .img-w-txt.collapse-corners:not(.img-w-txt--overlap)
+    .grid:not(.img-w-txt__grid--reverse)
+    .img-w-txt__content,
+  .img-w-txt.collapse-corners:not(.img-w-txt--overlap)
+    .grid:not(.img-w-txt__grid--reverse)
+    .img-w-txt__content:after,
+  .img-w-txt.collapse-corners:not(.img-w-txt--overlap)
+    .img-w-txt__grid--reverse
+    .img-w-txt__media-item:after,
+  .img-w-txt.collapse-corners:not(.img-w-txt--overlap)
+    .img-w-txt__grid--reverse
+    .img-w-txt__media,
+  .img-w-txt.collapse-corners:not(.img-w-txt--overlap)
+    .img-w-txt__grid--reverse
+    .img-w-txt__media
+    img,
+  .img-w-txt.collapse-corners:not(.img-w-txt--overlap)
+    .img-w-txt__grid--reverse
+    .img-w-txt__media
+    .placeholder-svg {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .img-w-txt.collapse-borders:not(.img-w-txt--overlap)
+    .grid:not(.img-w-txt__grid--reverse)
+    .img-w-txt__content {
+    border-left: 0;
+  }
+
+  .img-w-txt.collapse-borders:not(.img-w-txt--overlap)
+    .img-w-txt__grid--reverse
+    .img-w-txt__content {
+    border-right: 0;
+  }
+}
+
+.img-w-txt:not(.collapse-corners, .img-w-txt--overlap) .img-w-txt__media-item {
+  z-index: 2;
+}
+
+/* Needed for gradient continuity with or without animation so that transparent PNG images come up as we would expect */
+.img-w-txt:not(.img-w-txt--overlap) .color-background-1,
+.img-w-txt.img-w-txt--overlap .img-w-txt__media.color-background-1 {
+  background: transparent;
+}
+
+/* Needed for gradient continuity with or without animation, the transform scopes the gradient to its container which happens already when animation are turned on */
+.img-w-txt .gradient {
+  transform: perspective(0);
+}
+
+.img-w-txt__content {
+  border-radius: var(--text-boxes-radius);
+  box-shadow: var(--text-boxes-shadow-horizontal-offset) var(--text-boxes-shadow-vertical-offset)
+    var(--text-boxes-shadow-blur-radius) rgba(var(--color-shadow), var(--text-boxes-shadow-opacity));
+  word-break: break-word;
+}
+
+@media screen and (min-width: 990px) {
+  .img-w-txt__content {
+    padding: 1rem 5rem;
+  }
+}
+
+.img-w-txt__content > * + * {
+  margin-top: 2rem;
+}
+
+.img-w-txt__content > .img-w-txt__text:empty ~ a {
+  margin-top: 2rem;
+}
+
+.img-w-txt__content > :first-child:is(.img-w-txt__heading),
+.img-w-txt__text--caption + .img-w-txt__heading,
+.img-w-txt__text--caption:first-child {
+  margin-top: 0;
+}
+
+.img-w-txt__content :last-child:is(.img-w-txt__heading),
+.img-w-txt__text--caption {
+  margin-bottom: 0;
+}
+
+.img-w-txt__content .button + .img-w-txt__text {
+  margin-top: 2rem;
+}
+
+.img-w-txt__content .img-w-txt__text + .button {
+  margin-top: 3rem;
+}
+
+.img-w-txt__heading {
+  margin-bottom: 0;
+}
+
+.img-w-txt__text p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 749px) {
+  .collapse-padding .img-w-txt__grid .img-w-txt__content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .collapse-padding
+    .img-w-txt__grid:not(.img-w-txt__grid--reverse)
+    .img-w-txt__content:not(.img-w-txt__content--desktop-center) {
+    padding-right: 0;
+  }
+
+  .collapse-padding
+    .img-w-txt__grid--reverse
+    .img-w-txt__content:not(.img-w-txt__content--desktop-center) {
+    padding-left: 0;
+  }
+}
+
+/* check for flexbox gap in older Safari versions */
+@supports not (inset: 10px) {
+  .img-w-txt .grid {
+    margin-left: 0;
+  }
+}
+
+/*
+  Multirow
+  note: consider removing from this stylesheet if multirow-specific styles increase signficantly
+*/
+.multirow__inner {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--grid-mobile-vertical-spacing);
+}
+
+@media screen and (min-width: 750px) {
+  .multirow__inner {
+    row-gap: var(--grid-desktop-vertical-spacing);
+  }
+}

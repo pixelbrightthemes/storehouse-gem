@@ -613,27 +613,27 @@ a.product__text {
     max-width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2);
   }
 
-  .product--large.product--columns .product__media-item--full .deferred-media__poster-button {
+  .product--large.product--columns .product__media-item--full .delayed-media__poster-button {
     height: 5rem;
     width: 5rem;
   }
 
-  .product--medium.product--columns .product__media-item--full .deferred-media__poster-button {
+  .product--medium.product--columns .product__media-item--full .delayed-media__poster-button {
     height: 4.2rem;
     width: 4.2rem;
   }
 
-  .product--medium.product--columns .product__media-item--full .deferred-media__poster-button .icon {
+  .product--medium.product--columns .product__media-item--full .delayed-media__poster-button .icon {
     width: 1.8rem;
     height: 1.8rem;
   }
 
-  .product--small.product--columns .product__media-item--full .deferred-media__poster-button {
+  .product--small.product--columns .product__media-item--full .delayed-media__poster-button {
     height: 3.6rem;
     width: 3.6rem;
   }
 
-  .product--small.product--columns .product__media-item--full .deferred-media__poster-button .icon {
+  .product--small.product--columns .product__media-item--full .delayed-media__poster-button .icon {
     width: 1.6rem;
     height: 1.6rem;
   }
@@ -751,7 +751,7 @@ a.product__text {
 }
 
 .product-media-modal__content > *:not(.active),
-.product__media-list .deferred-media {
+.product__media-list .delayed-media {
   display: none;
 }
 
@@ -768,7 +768,7 @@ a.product__text {
     display: none;
   }
 
-  .product__media-list .deferred-media {
+  .product__media-list .delayed-media {
     display: block;
   }
 }
@@ -779,8 +779,8 @@ a.product__text {
     display: none;
   }
 
-  .product--thumbnail .is-active .deferred-media,
-  .product--thumbnail_slider .is-active .deferred-media {
+  .product--thumbnail .is-active .delayed-media,
+  .product--thumbnail_slider .is-active .delayed-media {
     display: block;
     width: 100%;
   }
@@ -817,7 +817,7 @@ a.product__text {
   width: 4rem;
 }
 
-.product-media-modal__content .deferred-media {
+.product-media-modal__content .delayed-media {
   width: 100%;
 }
 
@@ -1459,7 +1459,7 @@ a.product__text {
     height: 100%;
   }
 
-  .product-media-container.media-fit-cover .deferred-media__poster img {
+  .product-media-container.media-fit-cover .delayed-media__poster img {
     object-fit: cover;
     width: 100%;
   }

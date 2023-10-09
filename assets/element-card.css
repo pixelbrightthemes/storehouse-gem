@@ -134,6 +134,9 @@
 .card__content--auto-margins {
   grid-template-rows: minmax(0, auto) max-content minmax(0, auto);
 }*/
+.promo_card--conent {
+  padding-top: 0!important;
+}
 .card__content {
   display: grid;
   grid-template-rows: minmax(0, 1fr) max-content minmax(0, 1fr);
@@ -158,9 +161,9 @@
 }
 .card__info {
   grid-row-start: 2;
-  padding: 1.3rem 1rem;
+  padding: 1.5rem 1rem;
 }
-.card__info > * {
+.card__info > *:not(.promo-card) {
   margin-top: 2rem;
 }
 
@@ -175,9 +178,12 @@
 }
 
 @media screen and (min-width: 750px) {
-  .card__info {
-    padding-bottom: 1.7rem;
-    padding-top: 1.7rem;
+  .promo-card {
+    padding-top: 0rem!important;
+  }
+  .card__info{
+    padding-bottom: 2rem;
+    padding-top: 2rem;
   }
 }
 

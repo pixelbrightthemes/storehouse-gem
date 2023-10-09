@@ -413,6 +413,15 @@
         "label": "Color scheme",
         "has_cards_info": "To change the card color scheme, update your theme settings."
       },
+      "text_vertical_position": {
+        "label": "Text vertical position",
+        "options__1": {
+          "label": "Middle"
+        },
+        "options__2": {
+          "label": "Bottom"
+        }
+      },
       "color": {
         "content": "Colors"
       },
@@ -978,8 +987,8 @@
         "name": "Featured collection"
       }
     },
-    "featured-product": {
-      "name": "Featured product",
+    "recently-viewd": {
+      "name": "Recently viewed",
       "blocks": {
         "text": {
           "name": "Text",
@@ -1105,7 +1114,7 @@
         }
       },
       "presets": {
-        "name": "Featured product"
+        "name": "Recently viewed"
       }
     },
     "footer": {
@@ -1135,6 +1144,17 @@
             "show_social": {
               "label": "Show social media icons",
               "info": "To display your social media accounts, link them in your [theme settings](\/editor?context=theme&category=social%20media)."
+            }
+          }
+        },
+        "image": {
+          "name": "Logo with text",
+          "settings": {
+            "image_width": {
+              "label": "Image width"
+            },
+            "alignment": {
+              "label": "Image alignment on larger screens"
             }
           }
         },
@@ -2494,8 +2514,8 @@
             }
           }
         },
-        "collapsible_tab": {
-          "name": "Collapsible row",
+        "faq_tab": {
+          "name": "Faq row",
           "settings": {
             "heading": {
               "info": "Include a heading that explains the content.",
@@ -2672,11 +2692,11 @@
             "heading": {
               "label": "Heading"
             },
-            "make_collapsible_row": {
-              "label": "Show as collapsible row"
+            "make_faq_row": {
+              "label": "Show as Faq row"
             },
             "icon": {
-              "info": "Visible when collapsible row is displayed."
+              "info": "Visible when Faq row is displayed."
             },
             "product_list_limit": {
               "label": "Maximum products to show"
@@ -4015,8 +4035,8 @@
         "name": "Testimonials"
       }
     },
-    "collapsible_content": {
-      "name": "Collapsible content",
+    "faq_content": {
+      "name": "Faq content",
       "settings": {
         "caption": {
           "label": "Caption"
@@ -4052,8 +4072,8 @@
           "label": "Container color scheme",
           "info": "Visible when Layout is set to Row or Section container."
         },
-        "open_first_collapsible_row": {
-          "label": "Open first collapsible row"
+        "open_first_faq_row": {
+          "label": "Open first Faq row"
         },
         "header": {
           "content": "Image layout"
@@ -4085,8 +4105,8 @@
         }
       },
       "blocks": {
-        "collapsible_row": {
-          "name": "Collapsible row",
+        "faq_row": {
+          "name": "Faq row",
           "settings": {
             "heading": {
               "info": "Include a heading that explains the content.",
@@ -4237,7 +4257,7 @@
         }
       },
       "presets": {
-        "name": "Collapsible content"
+        "name": "Faq content"
       }
     }
   }

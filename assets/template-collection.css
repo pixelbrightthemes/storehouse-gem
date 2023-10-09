@@ -32,7 +32,9 @@
 .collection.loading .loading-overlay {
   display: block;
 }
-
+.collection--empty {
+  padding: 5rem 25%;
+}
 .collection--empty .title-wrapper {
   margin-top: 10rem;
   margin-bottom: 15rem;

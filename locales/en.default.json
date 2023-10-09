@@ -77,11 +77,12 @@
     "loading": "Loading...",
     "total_reviews": "total reviews",
     "star_reviews_info": "{{ rating_value }} out of {{ rating_max }} stars",
-    "collapsible_content_title": "Collapsible content",
+    "faq_content_title": "Faq content",
     "complementary_products": "Complementary products"
   },
   "blogs": {
     "article": {
+      "author_prefix": "By ",
       "blog": "Blog",
       "read_more_title": "Read more: {{ title }}",
       "comments": {
@@ -320,7 +321,7 @@
       "view_all": "View all"
     },
     "collection_template": {
-      "empty": "No products found",
+      "empty_collection_html": "There are no products in this collection yet. Add a product or return to collection list <a class=\"{{ empty_class }}\" href=\"{{ empty_link }}\">View all collections<\/a>",
       "title": "Collection",
       "use_fewer_filters_html": "Use fewer filters or <a class=\"{{ class }}\" href=\"{{ link }}\">remove all<\/a>"
     },

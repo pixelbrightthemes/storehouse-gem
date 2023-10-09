@@ -5,45 +5,55 @@
     "footer": {
       "type": "footer",
       "blocks": {
+        "72be5c55-7bf1-4e9f-ae2d-5be3e353c461": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/unlock_1.png",
+            "image_width": 100,
+            "alignment": "center"
+          }
+        },
+        "footer-2": {
+          "type": "text",
+          "settings": {
+            "heading": "<strong>Our mission<\/strong>",
+            "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+          }
+        },
         "footer-0": {
           "type": "link_list",
           "settings": {
-            "heading": "Quick links",
+            "heading": "<strong>Quick links<\/strong>",
             "menu": "footer"
           }
         },
         "footer-1": {
           "type": "link_list",
           "settings": {
-            "heading": "Info",
+            "heading": "<strong>Info<\/strong>",
             "menu": "footer"
-          }
-        },
-        "footer-2": {
-          "type": "text",
-          "settings": {
-            "heading": "Our mission",
-            "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
           }
         }
       },
       "block_order": [
+        "72be5c55-7bf1-4e9f-ae2d-5be3e353c461",
+        "footer-2",
         "footer-0",
-        "footer-1",
-        "footer-2"
+        "footer-1"
       ],
       "settings": {
-        "color_scheme": "background-1",
-        "newsletter_enable": true,
+        "color_scheme": "inverse",
+        "newsletter_enable": false,
         "newsletter_heading": "Subscribe to our emails",
+        "enable_follow_on_shop": true,
         "show_social": true,
-        "enable_country_selector": false,
-        "enable_language_selector": false,
+        "enable_country_selector": true,
+        "enable_language_selector": true,
         "payment_enable": true,
         "show_policy": false,
         "margin_top": 50,
         "padding_top": 50,
-        "padding_bottom": 50
+        "padding_bottom": 10
       }
     }
   },

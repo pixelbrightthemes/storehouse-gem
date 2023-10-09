@@ -9,8 +9,9 @@
 }
 
 .art-template__hero-container {
-  max-width: 130rem;
-  margin: 0 auto;
+  /*max-width: 130rem;*/
+  margin: 0 5rem;
+  padding: 2rem 5rem;
 }
 
 .art-template__hero-small {
@@ -38,7 +39,9 @@
     height: 66rem;
   }
 }
-
+.art-template {
+  margin-top: 5rem;
+}
 @media screen and (min-width: 990px) {
   .art-template__hero-small {
     height: 27.5rem;
@@ -56,7 +59,6 @@
 .art-template header {
   margin-top: 4.4rem;
   margin-bottom: 2rem;
-  line-height: calc(0.8 / var(--font-body-scale));
 }
 
 @media screen and (min-width: 750px) {
@@ -93,12 +95,12 @@
 }
 
 .art-template__social-sharing {
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 .art-template__social-sharing + header,
 .art-template__social-sharing + .art-template__content {
-  margin-top: 1.5rem;
+  margin-top: 2rem;
 }
 
 .art-template__comment-wrapper {

@@ -44,30 +44,30 @@
 
       {%- when 'title' -%}
         <header
-          class="page--width page--width--narrow{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
+          class="page--width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
           {{ block.shopify_attributes }}
         >
-          <h1
-            class="art-template__title"
-            itemprop="headline"
-          >
-            {{ article.title | escape }}
-          </h1>
           {%- if block.settings.blog_show_date -%}
             <span class="circle-divider caption-with-letter-spacing" itemprop="dateCreated pubdate datePublished">
               {{- article.published_at | time_tag: format: 'date' -}}
             </span>
           {%- endif -%}
+          <h1
+            class="art-template__title"
+            itemprop="headline"
+          >
+            {{ article.title | escape }}
+          </h1>          
           {%- if block.settings.blog_show_author -%}
-            <span class="caption-with-letter-spacing" itemprop="author" itemscope itemtype="http://schema.org/Person">
-              <span itemprop="name">{{ article.author }}</span>
+            <span class="art-author caption-with-letter-spacing" itemprop="author" itemscope itemtype="http://schema.org/Person">
+              <span itemprop="name">{{ 'blogs.article.author_prefix' | t }} {{ article.author }}</span>
             </span>
           {%- endif -%}
         </header>
 
       {%- when 'content' -%}
         <div
-          class="art-template__content page--width page--width--narrow rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          class="art-template__content page--width rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
           itemprop="articleBody"
           {{ block.shopify_attributes }}
         >
@@ -76,7 +76,7 @@
 
       {%- when 'share' -%}
         <div
-          class="art-template__social-sharing page--width page--width--narrow{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          class="art-template__social-sharing page--width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
           {{ block.shopify_attributes }}
         >
           {% assign share_url = request.origin | append: article.url %}

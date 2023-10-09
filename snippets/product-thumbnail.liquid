@@ -122,7 +122,7 @@
     {%- else -%}
       <delayed-media class="delayed-media media media--transparent no-js-hidden" data-media-id="{{ media.id }}">
     {%- endif -%}
-    <button id="Deferred-Poster-Modal-{{ media.id }}" class="delayed-media__poster" type="button">
+    <button id="Delayed-Poster-Modal-{{ media.id }}" class="delayed-media__poster" type="button">
       <span class="delayed-media__poster-button motion-reduce">
         {%- if media.media_type == 'model' -%}
           <span class="visually-hidden">{{ 'products.product.media.play_model' | t }}</span>

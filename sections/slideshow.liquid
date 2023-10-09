@@ -166,7 +166,7 @@
             {%- endif -%}     
             <div class="banner__buttons-div flex flex-h flex-gap-m">    
             {%- if block.settings.button_label1 != blank -%}
-              <div class="banner__buttons btn-shadow">
+              <div class="banner__buttons{% if block.settings.button_style_secondary == false %} btn-shadow{% endif %}">
                 <a
                   {% if block.settings.link1 %}
                     href="{{ block.settings.link }}"
@@ -180,7 +180,7 @@
               </div>
             {%- endif -%}
             {%- if block.settings.button_label2 != blank -%}
-              <div class="banner__buttons btn-shadow">
+              <div class="banner__buttons{% if block.settings.button_style_secondary == false %} btn-shadow{% endif %}">
                 <a
                   {% if block.settings.link2 %}
                     href="{{ block.settings.link }}"

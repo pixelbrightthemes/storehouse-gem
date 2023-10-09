@@ -84,8 +84,8 @@
             {%- endif -%}
             </div>
           </div>
-          <div class="card__content absolute text-{{ text_alignment }}">
-            <div class="card__info">
+          <div class="card__content promo_card--conent absolute text-{{ text_alignment }} align-items-{{ text_vertical_position }}">
+            <div class="card__info promo-card">
               <div class="card__heading h3">
                 <a
                   {% if link_url == blank %}
@@ -122,8 +122,8 @@
             </div>
           </div>
       </div>
-        <div class="card__content hoverable-overlay absolute text-{{ text_alignment }}">
-          <div class="card__info">
+        <div class="card__content promo_card--conent hoverable-overlay absolute text-{{ text_alignment }} align-items-{{ text_vertical_position }}">
+          <div class="card__info promo-card">
             <h3 class="card__heading">
               <a
                 {% if link_url == blank %}

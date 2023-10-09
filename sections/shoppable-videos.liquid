@@ -102,7 +102,7 @@
                       {% endif %}
                     >
                       <button
-                        id="Deferred-Poster-Modal-{{ video_id }}"
+                        id="Delayed-Poster-Modal-{{ video_id }}"
                         class="video-section__poster media delayed-media__poster media--landscape"
                         type="button"
                         aria-label="{{ alt }}"
@@ -152,7 +152,7 @@
                               image_size: '1100x',
                               autoplay: true,
                               loop: block.settings.enable_video_looping,
-                              controls: true,
+                              controls: false,
                               muted: false
                           }}
                         {%- endif -%}
@@ -160,7 +160,8 @@
                     </delayed-media>
                   </div>
                 </div>
-              <div class="multicolumn-card__info">
+              {% comment %}
+                <div class="multicolumn-card__info">
                 {%- if block.settings.title != blank -%}
                   <h3 class="inline-richtext">{{ block.settings.title }}</h3>
                 {%- endif -%}
@@ -181,6 +182,7 @@
                   >
                 {%- endif -%}
               </div>
+            {% endcomment %}
             </div>
           </li>
         {%- endfor -%}

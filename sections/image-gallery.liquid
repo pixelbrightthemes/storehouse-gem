@@ -83,7 +83,8 @@
               placeholder_image: placeholder_image,
               text_alignment: section.settings.text_alignment,
               text_weight: section.settings.text_weight,
-              image_corner_radius: section.settings.image_corner_radius
+              image_corner_radius: section.settings.image_corner_radius,
+              text_vertical_position: section.settings.text_vertical_position
             %}
           </li>
         {%- endfor -%}
@@ -179,6 +180,22 @@
       "id": "text_alignment",
       "label": "t:sections.all.text_alignment.label",
       "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "text_vertical_position",
+      "options": [
+        {
+          "value": "center",
+          "label": "t:sections.all.text_vertical_position.options__1.label"
+        },
+        {
+          "value": "end",
+          "label": "t:sections.all.text_vertical_position.options__2.label"
+        }
+      ],
+      "default": "center",
+      "label": "t:sections.all.text_vertical_position.label"
     },
     {
       "type": "select",

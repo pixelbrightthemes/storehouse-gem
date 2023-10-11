@@ -304,6 +304,40 @@
         "padding_bottom": 40
       }
     },
+    "fe9ce871-323d-4304-92a6-a43702ab6b2f": {
+      "type": "newsl",
+      "blocks": {
+        "template--21269232582972__fe9ce871-323d-4304-92a6-a43702ab6b2f-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Subscribe to our emails",
+            "heading_size": "h1"
+          }
+        },
+        "template--21269232582972__fe9ce871-323d-4304-92a6-a43702ab6b2f-paragraph-1": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Be the first to know about new collections and exclusive offers.<\/p>"
+          }
+        },
+        "template--21269232582972__fe9ce871-323d-4304-92a6-a43702ab6b2f-email_form-1": {
+          "type": "email_form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "template--21269232582972__fe9ce871-323d-4304-92a6-a43702ab6b2f-heading-1",
+        "template--21269232582972__fe9ce871-323d-4304-92a6-a43702ab6b2f-paragraph-1",
+        "template--21269232582972__fe9ce871-323d-4304-92a6-a43702ab6b2f-email_form-1"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "8fd6a484-d416-4a58-98a8-8372c5f2ccf0": {
       "type": "shoppable-videos",
       "blocks": {
@@ -734,40 +768,6 @@
         "padding_bottom": 40
       }
     },
-    "f17ad61c-09f3-4226-ac04-824d31c3e634": {
-      "type": "newsl",
-      "blocks": {
-        "template--21269232582972__f17ad61c-09f3-4226-ac04-824d31c3e634-heading-1": {
-          "type": "heading",
-          "settings": {
-            "heading": "Subscribe to our emails",
-            "heading_size": "h1"
-          }
-        },
-        "template--21269232582972__f17ad61c-09f3-4226-ac04-824d31c3e634-paragraph-1": {
-          "type": "paragraph",
-          "settings": {
-            "text": "<p>Be the first to know about new collections and exclusive offers.<\/p>"
-          }
-        },
-        "template--21269232582972__f17ad61c-09f3-4226-ac04-824d31c3e634-email_form-1": {
-          "type": "email_form",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "template--21269232582972__f17ad61c-09f3-4226-ac04-824d31c3e634-heading-1",
-        "template--21269232582972__f17ad61c-09f3-4226-ac04-824d31c3e634-paragraph-1",
-        "template--21269232582972__f17ad61c-09f3-4226-ac04-824d31c3e634-email_form-1"
-      ],
-      "settings": {
-        "color_scheme": "accent-2",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "video": {
       "type": "video",
       "settings": {
@@ -1001,6 +1001,7 @@
     "02cd4276-a273-4712-8f07-88f01f1d9c7d",
     "a2c95cf9-b47d-445f-bc5d-09323ea60ac2",
     "6e6133f9-400b-4eb1-8893-c32524afcaea",
+    "fe9ce871-323d-4304-92a6-a43702ab6b2f",
     "8fd6a484-d416-4a58-98a8-8372c5f2ccf0",
     "4a2cf0c8-5cee-4732-a8bd-9474dd47325f",
     "6f25c71b-616c-40da-8110-be19329396ba",
@@ -1009,7 +1010,6 @@
     "e7cf70f8-7c08-4b5c-a0df-d6b5508ef8e0",
     "featured_collection",
     "rich_text",
-    "f17ad61c-09f3-4226-ac04-824d31c3e634",
     "video",
     "68af79e5-4209-409f-83f5-09627f04ae70",
     "490eee47-3049-48f7-af68-0f2c35dfe031",

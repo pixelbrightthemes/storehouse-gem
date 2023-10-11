@@ -177,24 +177,21 @@
           "type": "featured_collection",
           "settings": {
             "collection": "rings",
-            "overlay_badge_text": "NEW",
-            "overlay_position": "left"
+            "overlay_badge_text": "NEW"
           }
         },
         "template--21269232582972__02cd4276-a273-4712-8f07-88f01f1d9c7d-featured_collection-2": {
           "type": "featured_collection",
           "settings": {
             "collection": "earrings",
-            "overlay_badge_text": "",
-            "overlay_position": "left"
+            "overlay_badge_text": ""
           }
         },
         "template--21269232582972__02cd4276-a273-4712-8f07-88f01f1d9c7d-featured_collection-3": {
           "type": "featured_collection",
           "settings": {
             "collection": "bracelets",
-            "overlay_badge_text": "",
-            "overlay_position": "left"
+            "overlay_badge_text": ""
           }
         }
       },
@@ -204,18 +201,18 @@
         "template--21269232582972__02cd4276-a273-4712-8f07-88f01f1d9c7d-featured_collection-3"
       ],
       "settings": {
+        "columns_desktop": 3,
         "title": "",
         "heading_size": "h2",
-        "text_alignment": "center",
-        "text_weight": "bold",
         "image_ratio": "portrait",
-        "columns_desktop": 3,
+        "show_view_all": false,
+        "color_scheme": "",
         "image_overlay_color": "#000000",
         "image_overlay_opacity": 20,
+        "text_alignment": "center",
         "overlay_heading_position": "end",
+        "text_weight": "bold",
         "overlay_heading_size": "h5",
-        "color_scheme": "",
-        "show_view_all": false,
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 80,
@@ -646,10 +643,10 @@
         "collection": "all",
         "products_to_show": 8,
         "columns_desktop": 4,
+        "enable_desktop_slider": true,
         "full_width": false,
         "show_view_all": false,
         "view_all_style": "solid",
-        "enable_desktop_slider": true,
         "color_scheme": "background-1",
         "image_ratio": "adapt",
         "image_shape": "default",
@@ -704,7 +701,7 @@
       }
     },
     "f17ad61c-09f3-4226-ac04-824d31c3e634": {
-      "type": "newsletter",
+      "type": "newsl",
       "blocks": {
         "template--21269232582972__f17ad61c-09f3-4226-ac04-824d31c3e634-heading-1": {
           "type": "heading",

@@ -11,8 +11,8 @@
       right: {{ section.settings.distancefromright }}px;
       z-index: 20;
       font-size: 32px;
-      background-color: rgba(var(--color-bg), var(--alpha-button-background));
-      color: rgba(var(--color-text));
+      background-color: rgba(var(--color-primary-bg), var(--alpha-button-background));
+      color: rgba(var(--color-primary-text));
       border: none;
       outline: none;
       cursor: pointer;
@@ -23,7 +23,7 @@
       vertical-align: middle;      
     }
     .backtotop_btn span {
-      color: rgba(var(--color-button-text), 0.9);
+      color: rgba(var(--color-primary-button-label), 0.9);
       font-size:  {{ section.settings.button_size | divided_by: 1.5 }}px;
     }
     .backtotop_btn:hover {

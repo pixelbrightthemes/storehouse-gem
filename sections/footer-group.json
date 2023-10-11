@@ -5,12 +5,10 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "72be5c55-7bf1-4e9f-ae2d-5be3e353c461": {
-          "type": "image",
+        "b9a5e3a0-5379-41c1-9d68-5706548a7922": {
+          "type": "brand_information",
           "settings": {
-            "image": "shopify:\/\/shop_images\/unlock_1.png",
-            "image_width": 100,
-            "alignment": "center"
+            "show_social": true
           }
         },
         "footer-2": {
@@ -36,21 +34,19 @@
         }
       },
       "block_order": [
-        "72be5c55-7bf1-4e9f-ae2d-5be3e353c461",
+        "b9a5e3a0-5379-41c1-9d68-5706548a7922",
         "footer-2",
         "footer-0",
         "footer-1"
       ],
       "settings": {
         "color_scheme": "inverse",
-        "newsletter_enable": false,
-        "newsletter_heading": "Subscribe to our emails",
         "enable_follow_on_shop": true,
         "show_social": true,
         "enable_country_selector": true,
         "enable_language_selector": true,
         "payment_enable": true,
-        "show_policy": false,
+        "show_policy": true,
         "margin_top": 50,
         "padding_top": 50,
         "padding_bottom": 10

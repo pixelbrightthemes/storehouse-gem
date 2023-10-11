@@ -57,19 +57,26 @@
           :root,
         {%- endif %}
         .color-{{ scheme.id }} {
-          --color-bg: {{ scheme.settings.background.red }},{{ scheme.settings.background.green }},{{ scheme.settings.background.blue }};
-        {% if scheme.settings.background_gradient != empty %}
-          --gradient-background: {{ scheme.settings.background_gradient }};
+          --color-primary-bg: {{ scheme.settings.background_primary.red }},{{ scheme.settings.background_primary.green }},{{ scheme.settings.background_primary.blue }};
+        {% if scheme.settings.background_primary_gradient != empty %}
+          --gradient-primary-background: {{ scheme.settings.background_primary_gradient }};
         {% else %}
-          --gradient-background: {{ scheme.settings.background }};
+          --gradient-primary-background: {{ scheme.settings.background_primary }};
         {% endif %}
-        --color-text: {{ scheme.settings.text.red }},{{ scheme.settings.text.green }},{{ scheme.settings.text.blue }};
+        --color-primary-text: {{ scheme.settings.text_primary.red }},{{ scheme.settings.text_primary.green }},{{ scheme.settings.text_primary.blue }};
+        --color-secondary-bg: {{ scheme.settings.background_secondary.red }},{{ scheme.settings.background_secondary.green }},{{ scheme.settings.background_secondary.blue }};
+        {% if scheme.settings.background_secondary_gradient != empty %}
+          --gradient-secondary-background: {{ scheme.settings.background_secondary_gradient }};
+        {% else %}
+          --gradient--secondary-background: {{ scheme.settings.background_secondary }};
+        {% endif %}
+        --color-secondary-text: {{ scheme.settings.text_secondary.red }},{{ scheme.settings.text_secondary.green }},{{ scheme.settings.text_secondary.blue }};
         --color-shadow: {{ scheme.settings.shadow.red }},{{ scheme.settings.shadow.green }},{{ scheme.settings.shadow.blue }};  
         --color-overlay-text: {{ scheme.settings.overlay_text.red }},{{ scheme.settings.overlay_text.green }},{{ scheme.settings.overlay_text.blue }};  
-        --color-button-bg: {{ scheme.settings.button.red }},{{ scheme.settings.button.green }},{{ scheme.settings.button.blue }};
-        --color-button-text: {{ scheme.settings.button_label.red }},{{ scheme.settings.button_label.green }},{{ scheme.settings.button_label.blue }};
+        --color-primary-button-bg: {{ scheme.settings.primary_button_bg.red }},{{ scheme.settings.primary_button_bg.green }},{{ scheme.settings.primary_button_bg.blue }};
+        --color-primary-button-label: {{ scheme.settings.primary_button_label.red }},{{ scheme.settings.primary_button_label.green }},{{ scheme.settings.primary_button_label.blue }};
         --color-secondary-button: {{ scheme.settings.background.red }},{{ scheme.settings.background.green }},{{ scheme.settings.background.blue }};
-        --color-secondary-button-text: {{ scheme.settings.secondary_button_label.red }},{{ scheme.settings.secondary_button_label.green }},{{ scheme.settings.secondary_button_label.blue }};
+        --color-secondary-button-label: {{ scheme.settings.secondary_button_label.red }},{{ scheme.settings.secondary_button_label.green }},{{ scheme.settings.secondary_button_label.blue }};
         --color-link: {{ scheme.settings.links.red }},{{ scheme.settings.links.green }},{{ scheme.settings.links.blue }};
         --color-badge-foreground: {{ scheme.settings.text.red }},{{ scheme.settings.text.green }},{{ scheme.settings.text.blue }};
         --color-badge-background: {{ scheme.settings.background.red }},{{ scheme.settings.background.green }},{{ scheme.settings.background.blue }};
@@ -79,8 +86,8 @@
       {% endfor %}
 
       {{ scheme_classes | prepend: 'body' }} {
-        color: rgba(var(--color-text), 1);
-        background-color: rgb(var(--color-bg));
+        color: rgba(var(--color-primary-text), 1);
+        background-color: rgb(var(--color-primary-bg));
       }
 
       :root {

@@ -137,15 +137,15 @@
           "type": "timer",
           "settings": {
             "heading": "<h2>Offer title<\/h2>",
-            "enddate": "",
+            "enddate": "11\/15\/2023",
             "after_message": ""
           }
         },
         "template--21269232582972__db2aec08-1985-4fe4-9194-1a8c0d103207-button-1": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
-            "button_link": ""
+            "button_label": "SHOP NOW",
+            "button_link": "shopify:\/\/collections"
           }
         }
       },
@@ -178,7 +178,7 @@
           "settings": {
             "collection": "rings",
             "overlay_badge_text": "NEW",
-            "overlay_position": "left"
+            "overlay_badge_position": "left"
           }
         },
         "template--21269232582972__02cd4276-a273-4712-8f07-88f01f1d9c7d-featured_collection-2": {
@@ -186,7 +186,7 @@
           "settings": {
             "collection": "earrings",
             "overlay_badge_text": "",
-            "overlay_position": "left"
+            "overlay_badge_position": "left"
           }
         },
         "template--21269232582972__02cd4276-a273-4712-8f07-88f01f1d9c7d-featured_collection-3": {
@@ -194,7 +194,7 @@
           "settings": {
             "collection": "bracelets",
             "overlay_badge_text": "",
-            "overlay_position": "left"
+            "overlay_badge_position": "left"
           }
         }
       },
@@ -204,22 +204,24 @@
         "template--21269232582972__02cd4276-a273-4712-8f07-88f01f1d9c7d-featured_collection-3"
       ],
       "settings": {
-        "title": "",
-        "heading_size": "h2",
-        "text_alignment": "center",
-        "text_weight": "bold",
-        "image_ratio": "portrait",
+        "side_padding": 200,
         "columns_desktop": 3,
+        "title": "Collections",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "image_ratio": "portrait",
+        "show_view_all": false,
+        "color_scheme": "",
         "image_overlay_color": "#000000",
         "image_overlay_opacity": 20,
+        "text_alignment": "center",
         "overlay_heading_position": "end",
+        "text_weight": "bold",
         "overlay_heading_size": "h5",
-        "color_scheme": "",
-        "show_view_all": false,
         "columns_mobile": "2",
         "swipe_on_mobile": false,
-        "padding_top": 80,
-        "padding_bottom": 80
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     },
     "a2c95cf9-b47d-445f-bc5d-09323ea60ac2": {
@@ -270,6 +272,34 @@
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
         "show_text_below": true,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "6e6133f9-400b-4eb1-8893-c32524afcaea": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured collection",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "testing",
+        "products_to_show": 11,
+        "columns_desktop": 4,
+        "enable_desktop_slider": true,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
         "padding_top": 40,
         "padding_bottom": 40
       }
@@ -647,10 +677,10 @@
         "collection": "all",
         "products_to_show": 8,
         "columns_desktop": 4,
+        "enable_desktop_slider": true,
         "full_width": false,
         "show_view_all": false,
         "view_all_style": "solid",
-        "enable_desktop_slider": true,
         "color_scheme": "background-1",
         "image_ratio": "adapt",
         "image_shape": "default",
@@ -705,7 +735,7 @@
       }
     },
     "f17ad61c-09f3-4226-ac04-824d31c3e634": {
-      "type": "newsletter",
+      "type": "newsl",
       "blocks": {
         "template--21269232582972__f17ad61c-09f3-4226-ac04-824d31c3e634-heading-1": {
           "type": "heading",
@@ -970,6 +1000,7 @@
     "db2aec08-1985-4fe4-9194-1a8c0d103207",
     "02cd4276-a273-4712-8f07-88f01f1d9c7d",
     "a2c95cf9-b47d-445f-bc5d-09323ea60ac2",
+    "6e6133f9-400b-4eb1-8893-c32524afcaea",
     "8fd6a484-d416-4a58-98a8-8372c5f2ccf0",
     "4a2cf0c8-5cee-4732-a8bd-9474dd47325f",
     "6f25c71b-616c-40da-8110-be19329396ba",

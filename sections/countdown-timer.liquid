@@ -60,16 +60,28 @@
                     </div>
                   </div>
                 </div>
+                {%- if block.settings.button_label != blank -%}
+                  <a
+                    class="animate-arrow button countdown-btn btn-shadow button--primary"
+                    {% if block.settings.link == blank %}
+                      role="link" aria-disabled="true"
+                    {% else %}
+                      href="{{ block.settings.button_link }}"
+                    {% endif %}
+                  >
+                    {{- block.settings.button_label | escape -}}
+                  </a>
+                {%- endif -%}
               </li>
             {%- when 'timer' -%}
               <li
                 id="Slide-{{ section.id }}-{{ forloop.index }}"
-                class="multicolumn-list__item grid__item{% if section.settings.swipe_on_mobile %} slider__slide{% endif %}{% if section.settings.column_alignment == 'center' %} center{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-                {{ block.shopify_attributes }}
+                class="multicolumn-list__item grid__item{% if section.settings.swipe_on_mobile %} slider__slide{% endif %}{% if section.settings.column_alignment == 'center' %} center{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"                
                 {% if settings.animations_reveal_on_scroll %}
                   data-cascade
                   style="--animation-order: {{ forloop.index }};"
                 {% endif %}
+                {{ block.shopify_attributes }}
               >
                 <div class="multicolumn-card content-container">
                   <div class="multicolumn-card__info">
@@ -79,7 +91,7 @@
                         id="countdownEndDate"
                         name="countdownEndDate"
                         class="countdownEndDate"
-                        value="{{ section.settings.enddate }}"
+                        value="{{ block.settings.enddate }}"
                       >
                       <div class="countdown-container">
                         <div id="countdown-timer" class="countdown-timer">
@@ -87,9 +99,9 @@
                             sectionid="{{ section.id }}"
                             id="countdown-timer-enddate-{{ section.id }}"
                             type="hidden"
-                            value="{{ section.settings.enddate }}"
+                            value="{{ block.settings.enddate }}"
                           >
-                          <ul class="flex flex-row text-center countdown-timer-img">
+                          <ul class="flex flex-row text-center countdown-timer-img justify-content-center">
                             <li>
                               <span id="DaysSpan-{{ section.id }}" class="h2"
                                 >00</span
@@ -133,7 +145,7 @@
                     {%- if block.settings.button_label != blank -%}
                       <a
                         class="animate-arrow button countdown-btn btn-shadow button--primary"
-                        {% if block.settings.link == blank %}
+                        {% if block.settings.button_link == blank %}
                           role="link" aria-disabled="true"
                         {% else %}
                           href="{{ block.settings.button_link }}"

@@ -7,14 +7,14 @@
 %}
   <div id="predictive-search-results" role="listbox">
     {%- if first_column_results_size > 0 or predictive_search.resources.products.size > 0 -%}
-      <div id="predictive-search-results-groups-wrapper" class="predictive-search__results-groups-wrapper{% unless predictive_search.resources.products.size > 0 %} predictive-search__results-groups-wrapper--no-products{% endunless %}{% unless predictive_search.resources.queries.size > 0 or predictive_search.resources.collections.size > 0 %} predictive-search__results-groups-wrapper--no-suggestions{% endunless %}">
+      <div id="predictive-search-results-groups-wrapper" class="predictive-search__results-groups-wrapper flex flex-v{% unless predictive_search.resources.products.size > 0 %} predictive-search__results-groups-wrapper--no-products{% endunless %}{% unless predictive_search.resources.queries.size > 0 or predictive_search.resources.collections.size > 0 %} predictive-search__results-groups-wrapper--no-suggestions{% endunless %}">
     {%- endif -%}
       {%- if first_column_results_size > 0 -%}
         <div class="predictive-search__result-group">
       {%- endif -%}
       {%- if predictive_search.resources.queries.size > 0 or predictive_search.resources.collections.size > 0 -%}
         <div>
-          <h2 id="predictive-search-queries" class="predictive-search__heading text-body caption-with-letter-spacing">
+          <h2 id="predictive-search-queries" class="predictive-search__heading text-body caption-with-letter-spacing--medium bold">
             {{- 'templates.search.suggestions' | t -}}
           </h2>
           <ul id="predictive-search-results-queries-list" class="predictive-search__results-list list-unstyled" role="group" aria-labelledby="predictive-search-queries">
@@ -22,7 +22,7 @@
               <li id="predictive-search-option-query-{{ forloop.index }}" class="predictive-search__list-item" role="option" aria-selected="false">
                 <a href="{{ query.url }}" class="predictive-search__item link link--text" tabindex="-1">
                   <div class="predictive-search__item-content predictive-search__item-content--centered">
-                    <p class="predictive-search__item-heading predictive-search__item-query-result h5" aria-label="{{ query.text }}">{{ query.styled_text }}</p>
+                    <p class="predictive-search__item-heading predictive-search__item-query-result" aria-label="{{ query.text }}">{{ query.styled_text }}</p>
                   </div>
                 </a>
               </li>
@@ -31,7 +31,7 @@
               <li id="predictive-search-option-collection-{{ forloop.index }}" class="predictive-search__list-item" role="option" aria-selected="false">
                 <a href="{{ collection.url }}" class="predictive-search__item link link--text" tabindex="-1">
                   <div class="predictive-search__item-content predictive-search__item-content--centered">
-                    <p class="predictive-search__item-heading h5">{{ collection.title }}</p>
+                    <p class="predictive-search__item-heading">{{ collection.title }}</p>
                   </div>
                 </a>
               </li>
@@ -41,7 +41,7 @@
       {%- endif -%}
       {%- if predictive_search.resources.articles.size > 0 or predictive_search.resources.pages.size > 0 -%}
         <div class="predictive-search__pages-wrapper">
-          <h2 id="predictive-search-pages-desktop" class="predictive-search__heading text-body caption-with-letter-spacing">
+          <h2 id="predictive-search-pages-desktop" class="predictive-search__heading text-body caption-with-letter-spacing--medium bold">
             {{- 'templates.search.pages' | t -}}
           </h2>
           <ul id="predictive-search-results-pages-list-desktop" class="predictive-search__results-list list-unstyled" role="group" aria-labelledby="predictive-search-pages-desktop">
@@ -73,7 +73,7 @@
         <div class="predictive-search__result-group">
           {%- if predictive_search.resources.products.size > 0 -%}
             <div>
-              <h2 id="predictive-search-products" class="predictive-search__heading text-body caption-with-letter-spacing">
+              <h2 id="predictive-search-products" class="predictive-search__heading text-body caption-with-letter-spacing--medium bold">
                 {{- 'templates.search.products' | t -}}
               </h2>
               <ul id="predictive-search-results-products-list" class="predictive-search__results-list list-unstyled" role="group" aria-labelledby="predictive-search-products">
@@ -145,9 +145,9 @@
       </svg>
     </div>
 
-    <div id="predictive-search-option-search-keywords" class="predictive-search__search-for-button">
+    <div id="predictive-search-option-search-keywords" class="predictive-search__search-for-button flex flex-center">
       <button
-        class="predictive-search__item predictive-search__item--term link link--text h5 animate-arrow"
+        class="predictive-search__item button button--primary predictive-search__item--term link link--text h5 animate-arrow"
         tabindex="-1"
         role="option"
         aria-selected="false"

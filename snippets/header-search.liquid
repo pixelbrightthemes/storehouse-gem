@@ -18,7 +18,7 @@
         </svg>
       {% endcomment %}
       <svg class="modal__toggle-open icon icon-search" xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 256 256">
-        <path stroke-width="2" d="m226.83 221.17l-52.7-52.7a84.1 84.1 0 1 0-5.66 5.66l52.7 52.7a4 4 0 0 0 5.66-5.66ZM36 112a76 76 0 1 1 76 76a76.08 76.08 0 0 1-76-76Z"/>
+        <path fill="currentColor" stroke-width="2" d="m226.83 221.17l-52.7-52.7a84.1 84.1 0 1 0-5.66 5.66l52.7 52.7a4 4 0 0 0 5.66-5.66ZM36 112a76 76 0 1 1 76 76a76.08 76.08 0 0 1-76-76Z"/>
       </svg>
         <svg class="modal__toggle-close icon icon-close" aria-hidden="true" focusable="false">
           <use href="#icon-close">
@@ -63,11 +63,10 @@
                 </button>
                 <button class="search__button field__button" aria-label="{{ 'general.search.search' | t }}">
                   <svg class="icon icon-search" aria-hidden="true" focusable="false">
-                    <use href="#icon-search">
+                    <path fill="currentColor" stroke-width="2" d="m226.83 221.17l-52.7-52.7a84.1 84.1 0 1 0-5.66 5.66l52.7 52.7a4 4 0 0 0 5.66-5.66ZM36 112a76 76 0 1 1 76 76a76.08 76.08 0 0 1-76-76Z"/>
                   </svg>
                 </button>
               </div>
-
               {%- if settings.predictive_search_enabled -%}
                 <div class="predictive-search predictive-search--header" tabindex="-1" data-predictive-search>
                   <div class="predictive-search__loading-state">
@@ -76,7 +75,6 @@
                     </svg>
                   </div>
                 </div>
-
                 <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
               {%- endif -%}
             </form>

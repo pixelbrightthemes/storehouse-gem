@@ -115,10 +115,19 @@
       "name": "Colors",
       "settings": {
         "primary_bg_header": {
-          "content": "Primary background"
+          "content": "Primary body"
         },
         "secondary_bg_header": {
-          "content": "Secondary background"
+          "content": "Secondary body"
+        },
+        "primary_btn_header": {
+          "content": "Primary button"
+        },
+        "secondary_btn_header": {
+          "content": "Secondary button"
+        },
+        "additional_colors_header": {
+          "content": "Additional"
         },
         "overlay_text": {
           "label": "Overlay text"
@@ -134,12 +143,18 @@
           "label": "Text"
         },
         "button_background": {
-          "label": "Solid button background"
+          "label": "Background"
         },
         "button_label": {
-          "label": "Solid button label"
+          "label": "Label"
+        },
+        "secondary_button_bg": {
+          "label": "Secondary button background"
         },
         "secondary_button_label": {
+          "label": "Secondary button label"
+        },
+        "outline_button_label": {
           "label": "Outline button"
         },
         "shadow": {
@@ -409,6 +424,33 @@
   },
   "sections": {
     "all": {
+      "section_heading_size": {
+        "options__1": {
+          "label": "Small"
+        },
+        "options__2": {
+          "label": "Medium"
+        },
+        "options__3": {
+          "label": "Large"
+        },
+        "label": "Section heading size"
+      },
+      "header_layout": {
+        "content": "Layout"
+      },
+      "header_title": {
+        "content": "Heading"
+      },
+      "header_overlay_text": {
+        "content": "Overlay text"
+      },
+      "header_overlay": {
+        "content": "Overlay content"
+      },
+      "side_padding": {
+        "label": "Side padding"
+      },
       "colors": {
         "label": "Color scheme",
         "has_cards_info": "To change the card color scheme, update your theme settings."
@@ -670,10 +712,10 @@
       "name": "Collection list",
       "settings": {
         "title": {
-          "label": "Heading"
+          "label": "Section heading"
         },
         "overlay_heading_size": {
-          "label": "Collection title size",
+          "label": "Text size",
           "options__1": {
             "label": "Small"
           },
@@ -691,7 +733,7 @@
           "label": "Overlay opacity percentage"
         },
         "overlay_heading_position": {
-          "label": "Collection title position",
+          "label": "Text vertical position",
           "options__1": {
             "label": "Center"
           },
@@ -749,6 +791,21 @@
           "settings": {
             "collection": {
               "label": "Collection"
+            },
+            "header_overlay_badge": {
+              "content": "Overlay badge"
+            },
+            "overlay_badge_text": {
+              "label": "Text"
+            },
+            "overlay_badge_position": {
+              "label": "Alignment",
+              "options__1": {
+                "label": "Left"
+              },
+              "options__2": {
+                "label": "Right"
+              }
             }
           }
         }
@@ -1117,6 +1174,136 @@
         "name": "Recently viewed"
       }
     },
+    "featured-product": {
+      "name": "Featured product",
+      "blocks": {
+        "text": {
+          "name": "Text",
+          "settings": {
+            "text": {
+              "label": "Text"
+            },
+            "text_style": {
+              "label": "Text style",
+              "options__1": {
+                "label": "Body"
+              },
+              "options__2": {
+                "label": "Subtitle"
+              },
+              "options__3": {
+                "label": "Uppercase"
+              }
+            }
+          }
+        },
+        "title": {
+          "name": "Title"
+        },
+        "price": {
+          "name": "Price"
+        },
+        "quantity_selector": {
+          "name": "Quantity selector"
+        },
+        "variant_picker": {
+          "name": "Variant picker",
+          "settings": {
+            "picker_type": {
+              "label": "Type",
+              "options__1": {
+                "label": "Dropdown"
+              },
+              "options__2": {
+                "label": "Pills"
+              }
+            }
+          }
+        },
+        "buy_buttons": {
+          "name": "Buy buttons",
+          "settings": {
+            "show_dynamic_checkout": {
+              "label": "Show dynamic checkout buttons",
+              "info": "Using the payment methods available on your store, customers see their preferred option, like PayPal or Apple Pay. [Learn more](https:\/\/help.shopify.com\/manual\/using-themes\/change-the-layout\/dynamic-checkout)"
+            }
+          }
+        },
+        "sku": {
+          "name": "SKU",
+          "settings": {
+            "text_style": {
+              "label": "Text style",
+              "options__1": {
+                "label": "Body"
+              },
+              "options__2": {
+                "label": "Subtitle"
+              },
+              "options__3": {
+                "label": "Uppercase"
+              }
+            }
+          }
+        },
+        "description": {
+          "name": "Description"
+        },
+        "share": {
+          "name": "Share",
+          "settings": {
+            "text": {
+              "label": "Text"
+            },
+            "featured_image_info": {
+              "content": "If you include a link in social media posts, the page’s featured image will be shown as the preview image. [Learn more](https:\/\/help.shopify.com\/manual\/online-store\/images\/showing-social-media-thumbnail-images)"
+            },
+            "title_info": {
+              "content": "A store title and description are included with the preview image. [Learn more](https:\/\/help.shopify.com\/manual\/promoting-marketing\/seo\/adding-keywords#set-a-title-and-description-for-your-online-store)"
+            }
+          }
+        },
+        "rating": {
+          "name": "Product rating",
+          "settings": {
+            "paragraph": {
+              "content": "To display a rating, add a product rating app. [Learn more](https:\/\/help.shopify.com\/manual\/online-store\/themes\/theme-structure\/theme-features#featured-product-rating)"
+            }
+          }
+        }
+      },
+      "settings": {
+        "product": {
+          "label": "Product"
+        },
+        "secondary_background": {
+          "label": "Show secondary background"
+        },
+        "header": {
+          "content": "Media",
+          "info": "Learn more about [media types](https:\/\/help.shopify.com\/manual\/products\/product-media)"
+        },
+        "media_position": {
+          "label": "Desktop media position",
+          "info": "Position is automatically optimized for mobile.",
+          "options__1": {
+            "label": "Left"
+          },
+          "options__2": {
+            "label": "Right"
+          }
+        },
+        "hide_variants": {
+          "label": "Hide unselected variants’ media on desktop"
+        },
+        "enable_video_looping": {
+          "label": "Enable video looping"
+        }
+      },
+      "presets": {
+        "name": "Featured product"
+      }
+    },
     "footer": {
       "name": "Footer",
       "blocks": {
@@ -1171,10 +1358,10 @@
         }
       },
       "settings": {
-        "newsletter_enable": {
+        "newsl_enable": {
           "label": "Show email signup"
         },
-        "newsletter_heading": {
+        "newsl_heading": {
           "label": "Heading"
         },
         "header__1": {
@@ -3107,11 +3294,11 @@
         }
       },
       "blocks": {
-        "column": {
-          "name": "Column",
+        "shoppable_video": {
+          "name": "Shoppable video",
           "settings": {
-            "image": {
-              "label": "Image"
+            "video": {
+              "label": "Video"
             },
             "title": {
               "label": "Heading"
@@ -3237,7 +3424,7 @@
         "name": "Guarantees"
       }
     },
-    "newsletter": {
+    "newsl": {
       "name": "Email signup",
       "settings": {
         "full_width": {
@@ -3653,6 +3840,21 @@
             },
             "description": {
               "label": "Description"
+            }
+          }
+        },
+        "timer": {
+          "name": "Timer",
+          "settings": {
+            "heading": {
+              "label": "Heading"
+            },
+            "enddate": {
+              "label": "Promotion end date",
+              "info": "Format: mm\/dd\/yyyy, example: 12\/31\/2022"
+            },
+            "after_message": {
+              "label": "Message to be displayed after enddate"
             }
           }
         },

@@ -46,19 +46,19 @@
           },
           {
             "type": "color",
-            "id": "background",
+            "id": "background_primary",
             "label": "t:settings_schema.colors.settings.background.label",
             "default": "#FFFFFF"
           },
           {
             "type": "color_background",
-            "id": "background_gradient",
+            "id": "background_primary_gradient",
             "label": "t:settings_schema.colors.settings.background_gradient.label",
             "info": "t:settings_schema.colors.settings.background_gradient.info"
           },
           {
             "type": "color",
-            "id": "text",
+            "id": "text_primary",
             "label": "t:settings_schema.colors.settings.text.label",
             "default": "#121212"
           },
@@ -74,7 +74,7 @@
           },
           {
             "type": "color_background",
-            "id": "background_gradient_secondary",
+            "id": "background_secondary_gradient",
             "label": "t:settings_schema.colors.settings.background_gradient.label",
             "info": "t:settings_schema.colors.settings.background_gradient.info"
           },
@@ -85,22 +85,40 @@
             "default": "#121212"
           },
           {
+            "type": "header",
+            "content": "t:settings_schema.colors.settings.primary_btn_header.content"
+          },
+          {
             "type": "color",
-            "id": "button",
+            "id": "primary_button_bg",
             "label": "t:settings_schema.colors.settings.button_background.label",
             "default": "#121212"
           },
           {
             "type": "color",
-            "id": "button_label",
+            "id": "primary_button_label",
             "label": "t:settings_schema.colors.settings.button_label.label",
             "default": "#FFFFFF"
           },
           {
+            "type": "header",
+            "content": "t:settings_schema.colors.settings.secondary_btn_header.content"
+          },
+          {
+            "type": "color",
+            "id": "secondary_button_bg",
+            "label": "t:settings_schema.colors.settings.button_background.label",
+            "default": "#ffffff"
+          },
+          {
             "type": "color",
             "id": "secondary_button_label",
-            "label": "t:settings_schema.colors.settings.secondary_button_label.label",
+            "label": "t:settings_schema.colors.settings.button_label.label",
             "default": "#121212"
+          },
+          {
+            "type": "header",
+            "content": "t:settings_schema.colors.settings.additional_colors_header.content"
           },
           {
             "type": "color",
@@ -128,19 +146,19 @@
           }
         ],
         "role": {
-          "text": "text",
+          "text": "text_primary",
           "background": {
-            "solid": "background",
-            "gradient": "background_gradient"
+            "solid": "background_primary",
+            "gradient": "background_primary_gradient"
           },
           "links": "secondary_button_label",
-          "icons": "text",
-          "primary_button": "button",
-          "on_primary_button": "button_label",
-          "primary_button_border": "button",
-          "secondary_button": "background",
+          "icons": "text_primary",
+          "primary_button": "primary_button_bg",
+          "on_primary_button": "primary_button_label",
+          "primary_button_border": "primary_button_bg",
+          "secondary_button": "secondary_button_bg",
           "on_secondary_button": "secondary_button_label",
-          "secondary_button_border": "secondary_button_label"
+          "secondary_button_border": "secondary_button_bg"
         }
       }
     ]

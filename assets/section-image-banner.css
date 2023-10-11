@@ -8,7 +8,7 @@
   text-align: center;
 }
 .banner_box_border {
-  border: 0.1rem solid rgba(var(--color-text));
+  border: 0.1rem solid rgba(var(--color-primary-text));
 }
 /* Needed for gradient continuity with or without animation, the transform scopes the gradient to its container which happens already when animation are turned on */
 .banner__box.gradient {
@@ -94,7 +94,7 @@
   padding: 0rem;
   border-radius: 1rem;
   width: 20rem;
-  background-color: rgba(var(--color-bg));
+  background-color: rgba(var(--color-primary-bg));
   color: rgba(var(--color-default-text));
   animation: hotspot-zoom-effect var(--duration-default) ease forwards;
 }

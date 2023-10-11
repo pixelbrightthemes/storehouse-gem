@@ -47,7 +47,7 @@ price-per-item .loading-overlay__spinner {
   stroke-dasharray: 280;
   stroke-dashoffset: 0;
   transform-origin: center;
-  stroke: rgb(var(--color-text));
+  stroke: rgb(var(--color-primary-text));
   animation: dash 1.4s ease-in-out infinite;
 }
 

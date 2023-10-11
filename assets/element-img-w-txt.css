@@ -51,7 +51,7 @@
 .img-w-txt__media--placeholder:after {
   content: '';
   position: absolute;
-  background: rgba(var(--color-text), 0.04);
+  background: rgba(var(--color-primary-text), 0.04);
 }
 
 .img-w-txt__media--placeholder.img-w-txt__media--adapt {

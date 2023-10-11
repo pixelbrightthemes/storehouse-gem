@@ -28,7 +28,7 @@
 }
 
 .video-section__media iframe {
-  background-color: rgba(var(--color-text), 0.03);
+  background-color: rgba(var(--color-primary-text), 0.03);
   border: 0;
 }
 

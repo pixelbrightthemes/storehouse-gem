@@ -9,7 +9,7 @@
 }
 
 .discounts__discount svg {
-  color: rgba(var(--color-button-bg), var(--alpha-button-background));
+  color: rgba(var(--color-primary-button-bg), var(--alpha-button-background));
 }
 
 .discounts__discount--position {
@@ -23,7 +23,7 @@
 }
 
 .discounts__discount > .icon {
-  color: rgb(var(--color-text));
+  color: rgb(var(--color-primary-text));
   width: 1.2rem;
   height: 1.2rem;
   margin-right: 0.7rem;

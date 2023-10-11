@@ -36,17 +36,17 @@
 
 .delayed-media__poster:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 var(--media-border-width) rgba(var(--color-text), var(--media-border-opacity)),
-    0 0 0 calc(var(--media-border-width) + 0.3rem) rgb(var(--color-bg)),
-    0 0 0 calc(var(--media-border-width) + 0.5rem) rgba(var(--color-text), 0.5);
+  box-shadow: 0 0 0 var(--media-border-width) rgba(var(--color-primary-text), var(--media-border-opacity)),
+    0 0 0 calc(var(--media-border-width) + 0.3rem) rgb(var(--color-primary-bg)),
+    0 0 0 calc(var(--media-border-width) + 0.5rem) rgba(var(--color-primary-text), 0.5);
   border-radius: calc(var(--media-radius) - var(--media-border-width));
 }
 
 .delayed-media__poster:focus {
   outline: none;
-  box-shadow: 0 0 0 var(--media-border-width) rgba(var(--color-text), var(--media-border-opacity)),
-    0 0 0 calc(var(--media-border-width) + 0.3rem) rgb(var(--color-bg)),
-    0 0 0 calc(var(--media-border-width) + 0.5rem) rgba(var(--color-text), 0.5);
+  box-shadow: 0 0 0 var(--media-border-width) rgba(var(--color-primary-text), var(--media-border-opacity)),
+    0 0 0 calc(var(--media-border-width) + 0.3rem) rgb(var(--color-primary-bg)),
+    0 0 0 calc(var(--media-border-width) + 0.5rem) rgba(var(--color-primary-text), 0.5);
   border-radius: calc(var(--media-radius) - var(--media-border-width));
 }
 
@@ -67,10 +67,10 @@
 }
 
 .delayed-media__poster-button {
-  background-color: rgb(var(--color-bg));
-  border: 0.1rem solid rgba(var(--color-text), 0.1);
+  background-color: rgb(var(--color-primary-bg));
+  border: 0.1rem solid rgba(var(--color-primary-text), 0.1);
   border-radius: 50%;
-  color: rgb(var(--color-text));
+  color: rgb(var(--color-primary-text));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -106,8 +106,8 @@
 .delayed-media__poster-button .icon {
   width: 2.5rem;
   height: 2.5rem;
-  color: rgb(var(--color-text));
-  fill: rgb(var(--color-text));
+  color: rgb(var(--color-primary-text));
+  fill: rgb(var(--color-primary-text));
 }
 
 .delayed-media__poster-button .icon-play {

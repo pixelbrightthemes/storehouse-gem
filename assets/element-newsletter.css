@@ -1,4 +1,4 @@
-.newsletter-form {
+.newsl-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,43 +8,43 @@
 }
 
 @media screen and (min-width: 750px) {
-  .newsletter-form {
+  .newsl-form {
     align-items: flex-start;
     margin: 0 auto;
     max-width: 36rem;
   }
 }
 
-.newsletter-form__field-wrapper {
+.newsl-form__field-wrapper {
   width: 100%;
 }
 
-.newsletter-form__field-wrapper .field__input {
+.newsl-form__field-wrapper .field__input {
   padding-right: 5rem;
   background-color: white;
   color: black;
 }
 
-.newsletter-form__field-wrapper .field {
+.newsl-form__field-wrapper .field {
   z-index: 0;
 }
 
-.newsletter-form__message {
+.newsl-form__message {
   justify-content: center;
   margin-bottom: 0;
 }
 
-.newsletter-form__message--success {
+.newsl-form__message--success {
   margin-top: 2rem;
 }
 
 @media screen and (min-width: 750px) {
-  .newsletter-form__message {
+  .newsl-form__message {
     justify-content: flex-start;
   }
 }
 
-.newsletter-form__button {
+.newsl-form__button {
   width: 4.4rem;
   margin: 0;
   right: var(--inputs-border-width);
@@ -53,21 +53,21 @@
   z-index: 2;
 }
 
-.newsletter-form__button:focus-visible {
-  box-shadow: 0 0 0 0.3rem rgb(var(--color-bg)), 0 0 0 0.4rem rgba(var(--color-text));
-  background-color: rgb(var(--color-bg));
+.newsl-form__button:focus-visible {
+  box-shadow: 0 0 0 0.3rem rgb(var(--color-primary-bg)), 0 0 0 0.4rem rgba(var(--color-primary-text));
+  background-color: rgb(var(--color-primary-bg));
 }
 
-.newsletter-form__button:focus {
-  box-shadow: 0 0 0 0.3rem rgb(var(--color-bg)), 0 0 0 0.4rem rgba(var(--color-text));
-  background-color: rgb(var(--color-bg));
+.newsl-form__button:focus {
+  box-shadow: 0 0 0 0.3rem rgb(var(--color-primary-bg)), 0 0 0 0.4rem rgba(var(--color-primary-text));
+  background-color: rgb(var(--color-primary-bg));
 }
 
-.newsletter-form__button:not(:focus-visible):not(.focused) {
+.newsl-form__button:not(:focus-visible):not(.focused) {
   box-shadow: inherit;
   background-color: inherit;
 }
 
-.newsletter-form__button .icon {
+.newsl-form__button .icon {
   width: 3.5rem;
 }

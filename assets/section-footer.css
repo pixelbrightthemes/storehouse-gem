@@ -1,5 +1,5 @@
 .footer {
-  border-top: 0.1rem solid rgba(var(--color-text), 0.08);
+  border-top: 0.1rem solid rgba(var(--color-primary-text), 0.08);
 }
 
 .footer:not(.color-background-1) {
@@ -41,7 +41,7 @@
 }
 
 .footer__content-bottom {
-  border-top: solid 0.1rem rgba(var(--color-text), 0.08);
+  border-top: solid 0.1rem rgba(var(--color-primary-text), 0.08);
   padding-top: 0.1rem;
 }
 
@@ -121,14 +121,14 @@
   display: none;
 }
 
-.footer-block--newsletter {
+.footer-block--newsl {
   display: flex;
   align-items: flex-end;
   margin-top: 3rem;
   gap: 1rem;
 }
 
-.footer-block--newsletter:only-child {
+.footer-block--newsl:only-child {
   margin-top: 0;
 }
 
@@ -139,7 +139,7 @@
 }
 
 @media screen and (min-width: 750px) {
-  .footer-block--newsletter {
+  .footer-block--newsl {
     flex-wrap: nowrap;
     justify-content: center;
   }
@@ -158,7 +158,7 @@
 }
 
 .footer__list-social:empty,
-.footer-block--newsletter:empty {
+.footer-block--newsl:empty {
   display: none;
 }
 
@@ -171,28 +171,28 @@
   justify-content: center;
 }
 
-.footer-block__newsletter {
+.footer-block__newsl {
   text-align: center;
   flex-grow: 1;
 }
 
-.newsletter-form__field-wrapper {
+.newsl-form__field-wrapper {
   max-width: 36rem;
 }
 
 @media screen and (min-width: 750px) {
   /* Pushes other components to the right of the flexbox */
-  .footer-block__newsletter:not(:only-child) {
+  .footer-block__newsl:not(:only-child) {
     text-align: left;
     margin-right: auto;
   }
 
-  .footer-block__newsletter:not(:only-child) .footer__newsletter {
+  .footer-block__newsl:not(:only-child) .footer__newsl {
     justify-content: flex-start;
     margin: 0;
   }
 
-  .footer-block__newsletter:not(:only-child) .newsletter-form__message--success {
+  .footer-block__newsl:not(:only-child) .newsl-form__message--success {
     left: auto;
   }
 
@@ -221,7 +221,7 @@
     On a small screen we want all the items to be centered
     because they will be stacked.
    */
-  .footer-block--newsletter {
+  .footer-block--newsl {
     display: flex;
     flex-direction: column;
     flex: 1 1 100%;
@@ -231,18 +231,18 @@
 
   .footer__list-social.list-social,
   .footer__follow-on-shop,
-  .footer-block__newsletter {
+  .footer-block__newsl {
     display: flex;
     justify-content: center;
   }
 
-  .footer-block__newsletter {
+  .footer-block__newsl {
     flex-direction: column;
   }
 }
 
 @media screen and (min-width: 750px) {
-  .footer-block__newsletter + .footer__list-social {
+  .footer-block__newsl + .footer__list-social {
     margin-top: 0;
   }
 }
@@ -262,7 +262,7 @@
 
 .footer__localization h2 {
   margin: 1rem 1rem 0.5rem;
-  color: rgba(var(--color-text), 0.9);
+  color: rgba(var(--color-primary-text), 0.9);
 }
 
 @media screen and (min-width: 750px) {
@@ -340,18 +340,18 @@
 
 .footer-block__details-content .list-menu__item--link,
 .copyright__content a {
-  color: rgba(var(--color-text), 0.9);
+  color: rgba(var(--color-primary-text), 0.9);
 }
 
 .footer-block__details-content .list-menu__item--active {
   transition: text-decoration-thickness var(--duration-short) ease;
-  color: rgb(var(--color-text));
+  color: rgb(var(--color-primary-text));
 }
 
 @media screen and (min-width: 750px) {
   .footer-block__details-content .list-menu__item--link:hover,
   .copyright__content a:hover {
-    color: rgb(var(--color-text));
+    color: rgb(var(--color-primary-text));
     text-decoration: underline;
     text-underline-offset: 0.3rem;
   }

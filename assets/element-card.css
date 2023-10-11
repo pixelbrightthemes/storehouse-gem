@@ -45,7 +45,7 @@
   position: relative;
   box-sizing: border-box;
   border-radius: var(--border-radius);
-  border: var(--border-width) solid rgba(var(--color-text), var(--border-opacity));
+  border: var(--border-width) solid rgba(var(--color-primary-text), var(--border-opacity));
 }
 
 .card--card:after,
@@ -174,7 +174,7 @@
 .card-info .card__info-volume-pricing-note {
   margin-top: 0.6rem;
   line-height: calc(0.5 + .4 / var(--font-body-scale));
-  color: rgba(var(--color-text), 0.9);
+  color: rgba(var(--color-primary-text), 0.9);
 }
 
 @media screen and (min-width: 750px) {
@@ -283,13 +283,13 @@
 }
 
 .card__heading a:focus:after {
-  box-shadow: 0 0 0 0.3rem rgb(var(--color-bg)), 0 0 0.5rem 0.4rem rgba(var(--color-text), 0.3);
-  outline: 0.2rem solid rgba(var(--color-text), 0.5);
+  box-shadow: 0 0 0 0.3rem rgb(var(--color-primary-bg)), 0 0 0.5rem 0.4rem rgba(var(--color-primary-text), 0.3);
+  outline: 0.2rem solid rgba(var(--color-primary-text), 0.5);
 }
 
 .card__heading a:focus-visible:after {
-  box-shadow: 0 0 0 0.3rem rgb(var(--color-bg)), 0 0 0.5rem 0.4rem rgba(var(--color-text), 0.3);
-  outline: 0.2rem solid rgba(var(--color-text), 0.5);
+  box-shadow: 0 0 0 0.3rem rgb(var(--color-primary-bg)), 0 0 0.5rem 0.4rem rgba(var(--color-primary-text), 0.3);
+  outline: 0.2rem solid rgba(var(--color-primary-text), 0.5);
 }
 
 .card__heading a:focus:not(:focus-visible):after {
@@ -330,20 +330,20 @@
   }*/
 }
 .overlay-left {
-  top: 2rem;
-  left: 2rem;
+  top: 1.2rem;
+  left: 1.2rem;
 }
 .overlay-right {
-  top: 2rem;
-  right: 2rem;
+  top: 1.2rem;
+  right: 1.2rem;
 }
 .card_colln_overlay { 
   font-size: 1.6rem;
   width: 7rem;
   height: 7rem;
   border-radius: 50%;
-  background-color: rgba(var(--color-button-bg), 1);
-  color: rgba(var(--color-button-text), 1);
+  background-color: rgba(var(--color-primary-button-bg), 1);
+  color: rgba(var(--color-primary-button-label), 1);
 }
 .card_colln_overlay span {
   text-align: center;
@@ -410,15 +410,15 @@
 
 .card-info>* {
   line-height: calc(1 + 0.4 / var(--font-body-scale));
-  color: rgb(var(--color-text));
+  color: rgb(var(--color-primary-text));
 }
 
 .card-info>.price {
-  color: rgb(var(--color-text));
+  color: rgb(var(--color-primary-text));
 }
 
 .card--horizontal .card-info>.price {
-  color: rgba(var(--color-text), 0.9);
+  color: rgba(var(--color-primary-text), 0.9);
 }
 
 .card-info>.rating {

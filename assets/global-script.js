@@ -624,10 +624,7 @@ class DelayedMedia extends HTMLElement {
       content.appendChild(this.querySelector('template').content.firstElementChild.cloneNode(true));
 
       this.setAttribute('loaded', true);
-      console.log(this);
-      console.log(focus);
       const deferredElement = this.appendChild(content.querySelector('video, model-viewer, iframe'));
-      console.log(deferredElement);
       if (focus) deferredElement.focus();
       if (deferredElement.nodeName == 'VIDEO' && deferredElement.getAttribute('autoplay')) {
         // force autoplay for safari

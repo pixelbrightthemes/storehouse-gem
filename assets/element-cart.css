@@ -58,7 +58,7 @@ cart-items {
 .cart__items {
   position: relative;
   padding-bottom: 3rem;
-  border-bottom: 0.1rem solid rgba(var(--color-text), 0.08);
+  border-bottom: 0.1rem solid rgba(var(--color-primary-text), 0.08);
 }
 
 .cart__items--disabled {
@@ -95,7 +95,7 @@ cart-items {
   line-height: 1;
   height: 1.8rem;
   top: -3rem;
-  color: rgba(var(--color-text), 0.9);
+  color: rgba(var(--color-primary-text), 0.9);
 }
 
 .cart__note .field__input {

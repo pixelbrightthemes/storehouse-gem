@@ -73,7 +73,7 @@
 .disclosure__button.localization-form__select {
   padding: calc(2rem + var(--inputs-border-width));
   background: rgba(var(--color-overlay-text));
-  color: rgba(var(--color-text));
+  color: rgba(var(--color-primary-text));
   border: 0;
 }
 
@@ -100,7 +100,7 @@ noscript .localization-form__select {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  color: rgb(var(--color-text));
+  color: rgb(var(--color-primary-text));
   width: 100%;
   padding-right: 4rem;
   padding-bottom: 1.5rem;
@@ -142,7 +142,7 @@ noscript .localization-selector.link {
 .disclosure__list-wrapper {
   border-width: var(--popup-border-width);
   border-style: solid;
-  border-color: rgba(var(--color-text), var(--popup-border-opacity));
+  border-color: rgba(var(--color-primary-text), var(--popup-border-opacity));
   overflow: hidden;
   position: absolute;
   bottom: 100%;
@@ -177,18 +177,18 @@ noscript .localization-selector.link {
   padding: 0.25rem 2rem;
   text-decoration: none;
   line-height: calc(1 + 0.8 / var(--font-body-scale));
-  color: rgba(var(--color-text), 0.9);
+  color: rgba(var(--color-primary-text), 0.9);
   word-break: break-word;
 }
 
 .disclosure__link:hover {
-  background-color: rgba(var(--color-text), 0.05);
-  color: rgb(var(--color-text));
+  background-color: rgba(var(--color-primary-text), 0.05);
+  color: rgb(var(--color-primary-text));
 }
 
 .disclosure__link--active {
   /*text-decoration: underline;*/
-  background-color: rgba(var(--color-text), 0.05);
+  background-color: rgba(var(--color-primary-text), 0.05);
 }
 
 .disclosure__button[aria-expanded='true'] .icon-caret {
@@ -219,9 +219,9 @@ noscript .localization-selector.link {
 }
 
 .header-localization .localization-form__select.link:focus-visible {
-  outline: 0.2rem solid rgba(var(--color-text), 0.5);
+  outline: 0.2rem solid rgba(var(--color-primary-text), 0.5);
   outline-offset: -0.2rem;
-  box-shadow: 0 0 0.2rem 0 rgba(var(--color-text), 0.3);
+  box-shadow: 0 0 0.2rem 0 rgba(var(--color-primary-text), 0.3);
 }
 
 /* Header icons (desktop) */

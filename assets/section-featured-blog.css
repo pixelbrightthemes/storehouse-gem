@@ -33,7 +33,7 @@
 }
 
 .background-secondary .blog-placeholder__content {
-  background-color: rgb(var(--color-bg));
+  background-color: rgb(var(--color-primary-bg));
 }
 
 .blog__posts .card-wrapper {

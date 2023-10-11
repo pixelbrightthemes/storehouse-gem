@@ -28,8 +28,8 @@ html {
 }
 
 body {
-  background-color: rgb(var(--color-bg));
-  color: rgb(var(--color-text));
+  background-color: rgb(var(--color-primary-bg));
+  color: rgb(var(--color-primary-text));
   letter-spacing: 0.07rem;
   line-height: calc(1 + 0.8 / var(--font-body-scale));
   max-width: var(--page--width);
@@ -47,7 +47,7 @@ body {
 }
 
 ::selection {
-  background-color: rgba(var(--color-text), 0.2);
+  background-color: rgba(var(--color-primary-text), 0.2);
 }
 
 h1,
@@ -96,8 +96,8 @@ h2,
   border: none;
   padding: 1.5rem 3rem;
   text-decoration: none;
-  background-color: rgb(var(--color-button-bg));
-  box-shadow: 0 0 0 0.1rem rgb(var(--color-button-bg));
+  background-color: rgb(var(--color-primary-button-bg));
+  box-shadow: 0 0 0 0.1rem rgb(var(--color-primary-button-bg));
   color: rgb(var(--color-button-label));
   min-width: 12rem;
   height: auto;
@@ -111,7 +111,7 @@ h2,
 }
 
 .button:hover {
-  box-shadow: 0 0 0 0.2rem rgb(var(--color-button-bg));
+  box-shadow: 0 0 0 0.2rem rgb(var(--color-primary-button-bg));
 }
 
 .button--secondary {
@@ -181,7 +181,7 @@ h2,
 }
 
 .gift-card__number {
-  color: rgb(var(--color-text));
+  color: rgb(var(--color-primary-text));
   font-size: 1.8rem;
   line-height: calc(1 + 0.6 / var(--font-body-scale));
   text-align: center;
@@ -212,9 +212,9 @@ h2,
   line-height: 1;
   padding: 0.6rem 1.3rem;
   text-align: center;
-  background-color: rgb(var(--color-bg));
-  border-color: rgba(var(--color-text), 0.04);
-  color: rgb(var(--color-text));
+  background-color: rgb(var(--color-primary-bg));
+  border-color: rgba(var(--color-primary-text), 0.04);
+  color: rgb(var(--color-primary-text));
 }
 
 .badge--expired {
@@ -262,22 +262,22 @@ h2,
 }
 
 *:focus-visible {
-  outline: 0.2rem solid rgba(var(--color-text), 0.5);
+  outline: 0.2rem solid rgba(var(--color-primary-text), 0.5);
   outline-offset: 0.3rem;
-  box-shadow: 0 0 0 0.3rem rgb(var(--color-bg)), 0 0 0.5rem 0.4rem rgba(var(--color-text), 0.3);
+  box-shadow: 0 0 0 0.3rem rgb(var(--color-primary-bg)), 0 0 0.5rem 0.4rem rgba(var(--color-primary-text), 0.3);
 }
 
 /* Fallback - for browsers that don't support :focus-visible, a fallback is set for :focus */
 .focused,
 .no-js *:focus {
-  outline: 0.2rem solid rgba(var(--color-text), 0.5);
+  outline: 0.2rem solid rgba(var(--color-primary-text), 0.5);
   outline-offset: 0.3rem;
-  box-shadow: 0 0 0 0.3rem rgb(var(--color-bg)), 0 0 0.5rem 0.4rem rgba(var(--color-text), 0.3);
+  box-shadow: 0 0 0 0.3rem rgb(var(--color-primary-bg)), 0 0 0.5rem 0.4rem rgba(var(--color-primary-text), 0.3);
 }
 
 .button:focus-visible {
-  box-shadow: 0 0 0 0.1rem rgb(var(--color-button-bg)), 0 0 0 0.3rem rgb(var(--color-bg)),
-    0 0 0.5rem 0.4rem rgba(var(--color-text), 0.3);
+  box-shadow: 0 0 0 0.1rem rgb(var(--color-primary-button-bg)), 0 0 0 0.3rem rgb(var(--color-primary-bg)),
+    0 0 0.5rem 0.4rem rgba(var(--color-primary-text), 0.3);
 }
 
 /* Negate the fallback side-effect for browsers that support :focus-visible */
@@ -287,18 +287,18 @@ h2,
 }
 
 .button:focus {
-  box-shadow: 0 0 0 0.1rem rgb(var(--color-button-bg)), 0 0 0 0.3rem rgb(var(--color-bg)),
-    0 0 0.5rem 0.4rem rgba(var(--color-text), 0.3);
+  box-shadow: 0 0 0 0.1rem rgb(var(--color-primary-button-bg)), 0 0 0 0.3rem rgb(var(--color-primary-bg)),
+    0 0 0.5rem 0.4rem rgba(var(--color-primary-text), 0.3);
 }
 
 .button--secondary:focus-visible {
-  box-shadow: 0 0 0 0.1rem rgb(var(--color-secondary-button-label)), 0 0 0 0.3rem rgb(var(--color-bg)),
-    0 0 0.5rem 0.4rem rgba(var(--color-text), 0.3);
+  box-shadow: 0 0 0 0.1rem rgb(var(--color-secondary-button-label)), 0 0 0 0.3rem rgb(var(--color-primary-bg)),
+    0 0 0.5rem 0.4rem rgba(var(--color-primary-text), 0.3);
 }
 
 .button--secondary:focus {
-  box-shadow: 0 0 0 0.1rem rgb(var(--color-secondary-button-label)), 0 0 0 0.3rem rgb(var(--color-bg)),
-    0 0 0.5rem 0.4rem rgba(var(--color-text), 0.3);
+  box-shadow: 0 0 0 0.1rem rgb(var(--color-secondary-button-label)), 0 0 0 0.3rem rgb(var(--color-primary-bg)),
+    0 0 0.5rem 0.4rem rgba(var(--color-primary-text), 0.3);
 }
 
 .form__message {
@@ -325,7 +325,7 @@ h2,
 }
 
 .gradient {
-  background: rgb(var(--color-bg));
-  background: var(--gradient-background);
+  background: rgb(var(--color-primary-bg));
+  background: var(--gradient-primary-background);
   background-attachment: fixed;
 }

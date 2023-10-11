@@ -24,7 +24,7 @@
 }
 
 .pagination__item {
-  color: rgb(var(--color-text));
+  color: rgb(var(--color-primary-text));
   display: inline-flex;
   justify-content: center;
   align-items: center;

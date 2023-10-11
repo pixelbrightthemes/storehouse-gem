@@ -25,7 +25,7 @@ quick-order-list .quantity__button {
 
 .quick-order-list__total {
   padding-top: 2rem;
-  border-top: 0.1rem solid rgba(var(--color-text), .08);
+  border-top: 0.1rem solid rgba(var(--color-primary-text), .08);
 }
 
 .totals__product-total {
@@ -45,7 +45,7 @@ quick-order-list .quantity__button {
     position: sticky;
     bottom: 0;
     z-index: 1;
-    background-color: rgb(var(--color-bg));
+    background-color: rgb(var(--color-primary-bg));
   }
 
   .totals__product-total {
@@ -265,7 +265,7 @@ quick-order-list-remove-button .button {
 
 
 quick-order-list-remove-button .button:not([disabled]):hover {
-  color: rgb(var(--color-text));
+  color: rgb(var(--color-primary-text));
 }
 
 @media screen and (min-width: 990px) {
@@ -420,7 +420,7 @@ quick-order-list-remove-button:hover .icon-remove {
   .quick-order-list__table thead tr {
     display: flex;
     justify-content: space-between;
-    border-bottom: 0.1rem solid rgba(var(--color-text), 0.08);
+    border-bottom: 0.1rem solid rgba(var(--color-primary-text), 0.08);
     margin-bottom: 4rem;
   }
 
@@ -508,7 +508,7 @@ quick-order-list-remove-button:hover .icon-remove {
   }
 
   .quick-order-list__table th {
-    border-bottom: 0.1rem solid rgba(var(--color-text), 0.08);
+    border-bottom: 0.1rem solid rgba(var(--color-primary-text), 0.08);
   }
 
   .quick-order-list__table thead th:first-child {
@@ -622,7 +622,7 @@ quick-order-list-remove-button {
 
 .quick-order-list-total {
   padding-top: 2rem;
-  border-top: 0.1rem solid rgba(var(--color-text), .08);
+  border-top: 0.1rem solid rgba(var(--color-primary-text), .08);
 }
 
 .quick-order-list-total__price {

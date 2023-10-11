@@ -134,8 +134,8 @@
 }
 
 .art-template__comments-comment {
-  color: rgba(var(--color-text), 0.9);
-  background-color: rgb(var(--color-bg));
+  color: rgba(var(--color-primary-text), 0.9);
+  background-color: rgb(var(--color-primary-bg));
   margin-bottom: 1.5rem;
   padding: 2rem 2rem 1.5rem;
 }

@@ -3,7 +3,7 @@
 }
 
 .mega-menu__content {
-  background-color: rgb(var(--color-bg));
+  background-color: rgb(var(--color-primary-bg));
   border-left: 0;
   border-radius: 0;
   border-right: 0;
@@ -49,7 +49,7 @@
 }
 
 .mega-menu__link {
-  color: rgba(var(--color-text), 1);
+  color: rgba(var(--color-primary-text), 1);
   display: block;
   line-height: calc(1 + 0.3 / var(--font-body-scale));
   padding-bottom: 0.6rem;
@@ -73,7 +73,7 @@
 
 .mega-menu__link:hover,
 .mega-menu__link--active {
-  color: rgb(var(--color-text));
+  color: rgb(var(--color-primary-text));
   text-decoration: underline;
 }
 
